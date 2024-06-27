@@ -126,8 +126,8 @@
     font-weight: normal;
     font-style: normal;
 
-    src: url(/appformBuilder/static/media/slick.a4e97f5a.eot);
-    src: url(/appformBuilder/static/media/slick.a4e97f5a.eot?#iefix) format('embedded-opentype'), url(/appformBuilder/static/media/slick.29518378.woff) format('woff'), url(/appformBuilder/static/media/slick.c94f7671.ttf) format('truetype'), url(/appformBuilder/static/media/slick.2630a3e3.svg#slick) format('svg');
+    src: url(/DeptiKURProcess/static/media/slick.a4e97f5a.eot);
+    src: url(/DeptiKURProcess/static/media/slick.a4e97f5a.eot?#iefix) format('embedded-opentype'), url(/DeptiKURProcess/static/media/slick.29518378.woff) format('woff'), url(/DeptiKURProcess/static/media/slick.c94f7671.ttf) format('truetype'), url(/DeptiKURProcess/static/media/slick.2630a3e3.svg#slick) format('svg');
 }
 /* Arrows */
 .slick-prev,
