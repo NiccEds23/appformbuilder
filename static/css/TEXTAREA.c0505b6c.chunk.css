@@ -1,0 +1,69 @@
+.TEXTAREA_tooltip__kJurN {
+  position: relative;
+  display: inline-block;
+  /* border-bottom: 1px dotted black; */
+}
+
+.TEXTAREA_tooltip__kJurN .TEXTAREA_tooltiptext__2j6E1 {
+  visibility: hidden;
+  width: 120px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  word-break: break-all;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.TEXTAREA_tooltip__kJurN .TEXTAREA_tooltiptext__2j6E1::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.TEXTAREA_tooltip__kJurN:hover .TEXTAREA_tooltiptext__2j6E1 {
+  visibility: visible;
+}
+ 
+  .formBuilder_main_app *:not(.childmf-formb *) {   
+    caret-color: black !important;    
+  }
+  
+  .fr-toolbar .fr-btn-grp {
+    margin: 0 !important;
+  }
+  
+  .grayTableBorder,
+  .grayTableBorder tr th,
+  .grayTableBorder tr td {
+    border: 1px solid lightgray !important;
+    border-collapse: collapse;
+  }
+  
+  .blackTableBorder,
+  .blackTableBorder tr th,
+  .blackTableBorder tr td {
+    border: 1px solid black !important;
+    border-collapse: collapse;
+  }
+  
+  .noTableBorder,
+  .noTableBorder tr th,
+  .noTableBorder tr td {
+    border: none !important;
+    border-collapse: collapse;
+  }
+
+
+/*# sourceMappingURL=TEXTAREA.c0505b6c.chunk.css.map*/

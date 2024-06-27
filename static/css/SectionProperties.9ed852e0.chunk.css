@@ -1,0 +1,20 @@
+
+.percent {
+    border: 1px solid #bbb;
+    border-radius: 2px;
+    width: 30%;
+}
+
+.percent input {
+    border: none;
+    outline: none;
+    text-align:"left";
+    width: 86%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/*# sourceMappingURL=SectionProperties.9ed852e0.chunk.css.map*/

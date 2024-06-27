@@ -1,0 +1,11 @@
+<svg id="more_actions" data-name="more actions" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="Rectangle_8257" data-name="Rectangle 8257" fill="none" stroke="#c4c4c4" stroke-width="1">
+    <rect width="20" height="20" rx="2" stroke="none"/>
+    <rect x="0.5" y="0.5" width="19" height="19" rx="1.5" fill="none"/>
+  </g>
+  <g id="Group_50316" data-name="Group 50316" transform="translate(6350 19961)">
+    <circle id="Ellipse_2092" data-name="Ellipse 2092" cx="1.5" cy="1.5" r="1.5" transform="translate(-6336 -19952)" fill="#606060"/>
+    <circle id="Ellipse_2093" data-name="Ellipse 2093" cx="1.5" cy="1.5" r="1.5" transform="translate(-6341 -19952)" fill="#606060"/>
+    <circle id="Ellipse_2094" data-name="Ellipse 2094" cx="1.5" cy="1.5" r="1.5" transform="translate(-6346 -19952)" fill="#606060"/>
+  </g>
+</svg>

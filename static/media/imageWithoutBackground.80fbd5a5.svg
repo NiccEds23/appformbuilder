@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1378" height="716" viewBox="0 0 1378 716">
+  <defs>
+    <filter id="Rectangle_9301" x="0" y="0" width="1378" height="716" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-opacity="0.122"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_61021" data-name="Group 61021" transform="translate(6 4)">
+    <g transform="matrix(1, 0, 0, 1, -6, -4)" filter="url(#Rectangle_9301)">
+      <rect id="Rectangle_9301-2" data-name="Rectangle 9301" width="1366" height="704" transform="translate(6 4)" fill="#f7f7fd"/>
+    </g>
+    <rect id="Rectangle_16357" data-name="Rectangle 16357" width="499" height="424" rx="13" transform="translate(409 147)" fill="#fff"/>
+    <g id="Group_60102" data-name="Group 60102" transform="translate(-382 15)">
+      <g id="Group_52148" data-name="Group 52148" transform="translate(862.633 263.171)">
+        <g id="Rectangle_9303" data-name="Rectangle 9303" transform="translate(0.367 32.829)" fill="#fff" stroke="#c4c4c4" stroke-width="1">
+          <rect width="356" height="32" rx="2" stroke="none"/>
+          <rect x="0.5" y="0.5" width="355" height="31" rx="1.5" fill="none"/>
+        </g>
+        <g id="Rectangle_9304" data-name="Rectangle 9304" transform="translate(0.367 111.829)" fill="#fff" stroke="#c4c4c4" stroke-width="1">
+          <rect width="356" height="32" rx="2" stroke="none"/>
+          <rect x="0.5" y="0.5" width="355" height="31" rx="1.5" fill="none"/>
+        </g>
+        <g id="Group_52147" data-name="Group 52147" transform="translate(103.06 190.91)">
+          <rect id="Rectangle_9305" data-name="Rectangle 9305" width="155" height="40" rx="2" transform="translate(-0.693 -7.081)" fill="#0072c6"/>
+          <text id="Login" transform="translate(56.308 18.919)" fill="#fff" font-size="16" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="0">Login</tspan></text>
+        </g>
+        <text id="Password" transform="translate(0.367 99.829)" fill="#484848" font-size="14" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="0">Password</tspan></text>
+        <text id="Email" transform="translate(0.367 20.829)" fill="#484848" font-size="14" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="0">Email</tspan></text>
+      </g>
+      <text id="LOGIN-2" data-name="LOGIN" transform="translate(1010 223)" fill="#1072c6" font-size="20" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="0">LOGIN</tspan></text>
+    </g>
+  </g>
+</svg>

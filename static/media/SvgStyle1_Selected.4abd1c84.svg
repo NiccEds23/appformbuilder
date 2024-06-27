@@ -1,0 +1,41 @@
+import React from "react";
+
+function SvgStyle1_Selected() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="86"
+      height="41"
+      viewBox="0 0 86 41"
+    >
+      <g data-name="Group 77361" transform="translate(-12 -633)">
+        <path
+          fill="rgba(0,114,198,0.1)"
+          d="M2 0h82a2 2 0 012 2v37a2 2 0 01-2 2H2a2 2 0 01-2-2V2a2 2 0 012-2z"
+          data-name="Path 53102"
+          transform="translate(12 633)"
+        ></path>
+        <g data-name="Group 73534">
+          <g
+            fill="#fff"
+            stroke="#acacac"
+            strokeWidth="0.5"
+            data-name="Rectangle 13741"
+            transform="translate(22 643)"
+          >
+            <path stroke="none" d="M0 0H67V26H0z"></path>
+            <path fill="none" d="M0.25 0.25H66.75V25.75H0.25z"></path>
+          </g>
+          <path
+            fill="#0072c6"
+            d="M0 0H67V7H0z"
+            data-name="Rectangle 10729"
+            transform="translate(22 638)"
+          ></path>
+        </g>
+      </g>
+    </svg>
+  );
+}
+
+export default SvgStyle1_Selected;

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="224" height="26" viewBox="0 0 224 26">
+  <g id="Group_62675" data-name="Group 62675" transform="translate(-86 -428)">
+    <g id="Rectangle_16382" data-name="Rectangle 16382" transform="translate(86 428)" fill="#fff" stroke="#d3d3d3" stroke-miterlimit="10" stroke-width="0.7">
+      <rect width="224" height="26" rx="2" stroke="none"/>
+      <rect x="0.35" y="0.35" width="223.3" height="25.3" rx="1.65" fill="none"/>
+    </g>
+    <text id="Call_us" data-name="Call us" transform="translate(286 443)" fill="#3e3e3e" font-size="5" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="0">Call us</tspan></text>
+    <text id="Schedule_Appointment" data-name="Schedule Appointment" transform="translate(271 443)" fill="#3e3e3e" font-size="5" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="-55.066" y="0">Schedule Appointment</tspan></text>
+    <text id="Legal_Counsel_Appointment" data-name="Legal Counsel Appointment" transform="translate(95 443)" font-size="6" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="0">Legal Counsel Appointment</tspan></text>
+  </g>
+</svg>

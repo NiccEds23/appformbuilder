@@ -1,0 +1,33 @@
+{
+    "designHeader" : "{ position:'absolute', right:'0px'} ",
+    "leftVal": "auto",
+    "rightVal" :"0",
+    "leftValN": "auto",
+    "rightValN" :"1px",
+    "Redcross_quicktool":"0rem",
+    "Redcross_quicktool_top":"2.5rem",
+    "Redcross_quicktool_right":"auto",
+    "Redcross_quicktool_position":"absolute",
+    "Redcross_quicktool_top_property":"0rem",
+    "rightNavigationPosition":"68px",
+    "leftNavigationPosition" : "auto",
+    "sectionBorderLeft":"auto",
+    "sectionBorderRight":"8px solid #0072C6",
+    "borderNoneSection":"none",
+    "borderSolid":"8px solid",
+    "320pxLeft":"auto",
+    "320pxRight":"320px",
+    "58pxLeft":"auto",
+    "58pxRight":"58px",
+    "280pxLeft":"305px",
+    "280pxRight":"auto",
+    "0pxLeft":"0px",
+    "0pxRight":"auto",
+    "sizeHandlerLeft":"-3px",
+    "sizeHandlerRight":"auto",    
+    "searchIconLeft":"8px",
+    "searchIconRight":"unset",
+
+    "marginRight":"185px"
+}
+

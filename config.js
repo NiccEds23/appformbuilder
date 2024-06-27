@@ -1,0 +1,22 @@
+var appformBuilder_configs = {
+    // backEndUrl : "http://localhost:8080/iforms",
+    backEndUrl : "/formBuilder",
+    //backEndUrl : "http://192.168.153.196:8080/formBuilder",
+    //bam_Ip:"192.168.153.130",
+	bam_Ip:"127.0.0.1",
+	// bam_Ip:"127.0.0.1",
+    //bam_port:"8080",
+    bam_port:"8080",
+    //backEndUrl : "http://localhost:8084/iforms",
+    image_control_max_size: "200",
+    label_max_length: "255",
+    wizard_initial_step_count: "4",
+    column_size_web:"3",
+    column_size_tablet:"6",
+    column_size_mobile:"12",
+    selectedLanguage:localStorage.getItem("locale") || navigator.language || navigator.userLanguage,
+    mainMenuMaxCount: 6,
+    subMenuMaxCount: 6,
+    subChildMenuMaxCount: 6,
+    wizard_journey_to_blankPage:"false"
+}

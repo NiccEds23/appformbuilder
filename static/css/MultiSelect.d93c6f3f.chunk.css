@@ -1,0 +1,19 @@
+/* #customized-hook-demo-popup{
+    position:absolute;
+} */
+
+.MuiChip-root.MuiAutocomplete-tag.MuiChip-deletable{
+    height:24px;
+    border-radius: 0;
+    background: #ffffff;
+}
+.MuiInput-underline:before {
+    /* border-bottom: none !important; */
+    /* border-bottom: none; */
+}
+
+/* .MuiInputBase-root.MuiOutlinedInput-root.MuiAutocomplete-inputRoot.MuiInputBase-fullWidth.MuiInputBase-formControl.MuiInputBase-adornedEnd.MuiOutlinedInput-adornedEnd  {
+    padding:0;
+} */
+
+/*# sourceMappingURL=MultiSelect.d93c6f3f.chunk.css.map*/

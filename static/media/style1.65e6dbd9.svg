@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="88" height="53" viewBox="0 0 88 53">
+  <g id="Group_74502" data-name="Group 74502" transform="translate(-13 -869)">
+    <g id="Rectangle_14029" data-name="Rectangle 14029" transform="translate(13 869)" fill="rgba(255,255,255,0.05)" stroke="#dadada" stroke-miterlimit="10" stroke-width="1">
+      <rect width="88" height="53" rx="2" stroke="none"/>
+      <rect x="0.5" y="0.5" width="87" height="52" rx="1.5" fill="none"/>
+    </g>
+    <path id="Path_53114" data-name="Path 53114" d="M1231.8,295.813l2.285,2.285,2.285-2.285" transform="translate(-1146.455 582.197)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <g id="Group_55570" data-name="Group 55570" transform="translate(0 82)">
+      <g id="Rectangle_14012" data-name="Rectangle 14012" transform="translate(18 793)" fill="#f5f4f4" stroke="#c4c4c4" stroke-width="1">
+        <rect width="15" height="41" stroke="none"/>
+        <rect x="0.5" y="0.5" width="14" height="40" fill="none"/>
+      </g>
+      <g id="Rectangle_14013" data-name="Rectangle 14013" transform="translate(32 793)" fill="#fff" stroke="#c4c4c4" stroke-width="1">
+        <rect width="65" height="41" stroke="none"/>
+        <rect x="0.5" y="0.5" width="64" height="40" fill="none"/>
+      </g>
+      <g id="Rectangle_14014" data-name="Rectangle 14014" transform="translate(18 793)" fill="#fff" stroke="#c4c4c4" stroke-width="1">
+        <rect width="15" height="6" stroke="none"/>
+        <rect x="0.5" y="0.5" width="14" height="5" fill="none"/>
+      </g>
+      <g id="Rectangle_14017" data-name="Rectangle 14017" transform="translate(18 798)" fill="#f5f4f4" stroke="#c4c4c4" stroke-width="1">
+        <rect width="15" height="6" stroke="none"/>
+        <rect x="0.5" y="0.5" width="14" height="5" fill="none"/>
+      </g>
+      <g id="Rectangle_14018" data-name="Rectangle 14018" transform="translate(18 803)" fill="#f5f4f4" stroke="#c4c4c4" stroke-width="1">
+        <rect width="15" height="6" stroke="none"/>
+        <rect x="0.5" y="0.5" width="14" height="5" fill="none"/>
+      </g>
+      <rect id="Rectangle_14015" data-name="Rectangle 14015" width="2" height="5" transform="translate(18 793)" fill="#0072c6"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="86.577" height="51" viewBox="0 0 86.577 51">
+  <g id="Group_74499" data-name="Group 74499" transform="translate(-9.5 -869.5)">
+    <rect id="Rectangle_14701" data-name="Rectangle 14701" width="85.577" height="50" rx="1.5" transform="translate(10 870)" fill="rgba(255,255,255,0.05)" stroke="#dadada" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="Line_2442" data-name="Line 2442" x2="9.203" transform="translate(48.5 882.375)" fill="none" stroke="rgba(211,211,211,0.6)" stroke-width="1"/>
+    <line id="Line_2443" data-name="Line 2443" x2="9" transform="translate(66.5 882.5)" fill="none" stroke="rgba(211,211,211,0.6)" stroke-width="1"/>
+    <g id="Ellipse_3212" data-name="Ellipse 3212" transform="translate(20.141 876.88)" fill="#0072c6" stroke="#0072c6" stroke-width="1">
+      <circle cx="5.216" cy="5.216" r="5.216" stroke="none"/>
+      <circle cx="5.216" cy="5.216" r="4.716" fill="none"/>
+    </g>
+    <g id="Ellipse_3213" data-name="Ellipse 3213" transform="translate(38.15 876.88)" fill="#fff" stroke="#0072c6" stroke-width="1">
+      <circle cx="5.216" cy="5.216" r="5.216" stroke="none"/>
+      <circle cx="5.216" cy="5.216" r="4.716" fill="none"/>
+    </g>
+    <g id="Ellipse_3214" data-name="Ellipse 3214" transform="translate(56.602 876.88)" fill="#fff" stroke="#0072c6" stroke-width="1">
+      <circle cx="5.216" cy="5.216" r="5.216" stroke="none"/>
+      <circle cx="5.216" cy="5.216" r="4.716" fill="none"/>
+    </g>
+    <g id="Ellipse_3215" data-name="Ellipse 3215" transform="translate(74.594 876.88)" fill="#fff" stroke="#0072c6" stroke-width="1">
+      <circle cx="5.216" cy="5.216" r="5.216" stroke="none"/>
+      <circle cx="5.216" cy="5.216" r="4.716" fill="none"/>
+    </g>
+    <line id="Line_2444" data-name="Line 2444" x2="8.86" transform="translate(29.359 882.375)" fill="none" stroke="#0072c6" stroke-width="1"/>
+    <g id="Rectangle_14013" data-name="Rectangle 14013" transform="translate(17 899.727)" opacity="0.5">
+      <rect id="Rectangle_14704" data-name="Rectangle 14704" width="71.577" height="14.761" rx="1" fill="rgba(211,211,211,0.6)"/>
+      <rect id="Rectangle_14705" data-name="Rectangle 14705" width="71.077" height="14.523" rx="1" transform="translate(0.25 0.119)" fill="rgba(211,211,211,0.6)"/>
+    </g>
+    <g id="Rectangle_14013-2" data-name="Rectangle 14013" transform="translate(17 892.887)" opacity="0.5">
+      <rect id="Rectangle_14702" data-name="Rectangle 14702" width="71.577" height="5.141" rx="1" fill="rgba(211,211,211,0.6)"/>
+      <rect id="Rectangle_14703" data-name="Rectangle 14703" width="71.077" height="5.058" rx="1" transform="translate(0.25 0.041)" fill="rgba(211,211,211,0.6)"/>
+    </g>
+  </g>
+</svg>

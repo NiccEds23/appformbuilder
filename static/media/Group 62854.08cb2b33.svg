@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25.797" height="22" viewBox="0 0 25.797 22">
+  <g id="Group_62854" data-name="Group 62854" transform="translate(0)">
+    <path id="Icon_metro-calendar" data-name="Icon metro-calendar" d="M9.4,8.6h2.733v2.225H9.4Zm4.1,0h2.733v2.225H13.5Zm4.1,0h2.733v2.225H17.6ZM5.3,15.277H8.037V17.5H5.3Zm4.1,0h2.733V17.5H9.4Zm4.1,0h2.733V17.5H13.5ZM9.4,11.94h2.733v2.225H9.4Zm4.1,0h2.733v2.225H13.5Zm4.1,0h2.733v2.225H17.6Zm-12.3,0H8.037v2.225H5.3ZM20.336,1.928V3.04H17.6V1.928H8.037V3.04H5.3V1.928H2.571v17.8h20.5V1.928H20.336ZM21.7,18.614H3.937V6.378H21.7Z" transform="translate(-2.57 -1.928)" fill="#d6d6d6"/>
+    <ellipse id="Ellipse_2294" data-name="Ellipse 2294" cx="7.371" cy="6" rx="7.371" ry="6" transform="translate(11.056 10)" fill="#fff"/>
+    <g id="Icon_ionic-md-time" data-name="Icon ionic-md-time" transform="translate(12.657 11.302)">
+      <path id="Path_52970" data-name="Path 52970" d="M8.958,3.375c-3.085,0-5.583,2.038-5.583,4.549s2.5,4.549,5.583,4.549,5.594-2.038,5.594-4.549S12.048,3.375,8.958,3.375Zm.005,8.189c-2.469,0-4.471-1.629-4.471-3.64s2-3.64,4.471-3.64,4.471,1.629,4.471,3.64S11.433,11.564,8.964,11.564Z" transform="translate(-3.375 -3.375)" fill="rgba(210,210,210,0.9)"/>
+      <path id="Path_52971" data-name="Path 52971" d="M17.376,10.688h-.838v2.73l2.934,1.433.419-.56-2.515-1.214Z" transform="translate(-11.508 -8.413)" fill="rgba(210,210,210,0.9)"/>
+    </g>
+  </g>
+</svg>

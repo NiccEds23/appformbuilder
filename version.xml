@@ -1,0 +1,9 @@
+<ReleaseProperty>
+	<Product>NewgenONE 2024.1</Product>
+	<ServicePack>SP0</ServicePack>
+	<Patch>00</Patch>
+	<Hotfix>NewgenONE_2024.1_SP0_00_000</Hotfix>
+	<date_of_build>16-02-2024</date_of_build>
+	<build_person>aamir.akhtar@newgensoft.com</build_person>
+	<label>NewgenONE_Marvin_QABuild_16-02-2024</label>
+</ReleaseProperty>

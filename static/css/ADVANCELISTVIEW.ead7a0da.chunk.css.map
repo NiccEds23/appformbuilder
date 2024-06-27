@@ -1,0 +1,1 @@
+{"version":3,"sources":["UI/BasicFormControls/TableRowNew.css"],"names":[],"mappings":"AAAA;IACI;AACJ;AACA;IACI,aAAa;AACjB,C","file":"static/css/ADVANCELISTVIEW.ead7a0da.chunk.css","sourcesContent":[".numberFormatInput{\r\n    border:none\r\n}\r\n.numberFormatInput:focus{\r\n    outline: none;\r\n}"],"sourceRoot":""}

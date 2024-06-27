@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="86.577" height="51" viewBox="0 0 86.577 51">
+  <g id="Group_74501" data-name="Group 74501" transform="translate(-203.5 -869.5)">
+    <rect id="Rectangle_14711" data-name="Rectangle 14711" width="85.577" height="50" rx="1.5" transform="translate(204 870)" fill="#fff" stroke="#dadada" stroke-miterlimit="10" stroke-width="1"/>
+    <g id="Rectangle_14013" data-name="Rectangle 14013" transform="translate(211 892.887)" opacity="0.5">
+      <rect id="Rectangle_14712" data-name="Rectangle 14712" width="71.577" height="5.141" rx="1" fill="rgba(211,211,211,0.6)"/>
+      <rect id="Rectangle_14713" data-name="Rectangle 14713" width="71.077" height="5.058" rx="1" transform="translate(0.25 0.041)" fill="rgba(211,211,211,0.6)"/>
+    </g>
+    <g id="Rectangle_14013-2" data-name="Rectangle 14013" transform="translate(211 899.727)" opacity="0.5">
+      <rect id="Rectangle_14714" data-name="Rectangle 14714" width="71.577" height="14.761" rx="1" fill="rgba(211,211,211,0.6)"/>
+      <rect id="Rectangle_14715" data-name="Rectangle 14715" width="71.077" height="14.523" rx="1" transform="translate(0.25 0.119)" fill="rgba(211,211,211,0.6)"/>
+    </g>
+    <path id="Path_54055" data-name="Path 54055" d="M-330.014,72.217l-2.724,2.724-1.276-1.275" transform="translate(551.576 808.517)" fill="none" stroke="#0072c6" stroke-width="1"/>
+    <g id="Ellipse_3220" data-name="Ellipse 3220" transform="translate(214.348 876.88)" fill="none" stroke="#0072c6" stroke-width="1">
+      <circle cx="5.216" cy="5.216" r="5.216" stroke="none"/>
+      <circle cx="5.216" cy="5.216" r="4.716" fill="none"/>
+    </g>
+    <g id="Ellipse_3221" data-name="Ellipse 3221" transform="translate(232.348 876.88)" fill="#fff" stroke="#0072c6" stroke-width="6">
+      <circle cx="5.216" cy="5.216" r="5.216" stroke="none"/>
+      <circle cx="5.216" cy="5.216" r="2.216" fill="none"/>
+    </g>
+    <g id="Ellipse_3222" data-name="Ellipse 3222" transform="translate(250.799 876.88)" fill="rgba(211,211,211,0.6)" stroke="#e6e6e6" stroke-miterlimit="10" stroke-width="2">
+      <circle cx="5.216" cy="5.216" r="5.216" stroke="none"/>
+      <circle cx="5.216" cy="5.216" r="4.216" fill="none"/>
+    </g>
+    <g id="Ellipse_3223" data-name="Ellipse 3223" transform="translate(268.799 876.88)" fill="rgba(211,211,211,0.6)" stroke="#e6e6e6" stroke-miterlimit="10" stroke-width="2">
+      <circle cx="5.216" cy="5.216" r="5.216" stroke="none"/>
+      <circle cx="5.216" cy="5.216" r="4.216" fill="none"/>
+    </g>
+  </g>
+</svg>

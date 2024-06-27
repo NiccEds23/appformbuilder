@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="118.636" height="15" viewBox="0 0 118.636 15">
+  <g  transform="translate(-19.271 -27.499)">
+    <g id="Rectangle_16379" transform="translate(0 148)">
+      <path id="Path_3469" data-name="Path 3469" d="M21.271-120.5H72.544a2,2,0,0,1,2,2v11a2,2,0,0,1-2,2H21.271a2,2,0,0,1-2-2v-11A2,2,0,0,1,21.271-120.5Z" fill="#1f70b7"/>
+      <path id="Path_3470" data-name="Path 3470" d="M21.271-120H72.544a1.5,1.5,0,0,1,1.5,1.5v11a1.5,1.5,0,0,1-1.5,1.5H21.271a1.5,1.5,0,0,1-1.5-1.5v-11A1.5,1.5,0,0,1,21.271-120Z" fill="none" stroke="#1d70b8" stroke-width="1"/>
+    </g>
+    <g id="Rectangle_16380" transform="translate(63.363 148)">
+      <path id="Path_3471" data-name="Path 3471" d="M21.271-120.5H72.544a2,2,0,0,1,2,2v11a2,2,0,0,1-2,2H21.271a2,2,0,0,1-2-2v-11A2,2,0,0,1,21.271-120.5Z" fill="none"/>
+      <path id="Path_3472" data-name="Path 3472" d="M21.271-120H72.544a1.5,1.5,0,0,1,1.5,1.5v11a1.5,1.5,0,0,1-1.5,1.5H21.271a1.5,1.5,0,0,1-1.5-1.5v-11A1.5,1.5,0,0,1,21.271-120Z" fill="none" stroke="#1d70b8" stroke-width="1"/>
+    </g>
+    <text id="BTN" transform="translate(38.302 37.499)" fill="#fff" font-size="8" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700"><tspan x="0" y="0">BTN</tspan></text>
+    <text id="BTN-2" data-name="BTN" transform="translate(101.666 38.499)" fill="#1d70b8" font-size="8" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700"><tspan x="0" y="0">BTN</tspan></text>
+  </g>
+</svg>

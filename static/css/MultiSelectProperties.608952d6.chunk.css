@@ -1,0 +1,214 @@
+.toggleBtn,.combo, .colorpicker,.input, .uploadbtn, .add_optionbutton, .smalloptionselect {
+    display:flex;
+    justify-content: space-between;
+
+    /* align-items: center; */
+    /* padding:5px 10px; */
+}
+.customToggleBtn1ltr{
+    position:absolute;
+    right:0;
+    font-weight: 600;
+    vertical-align: middle;
+    align-items: center;
+    display:flex;
+}
+
+.customToggleBtn1rtl{
+    position:absolute;
+    right:185px;
+    font-weight: 600;
+    vertical-align: middle;
+    display:inline-flex;
+}
+.customToggleBtn1 > span{
+    margin-right: 10px;
+}
+.uploadbtn{
+    flex-direction: column;
+}
+.uploadbtn .fileUploadParent{
+    margin:5px 0 0 0;
+}
+/* .combo{
+    display:flex;
+    justify-content: space-between;
+    padding:5px 10px;
+} */
+.colorpicker{
+    position:relative;
+    top:0;
+}
+.text{
+}
+.inputcheckbox{
+    /* padding:5px 10px;    */
+}
+.inputcheckbox > span{
+    vertical-align: text-bottom;
+}
+.longradio{
+    display:flex;
+    align-items: center;   
+}
+.longradio > *{     
+    cursor: pointer;
+}
+.inputradio{
+    display:grid;
+    grid-template-columns: repeat(2,auto);
+    /* padding:5px 10px; */
+}
+.inputradio div{
+    margin:0 10px 0 0;
+}
+.longradio input, .inputradio input{
+    vertical-align: middle;
+    /* margin:6px 2px 0 0; */
+}
+.textarea{
+    /* padding:5px 10px; */
+}
+.textarea > input{
+    margin:5px 0 0;
+    width:100%;
+    padding:0 8px 20px;
+}
+/* .styleOptions > *{
+    margin:8px;
+} */
+.widebutton {
+    margin: 6px 12px;
+    width:90%;
+    background: #ffffff;
+    padding:auto ;
+    font-size:12px;
+    line-height: 15px;
+    font-weight: 600;
+    height:27px;
+    text-align:center;
+    cursor:pointer;
+}
+.combo select{
+    width:101px;
+    min-height:24px;
+}
+.combolong select{
+    /* width: 240px; */
+    height: 24px;
+}
+.line{
+    padding:0 !important;
+    margin:10px auto 0;
+}
+.cardlabelvalue{
+background: #F8F8F8 0% 0% no-repeat padding-box;
+border: 1px solid #F0F0F0;
+border-radius: 2px;
+margin:5px;
+color:#202020;
+}
+.cardlabelvalue > *{
+    padding:0;
+    margin:0 0 0 10px;
+}
+.cardlabelvalue input{
+    width:82%;
+    height:24px;
+    padding:0 5px;
+    margin:0 0 5px 10px;
+}
+.input > input {
+    width:121px;
+}
+.propertiesBody{
+    max-height: calc(100vh - 180px);
+    overflow-y: auto;
+    position:relative;
+    overflow-x: hidden;
+}
+.longinput{
+    display:flex;
+    flex-direction: column;
+    color:#000000;
+}
+.longinput  input{
+    width:100%;
+    margin: 5px 0 0 0;
+    padding: 3px 8px;
+}
+input.longinput_input{
+    /* margin:"6px 0"; */
+}
+.uploadLabel {
+    margin-bottom: 5px;
+    font-size:12px;
+    line-height: 15px;
+    /* font-weight: 600; */
+}
+
+input:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
+
+input:focus::-moz-placeholder {
+   opacity: 0;
+}
+ 
+input:focus:-ms-input-placeholder {
+    opacity: 0;
+}
+ 
+input:focus:-moz-placeholder {
+   opacity: 0;
+}
+
+input::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #808080 !important;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #808080 !important;
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #808080 !important;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #808080 !important;
+}
+
+/* .noLeftPadding{
+    padding-left: 0px !important;
+}
+.noLeftMargin {
+    margin-left: 0px !important;
+}
+
+.dragDiv {
+    float: left;
+    min-width: 15px;
+    padding-top: 5px;
+    pointer-events: none;
+}
+.dragIcon6dot{
+    display: none;
+}
+.dragIcon6dot:hover {
+    cursor: grab;
+}
+.dragIcon6dot:active {
+    cursor: grabbing;
+}
+.cardlabelvalue:hover .dragIcon6dot {
+    display:block;
+}
+.contentDiv {
+    display: table;
+}
+.flexDiv{
+    display: flex;
+}
+.addBorder{
+    border: 1px solid grey;
+} */
+
+/*# sourceMappingURL=MultiSelectProperties.608952d6.chunk.css.map*/

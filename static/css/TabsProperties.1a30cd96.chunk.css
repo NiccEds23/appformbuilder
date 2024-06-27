@@ -1,0 +1,874 @@
+.ConditionalVisibilityTab_backdropDiv__2BONI { 
+    width: 917px;
+    height: 480px;
+    /* display: flex;
+    flex-direction: row; */
+    position: relative;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 10px #51515180;
+    opacity: 1;
+ }
+ .ConditionalVisibilityTab_backdropHeader__1oDLt { 
+    width: 100%;
+    height: 50px;
+    padding: 24px 8px;
+    display: flex;
+    margin: 0px !important;
+    align-items: center;
+    font: normal normal 600 14px/16px Open Sans;
+    background: #F8F8F8 0% 0% no-repeat padding-box ;
+    color:#000000;
+    letter-spacing: 0px;
+    opacity: 1;
+    border-bottom: 1px solid #E4E4E4;
+ }
+ .ConditionalVisibilityTab_backdropBody__NxUnM { 
+    width: 100%;
+    height: 380px;
+    display: flex;
+    margin:0px !important;
+    padding: 0px !important;
+ }
+.ConditionalVisibilityTab_pageTitleRow__3vAgu { 
+    width:100%;
+    display: flex;
+    padding: 10px 24px;
+    margin-bottom: 1rem;
+}
+.ConditionalVisibilityTab_pageTitleCol1__1Nnyf { 
+    width: 50%;
+    max-width: 50%;
+    padding:0px;
+    display: flex;
+    align-items: center;
+}
+.ConditionalVisibilityTab_definingOptionCol__2A2AT { 
+    width: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 30px;
+}
+.ConditionalVisibilityTab_templateOptionParent__2ul0S { 
+    width:48%;
+    height: 62px;
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 12px;
+}
+.ConditionalVisibilityTab_templateOption__2Lkjb { 
+    width:100%;
+    height: 62px;
+    display: flex;
+    justify-content: center;
+    align-content: center ;
+    padding: 12px;
+}
+.ConditionalVisibilityTab_templateOptionText__1sIv1  { 
+    font: normal normal normal 12px/17px Open Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+.ConditionalVisibilityTab_selectedTemplateOption__24nLx { 
+    background: #0072c6 0% 0% no-repeat padding-box;
+    border: 1px solid #0072c6;
+    opacity: 1;
+}
+.ConditionalVisibilityTab_controlSetNameWriteSearchCol__2wMcI { 
+    width: 100%;
+    padding:0px !important;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.ConditionalVisibilityTab_controlsSetDefinitionDetails__1Zo-C{ 
+   width: 100%;
+   max-height: 250px;
+   padding:0px 6px 0px 0px!important;
+   overflow-y: auto;
+   margin-top: 1.5rem;
+}
+
+.ConditionalVisibilityTab_controlPropertyHeaderRow__1luEk{ 
+   width: 100%;
+   margin:0px !important;
+   padding:0px 8px 6px 8px;
+   display: flex;
+   align-items: center;
+   border-bottom: 1px solid #E7EAEF;
+}
+.ConditionalVisibilityTab_controlPropertyRow__2mV4B{ 
+   width: 100%;
+   height: 52px;
+   margin:0px !important;
+   padding:0px 0px 0px 8px;
+   display: flex;
+   align-items: center;
+   border-bottom: 1px solid #E7EAEF;
+}
+.ConditionalVisibilityTab_defaultValueDropdown__1pQWB{ 
+   font: normal normal 600 12px/17px OpenSans;
+   letter-spacing: 0px;
+   color: #000000;
+   border:none;
+   outline: none;
+}
+.ConditionalVisibilityTab_controlNameCol__QRJKK{ 
+   max-width: 25% !important;
+   width: 25%;
+   height:100%;
+   padding:0px 6px 0px 0px!important;
+   display: flex;
+   align-items: center;
+   text-overflow: ellipsis;
+}
+.ConditionalVisibilityTab_visibleCol__1UJg8{ 
+   max-width: 15% !important;
+   width: 15%;
+   height:100%;
+   padding:0px !important;
+   display: flex;
+   align-items: center;
+}
+.ConditionalVisibilityTab_enableCol__2L2Xa{ 
+   max-width: 15% !important;
+   width: 15%;
+   height:100%;
+   padding:0px !important;
+   display: flex;
+   align-items: center;
+}
+.ConditionalVisibilityTab_mandatoryCol__3Lh5q{ 
+   max-width: 15% !important;
+   width: 15%;
+   height:100%;
+   padding:0px !important;
+   display: flex;
+   align-items: center;
+}
+.ConditionalVisibilityTab_defaultValueCol__QHp9L{ 
+   max-width: 30% !important;
+   width: 30%;
+   height:100%;
+   padding:0px !important;
+   display: flex;
+   align-items: center;
+   position: relative;
+}
+.ConditionalVisibilityTab_pageTitleCol2__CpzQI { 
+    width: 50%;
+    max-width: 50%;
+    padding:0px;
+    display: flex;
+    align-items: center;
+}
+.ConditionalVisibilityTab_pageTitleText__3yYCR { 
+    color: #606060;
+    font: normal normal 600 12px/17px Open Sans;
+    letter-spacing: 0px;
+    opacity: 1;
+}
+.ConditionalVisibilityTab_pageTitleText2__117my { 
+   margin-bottom: 4px;
+   color: #202020;
+   font: normal normal 400 12px/15px OpenSans;
+   letter-spacing: 0px;
+   opacity: 1;
+}
+.ConditionalVisibilityTab_pageTitleText3__EIh5G { 
+   color: #000000;
+   font: normal normal 600 12px/17px OpenSans;
+   letter-spacing: 0px;
+   opacity: 1;
+}
+.ConditionalVisibilityTab_pageTitleText4__1DkCe { 
+   color: #606060;
+   font: normal normal 400 14px/19px OpenSans;
+   letter-spacing: 0px;
+   opacity: 1;
+}
+.ConditionalVisibilityTab_controlCol__2Qeh0 {
+   width: 100%;
+   max-height: 300px;
+   height:300px;
+   margin-bottom: 1rem;;
+   /* display: flex;
+   align-items: center;
+   flex-direction: column; */
+   padding:0px 4px 0px 0px!important;
+   overflow-x: auto;
+   overflow-y: auto;
+ }
+.ConditionalVisibilityTab_pageTitleInput__26sjr { 
+    width: 360px;
+    height: 28px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #C4C4C4;
+    border-radius: 2px;
+    opacity: 1;
+    margin-left: 12px;
+}
+.ConditionalVisibilityTab_pageTitleCheckbox__1pIPv { 
+    margin-right: 12px;
+}
+ .ConditionalVisibilityTab_backdropLeftBody__2lw5E { 
+    max-width: 25% !important;
+    width: 25% !important;
+    min-height: 310px;
+    padding: 12px 8px !important;
+ }
+ .ConditionalVisibilityTab_backdropCenterBody__3fBwM { 
+   max-width: 22% !important;
+   width: 22% !important;
+   max-height: 100%;
+   overflow-y: hidden;
+   padding: 12px 8px 0px 8px!important;
+   background: #FFFFFF 0% 0% no-repeat padding-box;
+   box-shadow: 0px 0px 3px #00000029;
+   opacity: 1;
+}
+.ConditionalVisibilityTab_backdropRightBody__1WAdg { 
+   max-width: 75% !important;
+   width: 75% !important;
+   min-height: 310px;
+   padding: 12px 8px !important;
+}
+.ConditionalVisibilityTab_searchCol__4m-ju  { 
+   width: 100%;
+   padding: 0px!important;
+   border: 1px solid #C4C4C4;
+   margin: 6px 0px;
+   border-radius: 2px;
+   position: relative;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.ConditionalVisibilityTab_searchCol2__KBVcM { 
+   max-width: 200px !important;
+   width: 200px;
+}
+.ConditionalVisibilityTab_searchCol3__1mYAq { 
+   max-width: 93% !important;
+   width: 93%;
+}
+.ConditionalVisibilityTab_searchIcon__3Qnq7  { 
+   position: absolute;
+   right: 8px;
+}
+.ConditionalVisibilityTab_deleteEditIcon__p0aP9  { 
+   visibility: visible;
+   margin: auto 4px;
+}
+.ConditionalVisibilityTab_controlSetNameCol__3YAdL:hover { 
+   background: #1071C519 0% 0% no-repeat padding-box;
+}
+.ConditionalVisibilityTab_controlSetNameCol__3YAdL:hover img  { 
+   /* visibility:visible;
+   margin: auto 8px; */
+}
+.ConditionalVisibilityTab_deleteIcon__3xnTx  { 
+   width:18px;
+}
+.ConditionalVisibilityTab_arrowIcon__13ii7{ 
+   margin: auto 4px;
+}
+.ConditionalVisibilityTab_explicitValueInputBox__39Uds {
+   width: 80px;
+   height: 28px;
+   margin-left: 8px;
+   background: #FFFFFF 0% 0% no-repeat padding-box;
+   border: 1px solid #C4C4C4;
+   font: normal normal normal 12px/17px Open Sans;
+   letter-spacing: 0px;
+   color: #606060;
+   outline-color: #0072C6;
+   text-overflow: ellipsis;
+   opacity: 1;
+}
+.ConditionalVisibilityTab_controlPropertyRow__2mV4B:hover img  { 
+   visibility:visible;
+   position: absolute;
+   right: 0%;
+   margin: auto 8px;
+}
+
+.ConditionalVisibilityTab_searchInput__rDod7 { 
+   width: 100%;
+   height: 28px;;
+   background: #FFFFFF 0% 0% no-repeat padding-box;
+   border: none;
+   font: normal normal normal 12px/17px Open Sans;
+   letter-spacing: 0px;
+   color: #606060;
+   outline-color:#0072C6;
+   opacity: 1;
+   padding: 0px 4px!important;
+}
+.ConditionalVisibilityTab_controlSetNameInput__o8l4U{ 
+   width: 271px !important;
+   height: 28px !important;
+   background: #FFFFFF 0% 0% no-repeat padding-box !important;
+   border: 1px solid #C4C4C4 !important;
+   border-radius: 2px !important;
+   font: normal normal normal 12px/17px Open Sans;
+   letter-spacing: 0px;
+   color: #606060 !important;
+   outline-color:#0072C6 !important;
+   opacity: 1;
+   padding: 0px 4px!important;
+}
+ .ConditionalVisibilityTab_templateOptionsTypeBody__1xhEC { 
+    width: 260px;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #E3E1E1;
+    border-radius: 2px;
+ }
+ .ConditionalVisibilityTab_controlSetAddCol__3L1uK { 
+   width: 100%;
+   padding: 0px 0px 4px 0px!important;
+   display: flex;
+   justify-content: space-between;
+   font: normal normal 600 12px/17px Open Sans;
+   letter-spacing: 0px;
+   color: #000000;
+}
+ .ConditionalVisibilityTab_backdropTemplateRow__3LUjF { 
+    width: 100%;;
+    height: 100%;
+    margin: 0px;
+    display: flex;
+ }
+ .ConditionalVisibilityTab_controlSetNameColParent__1XVds{
+    width:100%;
+    max-height: 300px;
+    overflow-y: auto;
+ }
+ .ConditionalVisibilityTab_controlSetNameColParent__1XVds::-webkit-scrollbar{
+    width: 8px;
+ }
+ .ConditionalVisibilityTab_controlSetNameCol__3YAdL {
+   width: 100%;
+   height:35px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   font: normal normal normal 12px/17px Open Sans;
+   letter-spacing: 0px;
+   color: #000000;
+   padding:0px 8px !important;
+   border-radius: 2px;
+   opacity: 1;
+ }
+ .ConditionalVisibilityTab_controlSetNameColEditable__1CaUH {
+   width: 100%;
+   height:35px;
+   font: normal normal normal 12px/17px Open Sans;
+   letter-spacing: 0px;
+   color: #000000;
+   padding:0px 8px !important;
+   border-radius: 2px;
+   opacity: 1;
+ }
+ .ConditionalVisibilityTab_selectedControlSet__3TSe3 { 
+   background: #cce9ff 0% 0% no-repeat padding-box;
+    
+ }
+ .ConditionalVisibilityTab_controlNameCollapsibleCol__1YFaW  {
+   max-width: 93% !important;
+   width: 93%; 
+   min-height: 35px;
+   max-height:35px;
+   height: 35px;
+   padding:0px 0px 0px 20px!important;
+   margin-top: 5px;
+   display: flex;
+   align-items: center;
+   font: normal normal normal 12px/17px Open Sans;
+   color: #000000;
+   background: #FCFCFC 0% 0% no-repeat padding-box;
+   border: 1px solid #E7EAEF;
+   border-radius: 2px;
+   letter-spacing: 0px;
+   opacity: 1; 
+   text-overflow: ellipsis;
+ }
+ .ConditionalVisibilityTab_controlNameRowBody__tcnzj  {
+   width: 100%; 
+   height: auto;
+   padding:0px !important;
+   margin:0px 0px 0px 8px !important;
+   flex-direction: row;
+   background: #FFFFFF 0% 0% no-repeat padding-box;
+   opacity: 1; 
+ }
+ .ConditionalVisibilityTab_controlNameColInnerBody__3tx5I  {
+   width: 100%; 
+   height: auto;
+   padding:0px !important;
+   /* margin:6px 0px 6px 0px; */
+   background: #FFFFFF 0% 0% no-repeat padding-box;
+   opacity: 1; 
+ }
+ .ConditionalVisibilityTab_noChildrenControl__2EFQr{ 
+   margin: 5px 0px ;
+}
+
+ .ConditionalVisibilityTab_treeLineSpan__39VmD{ 
+   max-width: 8px !important;
+   width:8px ;
+   margin-bottom: 22.5px;
+   padding:0px !important;
+   border: 1px solid #CCCCCC;
+   border-top:none;
+   border-right: none;
+}
+ .ConditionalVisibilityTab_controlNameCheckbox__nDRx0 { 
+   margin: 0px 10px ;
+}
+ .ConditionalVisibilityTab_editingToolOptionsText__3ZrXE { 
+    font: normal normal 600 12px/17px Open Sans !important;
+    color: #000000;
+    letter-spacing: 0px;
+    opacity: 1;
+ }
+ .ConditionalVisibilityTab_selectedEditingToolOptionText__1HP28 { 
+   
+ }
+
+ .ConditionalVisibilityTab_backdropRightTemplateBody__1yTSE { 
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    background: #FCFCFC 0% 0% no-repeat padding-box;
+    opacity: 1;
+ }
+ .ConditionalVisibilityTab_controlNameParentCol__118rt { 
+    height: 35px;
+    padding: 8px  !important;
+    font: normal normal 600 12px/17px Open Sans !important;
+    color: #000000;
+    letter-spacing: 0px;
+    background: #FCFCFC 0% 0% no-repeat padding-box;
+    border: 1px solid #0072C6;
+    border-radius: 2px;
+    opacity: 1;
+ }
+ 
+
+.ConditionalVisibilityTab_resizeOptionInput__25c-_ { 
+   width: 90px;
+   height: 24px;
+   display: flex;
+   margin-left: auto;
+   background: #FFFFFF 0% 0% no-repeat padding-box;
+   border: 1px solid #C4C4C4;
+   color: #000000;
+   border-radius: 2px;
+   outline: #0072C6;
+   opacity: 1;
+}
+.ConditionalVisibilityTab_resizeOptionInputropdown__3IcYP { 
+   margin-left: auto;
+}
+.ConditionalVisibilityTab_resizeOptionInputRadio__QAe-G { 
+   margin-right: 6px;
+}
+.ConditionalVisibilityTab_resizeOptionHiddenRadio__xX2P1 { 
+   margin-right: 6px;
+   visibility: hidden;
+}
+.ConditionalVisibilityTab_resizeOptionInputText__1D4Yv { 
+   width: 78%;
+   height: 100%;
+   padding-left: 6px;
+   border:none;
+   border-radius: none;
+   outline: none;
+}
+.ConditionalVisibilityTab_widthTypeSpan__2m3N3 { 
+   width: 20%;
+   height: 100%;
+}
+ .ConditionalVisibilityTab_resizeImageMessage__38AMO {
+   font: normal normal normal 10px/16px Open Sans !important;
+   background: #F0F0F0 0% 0% no-repeat padding-box;
+   border: 1px solid #C4C4C4;
+   border-radius: 2px;
+   margin-top: 12px;
+   padding: 6px 14px; 
+   letter-spacing: 0px;
+   color: #000000;
+   /* opacity: 0.4; */
+ }
+ .ConditionalVisibilityTab_cropImgCol__2iLDr { 
+    margin-top: 12px;
+    height:150px;
+  }
+  .ConditionalVisibilityTab_cropRatioDiv__ID0Ml {
+    width: 100%; 
+    height:120px;
+    border-bottom: 1px solid #E4E4E4;
+ }
+ .ConditionalVisibilityTab_cropImageDiv__1pdtR { 
+    widows: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+ .ConditionalVisibilityTab_cropRatioText__ROiV8 { 
+    font: normal normal normal 12px/17px Open Sans !important;
+    color: #000000;
+    letter-spacing: 0px;
+ }
+ .ConditionalVisibilityTab_cropRatioDropdown__3rmL2 { 
+    width: 120px;
+    height: 24px;
+    background: inherit;
+    border: 1px solid #C4C4C4;
+    color: #000000;
+    border-radius: 2px;
+    outline: #0072C6;
+    opacity: 1;
+ }
+ .ConditionalVisibilityTab_cropImageSize__3Ezrc { 
+   margin: 1rem 0px;
+}
+ .ConditionalVisibilityTab_selectedCropRatio__3dgdK { 
+    background: #0072C60A 0% 0% no-repeat padding-box;
+}
+.ConditionalVisibilityTab_cropImageDiv__1pdtR  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+.ConditionalVisibilityTab_cropImageDetails__1C221 {
+   height: 14px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.ConditionalVisibilityTab_widthHeightSpan__2L8uI { 
+    margin-left: 6px;
+    font: normal normal normal 10px/15px Open Sans !important;
+    color: #c4c4c4;
+    letter-spacing: 0px;
+}
+.ConditionalVisibilityTab_verticalSeparator__1IWpE { 
+   height: 14px;
+   margin-left: 6px;
+   border-left: 1px solid #C4C4C4 ;
+}
+ .ConditionalVisibilityTab_rotateFlipCol__39xxs { 
+    width:70%;
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+ }
+ .ConditionalVisibilityTab_rotateFlipImgDiv__35Pd4  { 
+    width:33px;
+    height:30px;
+    position: relative;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #C4C4C4;
+    border-radius: 2px;
+    opacity: 1;
+ }
+ .ConditionalVisibilityTab_selectedRotateFlipOption__19_iy  { 
+    border: 1px solid #0072C6;
+ }
+
+ .ConditionalVisibilityTab_backdropFooter__29XgG { 
+    width: 100%;
+    height: 50px;
+    margin:0px !important;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 6px #00000029;
+    opacity: 1;
+ }
+ .ConditionalVisibilityTab_cancelButton__rZqK7 {
+    height:28px;
+    background: #FFFFFF 0% 0% no-repeat padding-box !important;
+    border: 1px solid #C4C4C4 !important;
+    border-radius: 2px !important;
+    font: normal normal 600 12px/17px Open Sans !important;
+    letter-spacing: 0px;
+    margin-right:16px !important;
+    color: #606060 !important;
+    text-transform: none !important;
+    opacity: 1;
+}
+.ConditionalVisibilityTab_saveButton__2ysWy{
+    height:28px;
+    background: #0072C6 0% 0% no-repeat padding-box !important;
+    border-radius: 2px !important;
+    text-transform: none !important;
+    margin-right:16px !important;
+    font: normal normal 600 12px/17px Open Sans !important;
+    color: #FFFFFF !important;
+}
+.ConditionalVisibilityTab_resizeButton__1esgO{
+    height:28px;
+    background: #FFFFFF 0% 0% no-repeat padding-box !important;
+    border: 1px solid #338ED1 !important;
+    border-radius: 2px !important;
+    text-transform: none !important;
+    
+    
+    letter-spacing: 0px;
+    color: #0072C6 !important;
+    opacity: 1;
+}
+
+.ConditionalVisibilityTab_rotateFlipImgDiv__35Pd4 .ConditionalVisibilityTab_tooltiptext__15Lsu {
+   visibility: hidden;
+   text-align: center;
+   padding-left: 4px;
+   padding-right: 4px;
+   background: #1616169C 0% 0% no-repeat padding-box;
+   box-shadow: 0px 0px 6px #00000029;
+   border-radius: 5px;
+   font: normal normal normal 8px/16px Open Sans;
+   letter-spacing: 0px;
+   color: #FFFFFF;
+   white-space: nowrap;
+   display: flex;
+   align-items:center;
+   position: absolute;
+   z-index: 1;
+   top: 150%;
+   opacity: 1;
+ }
+
+ .ConditionalVisibilityTab_customControlNameCol__3m_TP{
+   max-width: 42%;
+   padding: 0px !important;
+   display: flex;
+   flex-direction: column;
+ }
+ .ConditionalVisibilityTab_customControlIconCol__318rB{
+   max-width: 39%;
+   margin-left: 4px;
+   color: #606060;
+   padding: 0px !important;
+   display: flex;
+   flex-direction: column;
+ }
+ .ConditionalVisibilityTab_col1__3Lb2s {
+   width: 12%;
+   height:36px;
+   padding:0px 0px 0px 6px;
+   font: normal normal 600 12px/17px Open Sans !important;
+   background: #FFFFFF 0% 0% no-repeat padding-box;
+   border: 1px solid #C4C4C4 ;
+   /* border-left:none !important; */
+   /* border-top:none !important; */
+   opacity: 1;
+ }
+ .ConditionalVisibilityTab_col4__1P9XF {
+   width: 12%;
+   height:36px;
+   padding:0px 0px 0px 6px;
+   font: normal normal 600 12px/17px Open Sans !important;
+   background: #FFFFFF 0% 0% no-repeat padding-box;
+   border: 1px solid #C4C4C4 ;
+   /* border-right:none !important; */
+   /* border-top:none !important; */
+   opacity: 1;
+ }
+ .ConditionalVisibilityTab_col23__3gb6R {
+   width: 38%;
+   height:36px;
+   font: normal normal 600 12px/17px Open Sans !important;
+   background: #FFFFFF 0% 0% no-repeat padding-box;
+   border: 1px solid #C4C4C4 ;
+   opacity: 1;
+ }
+ .ConditionalVisibilityTab_checkbox__2A7UJ {
+	width:14px;
+	height:14px;
+}
+.ConditionalVisibilityTab_sNoCell__3U2Ct {
+   width: 10%;
+   padding: 0px !important;
+   text-align: center !important;
+   /* border-left:none !important; */
+}
+.ConditionalVisibilityTab_deletePropertyCell__1j42U { 
+   /* border-right:none !important; */
+}
+.ConditionalVisibilityTab_cellCommon__3gOpY {
+   padding:0px !important;
+   height: 53px;
+   background: #FFFFFF 0% 0% no-repeat padding-box;
+   border: 1px solid #C4C4C4;
+   opacity: 1;
+}
+.ConditionalVisibilityTab_propertyValueCell__1Cqys {
+   width: 40%;
+   text-overflow: ellipsis;
+}
+.ConditionalVisibilityTab_propertiesHeader__2oEhN {
+   width: 100%;
+   height: 36px;
+   margin : 0px !important;
+   padding: 0px 10px ;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   font: normal normal 600 14px/19px Open Sans !important;
+   background: #F5F5F5 0% 0% no-repeat padding-box;
+   color: #000000;
+   border: 1px solid #C4C4C4;
+   border-bottom: none;;
+   opacity: 1;
+}
+.ConditionalVisibilityTab_addPropertiesText__3s8Dg {
+   font: normal normal 600 12px/17px Open Sans !important;
+   color: #0072C6;
+}
+
+.ConditionalVisibilityTab_activityNameButton__2suvf {
+   height: 35px !important;
+   background: #FFFFFF 0% 0% no-repeat padding-box !important;
+   font: normal normal 600 12px/16px Open Sans;
+   color: #0072C6 !important ;
+   border: 1px solid #0072C6 !important;
+   border-radius: 5px 0px 0px 5px !important;
+   opacity: 1;
+   text-transform: none !important;
+}
+.ConditionalVisibilityTab_activityNameButton1__3U_v4.ConditionalVisibilityTab_activityNameButton1__3U_v4{   
+   border-radius: 0px 5px 5px 0px !important;
+   margin-left: -13px !important;
+}
+.ConditionalVisibilityTab_dataVariablesButton__2nibu {
+   height: 35px !important;
+   background: #FFFFFF 0% 0% no-repeat padding-box !important;
+   font: normal normal 600 12px/16px Open Sans;
+   color: #0072C6 !important;
+   border: 1px solid #0072C6 !important;
+   border-radius: 0px 5px 5px 0px !important;
+   opacity: 1;
+   text-transform: none !important;
+   margin-left: -12px !important;
+}
+.ConditionalVisibilityTab_dataVariablesButton1__3waQR.ConditionalVisibilityTab_dataVariablesButton1__3waQR {
+   border-radius: 5px 0px 0px 5px !important;
+
+}
+.ConditionalVisibilityTab_selectedConditionalVisibilityOption__1KvEv{
+   background: #0072C5 0% 0% no-repeat padding-box !important;
+   color: #FFFFFF !important;
+}
+.ConditionalVisibilityTab_conditionalVisibilityButtonsCol__faFU7{
+   padding: 0px !important;
+   display: flex;
+   justify-content: center;
+ }
+ .ConditionalVisibilityTab_conditionalVisibilityBackdropLeftBody__1WnDq { 
+   max-width: 25% !important;
+   width: 25% !important;
+   min-height: 310px;
+   padding: 12px 8px !important;
+   border-right: 2px solid #E4E4E4;
+}
+ .ConditionalVisibilityTab_conditionalVisibilityBackdropRightBody__XYO7O { 
+   max-width: 75% !important;
+   width: 75% !important;
+   min-height: 310px;
+   padding: 18px 8px 12px 8px !important;
+}
+.ConditionalVisibilityTab_activityValueCommonCol__kXcnf{
+   height:36px;
+   border:none !important;
+   padding: 3px 16px !important;
+   font: normal normal 600 12px/17px Open Sans !important;
+   opacity: 1;
+ }
+.ConditionalVisibilityTab_activityCol__35BdN {
+   width: 30%;
+ }
+ .ConditionalVisibilityTab_operatorCol__3bNda {
+   width: 15%;
+ }
+ .ConditionalVisibilityTab_valueCol__3UyAK {
+   width: 25%;
+ }
+ .ConditionalVisibilityTab_displayCol__1GbcE {
+   width: 30%;
+ }
+ .ConditionalVisibilityTab_activityInput__3ttL1 {
+   width: 100%;
+   height: 24px;
+   background: #FFFFFF 0% 0% no-repeat padding-box;
+   font: normal normal 400 11px/15px Open Sans;
+   border: 1px solid #C4C4C4;
+   border-radius: 2px;
+   opacity: 1;
+ }
+ .ConditionalVisibilityTab_valueCombo__qQPnt {
+   width: 100%;
+   height: 24px;
+   background: #FFFFFF 0% 0% no-repeat padding-box;
+   border: 1px solid #C4C4C4;
+   border-radius: 2px;
+   opacity: 1;
+ }
+ .ConditionalVisibilityTab_operatorCombo__37O_6 {
+   width: 100%;
+   height: 24px;
+   background: #FFFFFF 0% 0% no-repeat padding-box;
+   border: 1px solid #C4C4C4;
+   border-radius: 2px;
+   opacity: 1;
+ }
+ .ConditionalVisibilityTab_displayCombo__1kGcC {
+   width: 100%;
+   height: 24px;
+   background: #FFFFFF 0% 0% no-repeat padding-box;
+   border: 1px solid #C4C4C4;
+   border-radius: 2px;
+   opacity: 1;
+ }
+ .ConditionalVisibilityTab_operatorValueCommonCell__g-a6c{
+    height:30px !important;
+    padding: 3px 16px !important;
+    border: none !important;
+ }
+ .ConditionalVisibilityTab_addButtonRow__1gxql{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 10px 0px !important ;
+ }
+ .ConditionalVisibilityTab_addButton__aLq08{
+    height: 24px;
+    background: #0072C6 0% 0% no-repeat padding-box !important;
+    font: normal normal 600 12px/16px Open Sans;
+    color: #FFFFFF !important;
+    border: 1px solid #0072C6 !important;
+    border-radius: 2px !important;
+    opacity: 1;
+    text-transform: none !important;
+} 
+.ConditionalVisibilityTab_tableContainer__1-W5R{
+    box-shadow: none !important;
+}
+
+/*# sourceMappingURL=TabsProperties.1a30cd96.chunk.css.map*/

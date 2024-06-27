@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="219.284" height="10" viewBox="0 0 219.284 10">
+  <g id="Layer_3" transform="translate(0)">
+    <g id="Rectangle_16020_00000078766712979373639330000009723542448940963219_" transform="translate(0 3.999)">
+      <path id="Path_3852" data-name="Path 3852" d="M-21.466-630.049h208.28a1.5,1.5,0,0,1,1.5,1.5h0a1.5,1.5,0,0,1-1.5,1.5H-21.466a1.5,1.5,0,0,1-1.5-1.5h0A1.5,1.5,0,0,1-21.466-630.049Z" transform="translate(22.966 630.049)" fill="#1d70b8"/>
+      <path id="Path_3853" data-name="Path 3853" d="M-21.466-629.549h208.28a1,1,0,0,1,1,1h0a1,1,0,0,1-1,1H-21.466a1,1,0,0,1-1-1h0A1,1,0,0,1-21.466-629.549Z" transform="translate(22.966 630.049)" fill="none" stroke="#1d70b8" stroke-width="1"/>
+    </g>
+    <g id="Ellipse_3007-2_00000031185870769791443110000018280693174041094065_" transform="translate(209.284)">
+      <ellipse id="Ellipse_447" data-name="Ellipse 447" cx="5" cy="5" rx="5" ry="5" transform="translate(0)" fill="#fff"/>
+      <ellipse id="Ellipse_448" data-name="Ellipse 448" cx="3.5" cy="3.5" rx="3.5" ry="3.5" transform="translate(1.5 1.5)" fill="none" stroke="#1d70b8" stroke-width="3"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,178 @@
+/* ::-webkit-background-size{
+    background-size: cover;
+} */
+
+.SECTION_AccordionToggle__7H71C {
+  /* color: #F57300; */
+  cursor: pointer;
+  margin-left: 15px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+.SECTION_sectionMain__ikBD6 {
+  /* margin: 4px 13px; */
+  border: 1px solid transparent;
+  position: relative;
+  margin: 10px 0;
+}
+.SECTION_sectionMainInTab__2zBXy {
+  margin: 4px 0px;
+  border: 1px solid transparent;
+  position: relative;
+}
+.SECTION_section___oGeP {
+  min-height: 50px;
+  height: 100%;
+  padding: 4px 13px !important;
+  border: 1px solid transparent;
+  /* background-size: cover !important;*/
+  background-size: 100% 100% !important;
+}
+.SECTION_section___oGeP:hover {
+  /* border: 1px dashed #d7d7d7; */
+}
+.SECTION_header__1typ- {
+  min-height: 40px;
+  /* padding:8px; */
+  /* min-width:100%; */
+  margin: 0 !important;
+  vertical-align: middle;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+.SECTION_hide__1Mda6 {
+  display: none;
+}
+.SECTION_headerLeft__2Em7L {
+  font-size: 14px;
+  display: flex;
+  position: relative;
+  min-height: 18px;
+  left: 10px;
+  align-items: center;
+  max-width: 70%;
+}
+.SECTION_header__1typ-:hover .SECTION_hide__1Mda6 {
+  display: flex;
+  margin-right: 8px;
+  align-items: center;
+}
+.SECTION_heading__1s4YT {
+  /* font-family: 'Open Sans', sans-serif;
+    font-weight: 600; */
+  /* font-size:16px; */
+  /* color: #F57300; */
+  /* padding-left: 10px; */
+  /* margin-left: 12px; */
+  /* text-transform: capitalize; */
+}
+
+.SECTION_columnLayoutOptions__1UT2g {
+  width: auto !important;
+}
+
+.SECTION_columnLayoutOptionsCol__1De2M {
+  text-align: end;
+  position: absolute;
+  right: 0;
+}
+.SECTION_columnLayoutOptionsCol__1De2M > * {
+  caret-color: transparent;
+}
+
+.SECTION_columnLayoutInsideOptionsCol__24vHL {
+  padding-left: 0px !important;
+  padding-right: 5px !important;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.SECTION_columnLayoutInsideOptionsCol__24vHL path{
+stroke : #808080;
+}
+
+.SECTION_columnLayoutInsideOptionsCol__24vHL > span {
+  padding: 0;
+  cursor: grab !important;
+}
+.SECTION_optionsPopUp__1NwqY {
+  position: absolute;
+  width: 129px;
+  height: 55px;
+  background: #ffffff;
+  box-shadow: 0px 0px 6px #00000029;
+  border-radius: 2px;
+  font: normal normal normal 12px/17px Open Sans;
+  letter-spacing: 0px;
+  color: #6b6b6b;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  right: 3em;
+  -webkit-transform: translate(0px, 5px);
+          transform: translate(0px, 5px);
+  z-index: 99999;
+}
+
+.SECTION_optionsPopUp__1NwqY > span {
+  padding: 5px 0;
+}
+.SECTION_optionsPopUp__1NwqY > span:hover {
+  color: #000000;
+  /* transform: scale(1.1); */
+  /* padding:5px 5px; */
+}
+
+.Section1_row_css__2Z-eR{
+    height:auto;
+    border:1px dashed transparent;
+    min-height:50px;
+}
+.Section1_row_css__2Z-eR:hover{
+    /* border:1px dashed rgba(0,0,0,0.10); */
+    border: 1px dashed #000000;
+}
+.Section1_row_css_withChildren__2j7aA {
+    height: auto;
+    border: 1px dashed transparent;
+    min-height: 50px;
+}
+
+.Section1_row_cssPreview__1engE{
+    height:auto;
+    min-height:50px;
+    margin-left: -7px !important;
+    margin-right: -7px !important;
+}
+.Section1_colSelectedStyle__1GhA2{
+    border: 1px dashed #000000;
+}
+.Section1_afterRow__2Soa4{
+    /* background-color: blue; */
+
+    /* height: 4px;
+    border-top: '2px';
+    border-top-color: '#0072C6';
+    border-bottom: '2px';
+    border-bottom-color: '#0072C6'; */
+    /* background-color: #0072C6; */
+    height: 8px;
+    /* border: 3px solid transparent !important; */
+    /* border-radius: 4px; */
+    /* padding: 2px; */
+    position: absolute;
+    width: 100%;
+}
+.Section1_afterRowConditional__2ugck{
+    /* should be 8px in total*/
+    height: 2px;
+    border: 3px solid transparent !important;
+    /* padding: 2px; */
+}
+
+/*# sourceMappingURL=SECTION.cbeda427.chunk.css.map*/

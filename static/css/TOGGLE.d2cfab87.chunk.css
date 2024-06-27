@@ -1,0 +1,106 @@
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0.6px;
+    background-color: #ccc;
+    transition: .5s;
+  }  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 1px;
+    bottom: 0.6px;
+    background-color: white;
+    transition: .5s;
+  }  
+  input:checked + .slider {
+    background-color: #1072C6;
+  }  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(14px);
+    transform: translateX(14px);
+    border:1px solid #dfe3e9;
+  }  
+  .slider.round {
+    display: flex;
+    align-items: center;
+    border-radius: 11px;
+  }  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  .slider_arabic {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0.6px;
+    background-color: #ccc;
+    transition: .5s;
+  }  
+  .slider_arabic:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    right: 1px;
+    bottom: 0.6px;
+    background-color: white;
+    transition: .5s;
+  }  
+  input:checked + .slider_arabic {
+    background-color: #1072C6;
+  }  
+  input:checked + .slider_arabic:before {
+    -webkit-transform: translateX(-14px);
+    transform: translateX(-14px);
+    border:1px solid #dfe3e9;
+  }  
+  .slider_arabic.round {
+    display: flex;
+    align-items: center;
+    border-radius: 11px;
+  }  
+  .slider_arabic.round:before {
+    border-radius: 50%;
+  }
+
+  .slideBar{
+    display: flex !important;
+	align-items: center !important;
+	margin-right: 0px !important;
+  }
+  .switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 16px;
+  margin-left:0px !important;
+  margin-bottom:0px !important;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.toggleCrossSpan{
+	margin-left: auto;
+    margin-right: 6px;
+}
+.toggleTickSpan{
+    margin-left: 4px;
+}
+.toggleStateSpan {
+	margin: auto ;
+	margin-left: 4px;
+}
+
+/*# sourceMappingURL=TOGGLE.d2cfab87.chunk.css.map*/

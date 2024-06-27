@@ -1,0 +1,63 @@
+.Captcha_captchaBox__1Kr47{
+    width: 348px;
+    height: 40px;
+    /* margin-top: 12px; */
+    /* border: 1px solid black; */
+    margin-bottom: 12px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    /* border: 1px solid #CED4DA;  */
+    opacity: 1;
+    display: flex;
+}
+
+.Captcha_textDivBox__dWhcO{
+    width: 190px;
+    border: 1px solid #CED4DA  !important;
+}
+
+.Captcha_codeDivBox__2S4Id{
+        width: 91px;
+        height: 40px;
+        background: #F8F8F8 0% 0% no-repeat padding-box;
+        border: 1px solid #CED4DA;
+        border-left: none;
+        opacity: 1;
+        /* border-top: none; */
+        /* border-bottom: none; */
+}
+
+.Captcha_refreshDivBox__ZGqUe{
+    border: 1px solid #CED4DA;
+    border-left: none;
+    width: 30px;
+}
+
+.Captcha_refreshIcon__3nYwf{
+    margin-top: 10px !important;
+    margin-left: 5px;
+    
+}
+
+.Captcha_inputBox__1FL1t{
+    border:none !important;
+    width: 180px;
+    height: 36px;
+    outline: none;
+    text-align: left;
+    font-size: 12px;
+    font-family: Open Sans;
+    letter-spacing: 0px;
+    color: #606060;
+    opacity: 1;
+}
+
+
+
+.Captcha_imageClass__1p5uN{
+     height:30px;
+     width:70px;
+     margin-left: 10px;
+     margin-top:4px;
+}
+
+/*# sourceMappingURL=Captcha.fa4fede8.chunk.css.map*/

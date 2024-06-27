@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="224" height="26" viewBox="0 0 224 26">
+  <g id="Group_62677" data-name="Group 62677" transform="translate(-86 -577.49)">
+    <rect id="Rectangle_16386" data-name="Rectangle 16386" width="224" height="26" rx="1" transform="translate(86 577.49)"/>
+    <g id="Group_60128" data-name="Group 60128" transform="translate(-1 -280)">
+      <text id="Privacy_Statement" data-name="Privacy Statement" transform="translate(164 872)" fill="#fff" font-size="5" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="0">Privacy Statement</tspan></text>
+      <text id="Disclaimer" transform="translate(138 872)" fill="#fff" font-size="5" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="-25.479" y="0">Disclaimer</tspan></text>
+      <text id="Terms_and_Conditions" data-name="Terms and Conditions" transform="translate(286 872)" fill="#fff" font-size="5" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="-52.446" y="0">Terms and Conditions</tspan></text>
+    </g>
+  </g>
+</svg>

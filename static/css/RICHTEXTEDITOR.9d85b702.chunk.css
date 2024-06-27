@@ -1,0 +1,32 @@
+ 
+  .formBuilder_main_app *:not(.childmf-formb *) {   
+    caret-color: black !important;    
+  }
+  
+  .fr-toolbar .fr-btn-grp {
+    margin: 0 !important;
+  }
+  
+  .grayTableBorder,
+  .grayTableBorder tr th,
+  .grayTableBorder tr td {
+    border: 1px solid lightgray !important;
+    border-collapse: collapse;
+  }
+  
+  .blackTableBorder,
+  .blackTableBorder tr th,
+  .blackTableBorder tr td {
+    border: 1px solid black !important;
+    border-collapse: collapse;
+  }
+  
+  .noTableBorder,
+  .noTableBorder tr th,
+  .noTableBorder tr td {
+    border: none !important;
+    border-collapse: collapse;
+  }
+
+
+/*# sourceMappingURL=RICHTEXTEDITOR.9d85b702.chunk.css.map*/

@@ -1,0 +1,29 @@
+.numberFormatInput{
+    border:none
+}
+.numberFormatInput:focus{
+    outline: none;
+}
+#header_aboveSection{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+#left > span {
+    color:var(--brand_color2);
+    font-size: var(--title_text_font_size);
+    font-weight: 700;
+}
+
+#right {
+    display: flex;
+    align-items: center;
+}
+
+#right > span {
+    font-size: larger;
+    margin:5px !important
+}
+
+/*# sourceMappingURL=LISTVIEW.584906f9.chunk.css.map*/

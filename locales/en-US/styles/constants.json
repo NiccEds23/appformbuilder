@@ -1,0 +1,25 @@
+{
+    "slider" : "{ sliderRoot: { dir:'ltr', '& .MuiSlider-track' :{ backgroundColor:styles=>styles.ActiveSliderBar, height:'5px' }, '& .MuiSlider-rail':{ color:styles=>styles.InActiveSliderBar, height:'5px'}, '& .MuiSlider-thumb':{ height:'13px', width:'13px',  backgroundColor:'white', border: '2px solid blue',  borderColor:styles=>styles.ActiveSliderBar },  '& .MuiSlider-mark MuiSlider-markActive':{  backgroundColor:styles=>styles.ActiveSliderBar },  '& .MuiSlider-mark':{  backgroundColor:'#ffffff' },  '& .MuiSlider-markLabel MuiSlider-markLabelActive':{   left:'19% !important' },  '& .MuiSlider-markLabel':{ left:'95%' },  '& .MuiInput-underline:before':{ width:'35px', height:'6px', },  '& .MuiInput-underline:after':{ width:'35px', height:'6px',},  '& .MuiInputBase-input':{width:'40px', height:'10px', fontSize:'12px', marginBottom:'-5px',marginLeft:'3px'  } }}  ",
+    "designHeader" : "{ position:'absolute', right:'0px'}",
+    "leftVal":"0",
+    "rightVal" :"auto",
+    "leftValN":"1px",
+    "rightValN" :"auto",
+    "leftNavigationPosition" : "68px",
+    "rightNavigationPosition":"auto",
+    "sectionBorderLeft":"8px solid #0072C6",
+    "sectionBorderRight":"auto",
+    "borderNoneSection":"none",
+    "borderSolid":"8px solid",
+    "320pxLeft":"320px",
+    "58pxLeft":"58px",
+    "280pxRight":"305px",
+    "280pxLeft":"auto",
+    "0pxRight":"0px",
+    "0pxLeft":"auto",
+    "sizeHandlerLeft":"auto",
+    "sizeHandlerRight":"0px",
+
+    "marginRight":"0px"
+
+}

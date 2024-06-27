@@ -1,0 +1,51 @@
+.DocList_doclistWrapper__3Do0j{
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #DDDDDD;
+    border-radius: 2px;
+    opacity: 1;
+    position: relative;
+}
+.DocList_docListLabel__dMa-B{
+    text-align: left;
+    font: normal normal 600 16px/22px Open Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    margin: 16px 21px;
+}
+.DocList_DocTypeDiv__1f2g_{
+    position: relative;
+}
+.DocList_doclistViewer_popup__2FGW1{
+    position: fixed;
+    top:50vh;
+    right:50vw;
+    -webkit-transform: translate(50%, -50%);
+            transform: translate(50%, -50%);
+    height:90vh;
+    width:90vw;
+    z-index: 99990;
+    /* padding:1.5em 2em; */
+    background: #FFFFFF;
+    box-shadow: 0 3px 6px 0 rgb(0,0,0,0.16);
+    font-size: 14px;
+    font-weight: 600;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    /* overflow-y: scroll !important; */
+}
+.DocList_shade_main__xBcGC{
+    position: fixed;
+    z-index: 99980;
+    left:0%;
+    top:0%;
+    height:100vh;
+    width:100%;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    opacity: 0.3;
+    background: #000000;    
+}
+
+/*# sourceMappingURL=DocumentIntegration.3593ce54.chunk.css.map*/

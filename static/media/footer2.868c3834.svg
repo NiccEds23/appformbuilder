@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="224" height="26" viewBox="0 0 224 26">
+  <g id="Group_62676" data-name="Group 62676" transform="translate(-86 -518.49)">
+    <g id="Rectangle_16383" data-name="Rectangle 16383" transform="translate(86 518.49)" fill="#fff" stroke="#d3d3d3" stroke-miterlimit="10" stroke-width="0.7">
+      <rect width="224" height="26" rx="1" stroke="none"/>
+      <rect x="0.35" y="0.35" width="223.3" height="25.3" rx="0.65" fill="none"/>
+    </g>
+    <text id="Privacy_Statement" data-name="Privacy Statement" transform="translate(258 533)" fill="#1072c6" font-size="5" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="0">Privacy Statement</tspan></text>
+    <text id="Disclaimer" transform="translate(243 533)" fill="#1072c6" font-size="5" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="-25.479" y="0">Disclaimer</tspan></text>
+    <text id="Copyright_2020._The_Landmark_Trust_" data-name="Copyright 2020. The Landmark Trust…… " transform="translate(92 534)" fill="#3a3a3a" font-size="6" font-family="OpenSans, Open Sans"><tspan x="0" y="0">Copyright 2020. The Landmark Trust…… </tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="224" height="26" viewBox="0 0 224 26">
+  <g id="Group_62673" data-name="Group 62673" transform="translate(-86 -309.57)">
+    <g id="Rectangle_16377" data-name="Rectangle 16377" transform="translate(86 309.57)" fill="#fff" stroke="#d3d3d3" stroke-miterlimit="10" stroke-width="0.7">
+      <rect width="224" height="26" rx="2" stroke="none"/>
+      <rect x="0.35" y="0.35" width="223.3" height="25.3" rx="1.65" fill="none"/>
+    </g>
+    <path id="Icon_awesome-image" data-name="Icon awesome-image" d="M18.372,19.1H1.9A1.864,1.864,0,0,1,0,17.272V6.325A1.864,1.864,0,0,1,1.9,4.5H18.372a1.864,1.864,0,0,1,1.9,1.825V17.272A1.864,1.864,0,0,1,18.372,19.1ZM4.435,6.629A2.174,2.174,0,0,0,2.217,8.757a2.174,2.174,0,0,0,2.217,2.129A2.174,2.174,0,0,0,6.652,8.757,2.174,2.174,0,0,0,4.435,6.629Zm-1.9,10.035h15.2V12.406L14.274,9.08a.489.489,0,0,0-.672,0L8.236,14.231l-2.2-2.11a.489.489,0,0,0-.672,0L2.534,14.839Z" transform="translate(94.109 310.746)" fill="#babec1"/>
+    <g id="Primary_Button" data-name="Primary Button" transform="translate(271 316)">
+      <rect id="Rectangle_8874" data-name="Rectangle 8874" width="33" height="13" rx="2" fill="#0072c6"/>
+      <text id="Submit" transform="translate(8 8)" fill="#fff" font-size="5" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="0">Submit</tspan></text>
+    </g>
+    <g id="Primary_Button-2" data-name="Primary Button" transform="translate(236 316)">
+      <g id="Rectangle_8874-2" data-name="Rectangle 8874" fill="#fff" stroke="#0072c6" stroke-width="0.5">
+        <rect width="27" height="13" rx="2" stroke="none"/>
+        <rect x="0.25" y="0.25" width="26.5" height="12.5" rx="1.75" fill="none"/>
+      </g>
+      <text id="Save" transform="translate(8 8)" fill="#0072c6" font-size="5" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="0">Save</tspan></text>
+    </g>
+  </g>
+</svg>

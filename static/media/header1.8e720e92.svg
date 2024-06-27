@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="224" height="26" viewBox="0 0 224 26">
+  <g id="Group_62672" data-name="Group 62672" transform="translate(-86 -251)">
+    <g id="Rectangle_16377" data-name="Rectangle 16377" transform="translate(86 251)" fill="#fff" stroke="#d3d3d3" stroke-miterlimit="10" stroke-width="0.7">
+      <rect width="224" height="26" rx="2" stroke="none"/>
+      <rect x="0.35" y="0.35" width="223.3" height="25.3" rx="1.65" fill="none"/>
+    </g>
+    <path id="Icon_awesome-image" data-name="Icon awesome-image" d="M18.372,19.1H1.9A1.864,1.864,0,0,1,0,17.272V6.325A1.864,1.864,0,0,1,1.9,4.5H18.372a1.864,1.864,0,0,1,1.9,1.825V17.272A1.864,1.864,0,0,1,18.372,19.1ZM4.435,6.629A2.174,2.174,0,0,0,2.217,8.757a2.174,2.174,0,0,0,2.217,2.129A2.174,2.174,0,0,0,6.652,8.757,2.174,2.174,0,0,0,4.435,6.629Zm-1.9,10.035h15.2V12.406L14.274,9.08a.489.489,0,0,0-.672,0L8.236,14.231l-2.2-2.11a.489.489,0,0,0-.672,0L2.534,14.839Z" transform="translate(94.109 252.176)" fill="#babec1"/>
+    <text id="Finacle_Reference_Number" data-name="Finacle Reference Number" transform="translate(172 262)" fill="#3e3e3e" font-size="5" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="0">Finacle Reference Number</tspan></text>
+    <text id="_166616788" data-name="166616788" transform="translate(172 270)" font-size="5" font-family="OpenSans, Open Sans"><tspan x="0" y="0">166616788</tspan></text>
+    <g id="Group_60117" data-name="Group 60117" transform="translate(257.332 256.775)">
+      <text id="Workstep_Name" data-name="Workstep Name" transform="translate(-0.332 5.225)" fill="#3e3e3e" font-size="5" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="0">Workstep Name</tspan></text>
+      <text id="Draft" transform="translate(-0.332 13.225)" font-size="5" font-family="OpenSans, Open Sans"><tspan x="0" y="0">Draft</tspan></text>
+    </g>
+  </g>
+</svg>

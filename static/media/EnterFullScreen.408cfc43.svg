@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="39" height="39" viewBox="0 0 39 39">
+  <defs>
+    <filter id="Ellipse_3396" x="0" y="0" width="39" height="39" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_62880" data-name="Group 62880" transform="translate(-1262 -729)">
+    <g transform="matrix(1, 0, 0, 1, 1262, 729)" filter="url(#Ellipse_3396)">
+      <circle id="Ellipse_3396-2" data-name="Ellipse 3396" cx="10.5" cy="10.5" r="10.5" transform="translate(9 9)" fill="#0072c6"/>
+    </g>
+    <path id="Icon_map-fullscreen" data-name="Icon map-fullscreen" d="M1.44,5.087V1.44H5.23L6.625,2.5H4.3L6.741,5.087,5.23,6.476,2.765,4.157V6.481ZM9.856,1.44h3.777V5.1l-1.06,1.394V4.171L9.921,6.611,8.5,5.165l2.286-2.4H8.461Zm3.777,8.416v3.777H9.843l-1.395-1.06h2.324L8.332,9.921,9.843,8.5l2.465,2.286V8.461ZM5.217,13.633H1.44V9.843L2.5,8.448v2.324L5.152,8.332,6.573,9.843,4.287,12.308H6.611Z" transform="translate(1273.963 740.965)" fill="#fff"/>
+  </g>
+</svg>
