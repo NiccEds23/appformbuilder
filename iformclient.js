@@ -58,6 +58,7 @@ function customValidation(type) {
 }
 
 function formLoad(){
+    functions.setValue("TrxLeadsActionDetail.statusleads", "");
     var activityName = functions.getWorkItemData("activityname");
 
     if(activityName === "Data Entry OTS"){
@@ -80,7 +81,6 @@ function formLoad(){
     } else if(activityName === "Request Disbursement"){
         hideByConsumerType();
     }
-    ActionActivityName()
 }
 
 function handleCustomKeyEvent(ev){
@@ -212,6 +212,23 @@ function selectFeatureToBeIncludedInRichText(){
 }
 
 //first entry
+function onChangeLoanType(){
+    var loanType = functions.getValue("TrxLeadsApplicantNew.loantype");
+
+    functions.setValue("LoanType", loanType);
+}
+
+function onChangeLoanPurpose(){
+    var loanPurpose = functions.getValue("TrxLeadsApplicantNew.loanpurpose");
+
+    functions.setValue("LoanPurpose", loanPurpose);
+}
+
+function onChangeSourceLeads(){
+    var sourceLeads = functions.getValue("TrxLeadsApplicantNew.sourceleads");
+
+    functions.setValue("SourceLeads", sourceLeads);
+}
 function setShowFieldsByCustomerType() {
     var customerType = functions.getValue("TrxLeadsApplicantNew.consumertype");
  
