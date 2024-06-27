@@ -189,7 +189,313 @@ function selectFeatureToBeIncludedInRichText(){
     return FroalaToolbarJson;
 }
 
-
+//first entry
+function setShowFieldsByCustomerType() {
+    var customerType = functions.getValue("consumertype");
+ 
+    if (customerType == "Individual") {
+       functions.setStyle("fieldofbusiness", "visible", "false");
+       functions.setStyle("companyname", "visible", "false");
+       functions.setStyle("npwpnumber", "visible", "false");
+       functions.setStyle("npwpname", "visible", "false");
+       functions.setStyle("dateofestablishnpwp", "visible", "false");
+       functions.setStyle("customername", "visible", "true");
+       functions.setStyle("identitynumber", "visible", "true");
+       functions.setStyle("placeofbirth", "visible", "true");
+       functions.setStyle("dateofbirth", "visible", "true");
+       functions.setStyle("address", "visible", "true");
+       functions.setStyle("rtrw", "visible", "true");
+       functions.setStyle("Province", "visible", "true");
+       functions.setStyle("City", "visible", "true");
+       functions.setStyle("District", "visible", "true");
+       functions.setStyle("Village", "visible", "true");
+       functions.setStyle("postalcode", "visible", "true");
+       functions.setStyle("religion", "visible", "true");
+       functions.setStyle("gender", "visible", "true");
+       functions.setStyle("maritalstatus", "visible", "true");
+       functions.setStyle("occupation", "visible", "true");
+       functions.setStyle("nationality", "visible", "true");
+ 
+    } else if (customerType == "Company") {
+       functions.setStyle("fieldofbusiness", "visible", "true");
+       functions.setStyle("companyname", "visible", "true");
+       functions.setStyle("npwpnumber", "visible", "true");
+       functions.setStyle("npwpname", "visible", "true");
+       functions.setStyle("dateofestablishnpwp", "visible", "true");
+       functions.setStyle("customername", "visible", "false");
+       functions.setStyle("Identitynumber", "visible", "false");
+       functions.setStyle("placeofbirth", "visible", "false");
+       functions.setStyle("dateofbirth", "visible", "false");
+       functions.setStyle("address", "visible", "false");
+       functions.setStyle("rtrw", "visible", "false");
+       functions.setStyle("Province", "visible", "false");
+       functions.setStyle("City", "visible", "false");
+       functions.setStyle("district", "visible", "false");
+       functions.setStyle("village", "visible", "false");
+       functions.setStyle("postalcode", "visible", "false");
+       functions.setStyle("religion", "visible", "false");
+       functions.setStyle("gender", "visible", "false");
+       functions.setStyle("maritalstatus", "visible", "false");
+       functions.setStyle("occupation", "visible", "false");
+       functions.setStyle("nationality", "visible", "false");
+    }
+ }
+ 
+ function actionDetailDecision() {
+    var action = functions.getValue("ActionDecision");
+ 
+    if (action == "Reject") {
+       functions.setStyle("rejectreason", "disable", "true");
+       functions.setStyle("rejectreason", "mandatory", "true");
+       functions.setValue("approvalDecision", "Reject");
+    } else {
+       functions.setStyle("rejectreason", "disable", "false");
+       functions.setStyle("rejectreason", "mandatory", "false");
+       functions.setValue("approvalDecision", "Proceed");
+    }
+    functions.updateJSON();
+ }
+ 
+ function setViewByDigitalSignature() {
+    var digitalSignature = functions.getValue("digitalsignature");
+ 
+    if (digitalSignature == true) {
+       functions.setStyle("submissionformbutton", "disable", "true");
+       functions.setStyle("frame8", "visible", "false");
+    } else {
+       functions.setStyle("submissionformbutton", "disable", "false");
+       functions.setStyle("frame8", "visible", "true");
+    }
+    functions.updateJSON();
+ }
+ 
+ //data entry
+ 
+ //approval
+ function TypeCustomer(){
+ 
+     var tipeCustomer = functions.getValue("TrxLeadsApplicantNew.consumertype")
+ 
+     if(tipeCustomer.toLowerCase() == "individual"){
+         functions.setStyle("TrxLeadsApplicantNew.dateofbirth","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.identityno","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.address","visible","true");
+         functions.setStyle("textbox10","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.occupation","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.maritalstatus","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.mobilephone","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.nationality","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.familyno","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.email","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.noofdependant","visible","true");
+         functions.setStyle("frame3","visible","true");
+ 
+ 
+         functions.setStyle("TrxLeadsApplicantNew.companytitle","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.companyname","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.npwpno","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.npwpname","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.npwpregistereddate","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.dateofestablishmentdeed","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.companyownershipstatus","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.noofestablishmentdeed","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.economysector","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.economysubsector","visible","false");
+         functions.setStyle("TrxLeadsGuarantor.placeofbirth","visible","false");
+         functions.setStyle("frame8","visible","false");
+         
+         
+     } else if (tipeCustomer.toLowerCase() = "company"){
+ 
+         functions.setStyle("TrxLeadsApplicantNew.dateofbirth","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.identityno","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.address","visible","false");
+         functions.setStyle("textbox10","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.occupation","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.maritalstatus","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.mobilephone","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.nationality","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.familyno","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.email","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.noofdependant","visible","false");
+         functions.setStyle("frame3","visible","false");
+ 
+ 
+         functions.setStyle("TrxLeadsApplicantNew.companytitle","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.companyname","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.npwpno","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.npwpname","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.npwpregistereddate","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.dateofestablishmentdeed","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.companyownershipstatus","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.noofestablishmentdeed","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.economysector","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.economysubsector","visible","true");
+         functions.setStyle("TrxLeadsGuarantor.placeofbirth","visible","true");
+         functions.setStyle("frame8","visible","true");
+     
+     }
+ 
+     functions.updateJSON();
+ 
+ }
+ 
+ function MaritalStatusCustomer(){
+     var status = functions.getValue("TrxLeadsApplicantNew.maritalstatus");
+ 
+     if(status.toLowerCase() == "belum menikah" || status.toLowerCase() == "Janda"){
+ 
+         functions.setStyle("frame3","visible","false");
+ 
+     } else {
+         functions.setStyle("frame3","visible","true");
+     }
+ 
+     functions.updateJSON();
+ }
+ 
+ function GetAgeCustomer(){
+     var birth = functions.getValue("TrxLeadsApplicantNew.dateofbirth");
+ 
+     var usia = GetAge(birth);
+ 
+     functions.setValue("textbox10",usia.toString());
+ 
+     functions.updateJSON();
+ }
+ 
+ 
+ function GetAgeSpouse(){
+     var birthSpouse = functions.getValue("TrxLeadsApplicantNew.spousedob");
+ 
+     var usiaSpouse = GetAge(birthSpouse);
+ 
+     functions.setValue("textbox21",usiaSpouse.toString());
+ 
+     functions.updateJSON();
+ }
+ 
+ 
+ function GetAgeGuarantor(){
+     var birthGuarantor = functions.getValue("TrxLeadsGuarantor.dateofbirth");
+ 
+     var usiaGuarantor = GetAge(birthGuarantor);
+ 
+     functions.setValue("textbox31",usiaGuarantor.toString());
+ 
+     functions.updateJSON();
+ }
+ 
+ function IsGuarantor(){
+     var guarantor = functions.getValue("TrxLeadsGuarantor.isguarantorneed");
+ 
+     if(guarantor == true){
+         functions.setStyle("frame4","visible","true");
+     } else{
+         functions.setStyle("frame4","visible","false");
+     }
+ functions.updateJSON();
+ 
+ }
+ 
+ 
+ function GetAge(dateString) {
+         
+     const parts = dateString.split('/');
+     const day = parseInt(parts[0], 10);
+     const month = parseInt(parts[1], 10) - 1; 
+     const year = parseInt(parts[2], 10);
+ 
+     const birthDate = new Date(year, month, day);
+ 
+     const currentDate = new Date();
+ 
+     let age = currentDate.getFullYear() - birthDate.getFullYear();
+     const monthDifference = currentDate.getMonth() - birthDate.getMonth();
+ 
+     if (monthDifference < 0 || (monthDifference === 0 && currentDate.getDate() < birthDate.getDate())) {
+         age--;
+     }
+ 
+     return age;
+ }
+ 
+ 
+ function ActionActivityName(){
+     var activity = functions.getWorkItemData("ActivityName");
+ 
+     if(activity.toLowerCase() == "approval head of kcp"){
+         functions.setStyle("button2","visible","false");
+         functions.setStyle("frame23","visible","true");
+     } else {
+         functions.setStyle("button2","visible","true");
+         functions.setStyle("frame23","visible","false");
+     }
+ 
+     functions.updateJSON();
+ 
+ }
+ 
+ //disbursement
+ 
+ function hideByConsumerType(){
+     let consumerType = functions.getValue("TrxLeadsApplicantNew.consumertype");
+     if(consumerType.toLowerCase() == "individu"){
+         functions.setValue("frame2", "visible", true);
+         functions.setValue("frame3", "visible", false);
+     }else if(consumerType.toLowerCase() == "company"){
+         functions.setValue("frame2", "visible", false); //individu
+         functions.setValue("frame3", "visible", true);  //company
+         functions.setValue("frame6", "visible", false); //spouse
+         functions.setValue("frame4", "visible", true);  //guarantor
+     }else{
+         functions.setValue("frame2", "visible", false);
+         functions.setValue("frame3", "visible", false);
+         functions.setValue("frame6", "visible", false);
+         functions.setValue("frame4", "visible", false);
+     }
+     functions.updateJSON();
+ }
+ 
+ function hideByMaritalStatus(){
+     let consumerType = functions.getValue("TrxLeadsApplicantNew.consumertype");
+     let maritalStatus = functions.getValue("TrxLeadsApplicantNew.maritalstatus");
+     if(maritalStatus.toLowerCase() == "menikah" && consumerType.toLowerCase() == "individu"){
+         functions.setValue("frame6","visible", true);
+     }else{
+         functions.setValue("frame6", "visible", false);
+     }
+     functions.updateJSON();
+ }
+ 
+ function GetAge(){
+     let birth = functions.getValue("TrxLeadsApplicantNew.dateofbirth");
+ 
+     let usia = getAge(birth);
+ 
+     function getAge(dateString) {
+ 
+         const birthDate = new Date(dateString);
+         
+ 
+         const currentDate = new Date();
+ 
+         let age = currentDate.getFullYear() - birthDate.getFullYear();
+         const monthDifference = currentDate.getMonth() - birthDate.getMonth();
+ 
+ 
+         if (monthDifference < 0 || (monthDifference === 0 && currentDate.getDate() < birthDate.getDate())) {
+             age--;
+         }
+ 
+         return age;
+     }
+ 
+ 
+     functions.setValue("textbox12",usia.toString());
+ 
+     functions.updateJSON();
+ }
 
 
 
