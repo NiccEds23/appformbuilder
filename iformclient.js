@@ -58,7 +58,29 @@ function customValidation(type) {
 }
 
 function formLoad(){
-    //console.log("formLoad hook..");
+    var activityName = functions.getWorkItemData("activityname");
+
+    if(activityName === "Data Entry OTS"){
+        handleFormDataEntry();
+    } else if(activityName === "Detail Data Entry"){
+        handleFormDetailDataEntry();
+    } else if(activityName === "Data Verification"){
+        handleFormDataVerif();
+    }  else if(activityName === "Approval Head of KCP"){
+        TypeCustomer();
+        functions.setStyle("button2","visible","false");
+        functions.setStyle("frame23","visible","true");
+        functions.updateJSON();
+    }
+    else if(activityName === "Approval Branch Manager" || activityName === "Agreement Verification" || activityName === "Approval JRM" || activityName === "Approval PBP" || activityName === "Document Printing"){
+        TypeCustomer();
+        functions.setStyle("button2","visible","true");
+         functions.setStyle("frame23","visible","false");
+         functions.updateJSON();
+    } else if(activityName === "Request Disbursement"){
+        hideByConsumerType();
+    }
+    ActionActivityName()
 }
 
 function handleCustomKeyEvent(ev){
@@ -189,7 +211,800 @@ function selectFeatureToBeIncludedInRichText(){
     return FroalaToolbarJson;
 }
 
+//first entry
+function setShowFieldsByCustomerType() {
+    var customerType = functions.getValue("TrxLeadsApplicantNew.consumertype");
+ 
+    if (customerType == "Individual") {
+       functions.setStyle("TrxLeadsApplicantNew.companytitle", "visible", "false");
+       functions.setStyle("TrxLeadsApplicantNew.companytitle", "mandatory", "false");
+       functions.setStyle("TrxLeadsApplicantNew.companyname", "visible", "false");
+       functions.setStyle("TrxLeadsApplicantNew.companyname", "mandatory", "false");
+       functions.setStyle("TrxLeadsApplicantNew.npwpno", "visible", "false");
+       functions.setStyle("TrxLeadsApplicantNew.npwpno", "mandatory", "false");
+       functions.setStyle("TrxLeadsApplicantNew.npwpname", "visible", "false");
+       functions.setStyle("TrxLeadsApplicantNew.npwpname", "mandatory", "false");
+       functions.setStyle("TrxLeadsApplicantNew.npwpregistereddate", "visible", "false");
+       functions.setStyle("TrxLeadsApplicantNew.npwpregistereddate", "mandatory", "false");
+       functions.setStyle("TrxLeadsApplicantNew.consumername", "visible", "true");
+       functions.setStyle("TrxLeadsApplicantNew.consumername", "mandatory", "true");
+       functions.setStyle("TrxLeadsApplicantNew.identityno", "visible", "true");
+       functions.setStyle("TrxLeadsApplicantNew.identityno", "mandatory", "true");
+       functions.setStyle("TrxLeadsApplicantNew.placeofbirth", "visible", "true");
+       functions.setStyle("TrxLeadsApplicantNew.placeofbirth", "mandatory", "true");
+       functions.setStyle("TrxLeadsApplicantNew.dateofbirth", "visible", "true");
+       functions.setStyle("TrxLeadsApplicantNew.dateofbirth", "mandatory", "true");
+       functions.setStyle("TrxLeadsApplicantNew.address", "visible", "true");
+       functions.setStyle("TrxLeadsApplicantNew.address", "mandatory", "true");
+       functions.setStyle("TrxLeadsApplicantNew.rtrw", "visible", "true");
+       functions.setStyle("TrxLeadsApplicantNew.rtrw", "mandatory", "true");
+       functions.setStyle("TrxLeadsApplicantNew.province", "visible", "true");
+       functions.setStyle("TrxLeadsApplicantNew.province", "mandatory", "true");
+       functions.setStyle("TrxLeadsApplicantNew.city", "visible", "true");
+       functions.setStyle("TrxLeadsApplicantNew.city", "mandatory", "true");
+       functions.setStyle("TrxLeadsApplicantNew.district", "visible", "true");
+       functions.setStyle("TrxLeadsApplicantNew.district", "mandatory", "true");
+       functions.setStyle("TrxLeadsApplicantNew.village", "visible", "true");
+       functions.setStyle("TrxLeadsApplicantNew.village", "mandatory", "true");
+       functions.setStyle("TrxLeadsApplicantNew.postalcode", "visible", "true");
+       functions.setStyle("TrxLeadsApplicantNew.postalcode", "mandatory", "true");
+       functions.setStyle("TrxLeadsApplicantNew.religion", "visible", "true");
+       functions.setStyle("TrxLeadsApplicantNew.religion", "mandatory", "true");
+       functions.setStyle("TrxLeadsApplicantNew.gender", "visible", "true");
+       functions.setStyle("TrxLeadsApplicantNew.gender", "mandatory", "true");
+       functions.setStyle("TrxLeadsApplicantNew.maritalstatus", "visible", "true");
+       functions.setStyle("TrxLeadsApplicantNew.maritalstatus", "mandatory", "true");
+       functions.setStyle("TrxLeadsApplicantNew.occupation", "visible", "true");
+       functions.setStyle("TrxLeadsApplicantNew.occupation", "mandatory", "true");
+       functions.setStyle("TrxLeadsApplicantNew.nationality", "visible", "true");
+       functions.setStyle("TrxLeadsApplicantNew.nationality", "mandatory", "true");
+       functions.setStyle("TrxLeadsApplicantNew.mobilephone", "visible", "true");
+       functions.setStyle("TrxLeadsApplicantNew.mobilephone", "mandatory", "true");
+       functions.setStyle("TrxLeadsApplicantNew.email", "visible", "true");
+       functions.setStyle("TrxLeadsApplicantNew.email", "mandatory", "true");
+       functions.setStyle("TrxLeadsApplicantNew.companyphone", "visible", "false");
+       functions.setStyle("TrxLeadsApplicantNew.companyphone", "mandatory", "false");
+       functions.setStyle("TrxLeadsApplicantNew.companyemail", "visible", "false");
+       functions.setStyle("TrxLeadsApplicantNew.companyemail", "mandatory", "false");
+    } else if (customerType == "Company") {
+       functions.setStyle("TrxLeadsApplicantNew.companytitle", "visible", "true");
+       functions.setStyle("TrxLeadsApplicantNew.companytitle", "mandatory", "true");
+       functions.setStyle("TrxLeadsApplicantNew.companyname", "visible", "true");
+       functions.setStyle("TrxLeadsApplicantNew.companyname", "mandatory", "true");
+       functions.setStyle("TrxLeadsApplicantNew.npwpno", "visible", "true");
+       functions.setStyle("TrxLeadsApplicantNew.npwpno", "mandatory", "true");
+       functions.setStyle("TrxLeadsApplicantNew.npwpname", "visible", "true");
+       functions.setStyle("TrxLeadsApplicantNew.npwpname", "mandatory", "true");
+       functions.setStyle("TrxLeadsApplicantNew.npwpregistereddate", "visible", "true");
+       functions.setStyle("TrxLeadsApplicantNew.npwpregistereddate", "mandatory", "true");
+       functions.setStyle("TrxLeadsApplicantNew.consumername", "visible", "false");
+       functions.setStyle("TrxLeadsApplicantNew.consumername", "mandatory", "false");
+       functions.setStyle("TrxLeadsApplicantNew.identityno", "visible", "false");
+       functions.setStyle("TrxLeadsApplicantNew.identityno", "mandatory", "false");
+       functions.setStyle("TrxLeadsApplicantNew.placeofbirth", "visible", "false");
+       functions.setStyle("TrxLeadsApplicantNew.placeofbirth", "mandatory", "false");
+       functions.setStyle("TrxLeadsApplicantNew.dateofbirth", "visible", "false");
+       functions.setStyle("TrxLeadsApplicantNew.dateofbirth", "mandatory", "false");
+       functions.setStyle("TrxLeadsApplicantNew.address", "visible", "false");
+       functions.setStyle("TrxLeadsApplicantNew.address", "mandatory", "false");
+       functions.setStyle("TrxLeadsApplicantNew.rtrw", "visible", "false");
+       functions.setStyle("TrxLeadsApplicantNew.rtrw", "mandatory", "false");
+       functions.setStyle("TrxLeadsApplicantNew.province", "visible", "false");
+       functions.setStyle("TrxLeadsApplicantNew.province", "mandatory", "false");
+       functions.setStyle("TrxLeadsApplicantNew.city", "visible", "false");
+       functions.setStyle("TrxLeadsApplicantNew.city", "mandatory", "false");
+       functions.setStyle("TrxLeadsApplicantNew.district", "visible", "false");
+       functions.setStyle("TrxLeadsApplicantNew.district", "mandatory", "false");
+       functions.setStyle("TrxLeadsApplicantNew.village", "visible", "false");
+       functions.setStyle("TrxLeadsApplicantNew.village", "mandatory", "false");
+       functions.setStyle("TrxLeadsApplicantNew.postalcode", "visible", "false");
+       functions.setStyle("TrxLeadsApplicantNew.postalcode", "mandatory", "false");
+       functions.setStyle("TrxLeadsApplicantNew.religion", "visible", "false");
+       functions.setStyle("TrxLeadsApplicantNew.religion", "mandatory", "false");
+       functions.setStyle("TrxLeadsApplicantNew.gender", "visible", "false");
+       functions.setStyle("TrxLeadsApplicantNew.gender", "mandatory", "false");
+       functions.setStyle("TrxLeadsApplicantNew.maritalstatus", "visible", "false");
+       functions.setStyle("TrxLeadsApplicantNew.maritalstatus", "mandatory", "false");
+       functions.setStyle("TrxLeadsApplicantNew.occupation", "visible", "false");
+       functions.setStyle("TrxLeadsApplicantNew.occupation", "mandatory", "false");
+       functions.setStyle("TrxLeadsApplicantNew.nationality", "visible", "false");
+       functions.setStyle("TrxLeadsApplicantNew.nationality", "mandatory", "false");
+       functions.setStyle("TrxLeadsApplicantNew.mobilephone", "visible", "false");
+       functions.setStyle("TrxLeadsApplicantNew.mobilephone", "mandatory", "false");
+       functions.setStyle("TrxLeadsApplicantNew.email", "visible", "false");
+       functions.setStyle("TrxLeadsApplicantNew.email", "mandatory", "false");
+       functions.setStyle("TrxLeadsApplicantNew.companyphone", "visible", "true");
+       functions.setStyle("TrxLeadsApplicantNew.companyphone", "mandatory", "true");
+       functions.setStyle("TrxLeadsApplicantNew.companyemail", "visible", "true");
+       functions.setStyle("TrxLeadsApplicantNew.companyemail", "mandatory", "true");
+    }
+ }
 
+ 
+ function setAgeValue() {
+    var birthdate = new Date(functions.getValue("TrxLeadsApplicantNew.dateofbirth"));
+ 
+    var result = Math.abs(new Date(Date.now() - birthdate).getUTCFullYear() - 1970);
+    functions.setValue("ageOfCustomer", result.toString());
+ }
+ 
+ function setTimeInBusiness() {
+    var businessEst = new Date(functions.getValue("TrxLeadsBusiness.sincewhen")).getTime();
+ 
+    var diff = new Date(Date.now() - businessEst);
+ 
+    var month = diff.getUTCMonth();
+    var year = diff.getUTCFullYear();
+ 
+    var result = (Math.abs(year - 1970) * 12) + month;
+ 
+    functions.setValue("businessOperation", result.toString());
+ }
+ 
+ function getSetNationality() {
+    var nationality = functions.getValue("TrxLeadsApplicantNew.nationality")
+ 
+    functions.setValue("nationality", nationality)
+ }
+ 
+ function getSetAverageMonthlySale() {
+    var avgMonthlySale = functions.getValue("TrxLeadsApplicantNew.averagemonthlysales")
+ 
+    functions.setValue("avgMonthlySales", avgMonthlySale)
+ }
+ 
+ function onChangeActionDetail() {
+    var action = functions.getValue("TrxLeadsActionDetail.statusleads");
+ 
+    if (action == "Reject") {
+       functions.setStyle("TrxLeadsActionDetail.rejectreason", "disable", "true");
+       functions.setStyle("TrxLeadsActionDetail.rejectreason", "mandatory", "true");
+       functions.setValue("approvalDecision", action);
+       functions.updateJSON();
+    } else {
+       functions.setStyle("TrxLeadsActionDetail.rejectreason", "disable", "false");
+       functions.setStyle("TrxLeadsActionDetail.rejectreason", "mandatory", "false");
+       functions.setValue("approvalDecision", action);
+       functions.updateJSON();
+    }
+ }
+ 
+ function setViewByDigitalSignature() {
+    var digitalSignature = functions.getValue("TrxLeadsApplicant.isdigitalsignature");
+ 
+    if (digitalSignature == true) {
+    
+       functions.setStyle("frame8", "visible", "false");
+    } else {
+       
+       functions.setStyle("frame8", "visible", "true");
+    }
+    functions.updateJSON();
+ }
+ 
+ //data entry
+ function handleFormDataEntry(){
+    var type = functions.getValue("TrxLeadsApplicantNew.consumertype");
+    functions.setStyle("TrxLeadsApplicantNew.jrmuser", "visible", "false");
+    functions.setStyle("label20", "visible", "false");
+    functions.setStyle("override", "visible", "false");
+
+    // Hide Detail
+    functions.setStyle("alamatdetail", "visible", "false");
+    functions.setStyle("provincedetail", "visible", "false");
+    functions.setStyle("rtrwdetail", "visible", "false");
+    functions.setStyle("codedetail", "visible", "false");
+    functions.setStyle("districtdetail", "visible", "false");
+    functions.setStyle("citydetail", "visible", "false");
+    functions.setStyle("villagedetail", "visible", "false");
+    functions.setStyle("citydetail", "visible", "false");
+    functions.setStyle("kkdetail", "visible", "false");
+    functions.setStyle("motherdetail", "visible", "false");
+    functions.setStyle("passportdetail", "visible", "false");
+    functions.setStyle("totaldetail", "visible", "false");
+    functions.setStyle("enddatedetail", "visible", "false");
+    functions.setStyle("economicdetail", "visible", "false");
+    functions.setStyle("enddatedetail", "visible", "false");
+    functions.setStyle("subeconomicdetail", "visible", "false");
+
+    //Same field
+    functions.setStyle("TrxLeadsGuarantor.npwpno", "visible", "false");
+    functions.setStyle("TrxLeadsGuarantor.npwpname", "visible", "false");
+    functions.setStyle("TrxLeadsGuarantor.npwpregistereddate", "visible", "false");
+    functions.setStyle("TrxLeadsGuarantor.passportno", "visible", "false");
+    functions.setStyle("TrxLeadsGuarantor.passportenddate", "visible", "false");
+
+    //Tab Data Keungan
+    functions.setStyle("TrxLeadsFinancial.rawmaterialpurchase", "visible", "false");
+    functions.setStyle("TrxLeadsFinancial.monthlygrossprofit", "visible", "false");
+    functions.setStyle("TrxLeadsFinancial.monthlynetprofit", "visible", "false");
+    functions.setStyle("TrxLeadsFinancial.supplyrawmaterial", "visible", "false");
+    functions.setStyle("TrxLeadsFinancial.moveableprop", "visible", "false");
+    functions.setStyle("TrxLeadsFinancial.remainingloanbalance", "visible", "false");
+    functions.setStyle("monthlydetail", "visible", "false");
+    functions.setStyle("TrxLeadsFinancial.initcaptbusiness", "visible", "false");
+    functions.setStyle("frame31", "visible", "false");
+    functions.setStyle("frame37", "visible", "false");
+
+    if(type === "Individual"){
+        functions.setStyle("TrxLeadsApplicantNew.companytitle", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.companyname", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.companyphone", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.companyemail", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.npwpregistereddate", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.companyownershipstatus", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.noofestablishmentdeed", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.dateofestablishmentdeed", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spouseaddress", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spouseprovince", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spousecity", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spousedistrict", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spousevillage", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spousertrw", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spousepostalcode", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spousemaritalstatus", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spouseoccupation", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spousenationality", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spousenpwpno", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spousenpwpname", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spousenpwpregistereddate", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spousenopassport", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spousepassportenddate", "visible", "false");
+
+        functions.setStyle("frame13", "visible", "false");
+    } else {
+        functions.setStyle("TrxLeadsApplicantNew.placeofbirth", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.placeofbirth", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.identityno", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.identityno", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.gender", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.gender", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.dateofbirth", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.dateofbirth", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.occupation", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.occupation", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.religion", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.religion", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.mobilephone", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.mobilephone", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.maritalstatus", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.maritalstatus", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.education", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.education", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.nationality", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.nationality", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.email", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.email", "visible", "false");
+
+        functions.setStyle("TrxLeadsApplicantNew.isdomicilesame", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.addressdomicile", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.rtrwdomicile", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.provincedomicile", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.citydomicile", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.districtdomicile", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.villagedomicile", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.postalcodedomicile", "visible", "false");
+
+        functions.setStyle("TrxLeadsApplicantNew.spousename", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spouseidentityno", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spousepob", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spousedob", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spousegender", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spousereligion", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spousemobilephone", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.emergencycontactname", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.emergencycontactphone", "mandatory", "false");
+        
+        functions.setStyle("frame6", "visible", "false");
+        functions.setStyle("frame7", "visible", "false");
+    }
+
+    functions.updateJSON();
+}
+
+function onChangeDomicileChecklist(){
+    var domicile = functions.getValue("TrxLeadsApplicantNew.isdomicilesame");
+
+    if(domicile === true){
+        functions.setValues({"TrxLeadsApplicantNew.addressdomicile": functions.getValue("TrxLeadsApplicantNew.address")});
+        functions.setValues({"TrxLeadsApplicantNew.rtrwdomicile": functions.getValue("TrxLeadsApplicantNew.rtrw")});
+        functions.setValues({"TrxLeadsApplicantNew.provincedomicile": functions.getValue("TrxLeadsApplicantNew.province")});
+        functions.setValues({"TrxLeadsApplicantNew.citydomicile": functions.getValue("TrxLeadsApplicantNew.city")});
+        functions.setValues({"TrxLeadsApplicantNew.districtdomicile": functions.getValue("TrxLeadsApplicantNew.district")});
+        functions.setValues({"TrxLeadsApplicantNew.villagedomicile": functions.getValue("TrxLeadsApplicantNew.village")});
+        functions.setValues({"TrxLeadsApplicantNew.postalcodedomicile": functions.getValue("TrxLeadsApplicantNew.postalcode")});
+    } else {
+        functions.clearValue("TrxLeadsApplicantNew.addressdomicile",true);
+        functions.clearValue("TrxLeadsApplicantNew.rtrwdomicile",true);
+        functions.clearValue("TrxLeadsApplicantNew.provincedomicile",true);
+        functions.clearValue("TrxLeadsApplicantNew.citydomicile",true);
+        functions.clearValue("TrxLeadsApplicantNew.districtdomicile",true);
+        functions.clearValue("TrxLeadsApplicantNew.villagedomicile",true);
+        functions.clearValue("TrxLeadsApplicantNew.postalcodedomicile",true);
+    }
+
+    functions.updateJSON();
+
+}
+
+function onChangeGuerantorChecklist(){
+    var guarantor = functions.getValue("TrxLeadsGuarantor.isguarantorneed");
+
+    if(guarantor === true){
+        functions.setStyle("frame8", "visible", "true");
+    } else {
+        functions.clearValue("TrxLeadsGuarantor.name",true);
+        functions.clearValue("TrxLeadsGuarantor.identityno",true);
+        functions.clearValue("TrxLeadsGuarantor.placeofbirth",true);
+        functions.clearValue("TrxLeadsGuarantor.dateofbirth",true);
+        functions.clearValue("TrxLeadsApplicantNew.addressdomicile",true);
+        functions.clearValue("TrxLeadsGuarantor.address",true);
+        functions.clearValue("TrxLeadsGuarantor.rtrw",true);
+        functions.clearValue("TrxLeadsGuarantor.province",true);
+        functions.clearValue("TrxLeadsGuarantor.city",true);
+        functions.clearValue("TrxLeadsGuarantor.district",true);
+        functions.clearValue("TrxLeadsGuarantor.village",true);
+        functions.clearValue("TrxLeadsGuarantor.postalcode",true);
+        functions.clearValue("TrxLeadsGuarantor.religion",true);
+        functions.clearValue("TrxLeadsGuarantor.gender",true);
+        functions.clearValue("TrxLeadsGuarantor.maritalstatus",true);
+        functions.clearValue("TrxLeadsGuarantor.occupation",true);
+        functions.clearValue("TrxLeadsGuarantor.kewarganegaraan",true);
+        functions.clearValue("TrxLeadsGuarantor.mobilephone",true);
+        functions.clearValue("TrxLeadsGuarantor.email",true);
+        functions.setStyle("frame8", "visible", "false");
+    }
+
+    functions.updateJSON();
+
+}
+
+function onChangeCollateral(){
+    var collateral = functions.getValue("checkbox3");
+
+    if(collateral === true){
+        functions.setStyle("TrxLeadsCollateral", "visible", "true");
+    } else {
+        functions.clearTable("TrxLeadsCollateral");
+        functions.setStyle("TrxLeadsCollateral", "visible", "false");
+    }
+
+    functions.updateJSON();
+}
+
+function onChangeSpouse(){
+    var spouse = functions.getValue("TrxLeadsApplicantNew.maritalstatus");
+
+    if(spouse != "Menikah"){
+        functions.setStyle("TrxLeadsApplicantNew.spousename", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spouseidentityno", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spousepob", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spousedob", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spousegender", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spousereligion", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spousemobilephone", "mandatory", "false");
+
+        functions.setStyle("frame6", "visible", "false");
+    } else {
+        functions.setStyle("TrxLeadsApplicantNew.spousename", "mandatory", "true");
+        functions.setStyle("TrxLeadsApplicantNew.spouseidentityno", "mandatory", "true");
+        functions.setStyle("TrxLeadsApplicantNew.spousepob", "mandatory", "true");
+        functions.setStyle("TrxLeadsApplicantNew.spousedob", "mandatory", "true");
+        functions.setStyle("TrxLeadsApplicantNew.spousegender", "mandatory", "true");
+        functions.setStyle("TrxLeadsApplicantNew.spousereligion", "mandatory", "true");
+        functions.setStyle("TrxLeadsApplicantNew.spousemobilephone", "mandatory", "true");
+
+        functions.setStyle("frame6", "visible", "true");
+    }
+
+    functions.updateJSON();
+}
+
+function onChangeInsuranceDetail(){
+    var premi = 0;
+    var depresi = 100 - (parseInt((functions.getValue("TrxLeadsLoanInsurance.insuranceyear")) - 1) * 10);
+    functions.setValues({"TrxLeadsLoanInsurance.coveramount": functions.getValue("TrxLeadsLoan.loanamount")});
+
+    premi = (parseInt(functions.getValue("TrxLeadsLoan.loanamount")) * depresi) * parseInt(functions.getValue("TrxLeadsLoanInsurance.sellrate")) / 100;
+
+    functions.setValues({"TrxLeadsLoanInsurance.premitotal": parseInt(Math.floor(premi)).toString()})
+    functions.setValues({"TrxLeadsLoanInsurance.stdrate": "5"})
+
+    functions.updateJSON();
+}
+
+function handleFormDetailDataEntry(){
+    var type = functions.getValue("TrxLeadsApplicantNew.consumertype");
+    functions.setStyle("label20", "visible", "false");
+    functions.setStyle("override", "visible", "false");
+    
+    // Same Field
+    functions.setStyle("TrxLeadsFinancial.rentbusinessplace", "mandatory", "false");
+    functions.setStyle("TrxLeadsFinancial.rentbusinessplace", "visible", "false");
+    functions.setStyle("TrxLeadsFinancial.isotherincome", "mandatory", "false");
+    functions.setStyle("TrxLeadsFinancial.isotherincome", "visible", "false");
+    functions.setStyle("TrxLeadsFinancial.monthlyrentfee", "mandatory", "false");
+    functions.setStyle("TrxLeadsFinancial.monthlyrentfee", "visible", "false");
+    functions.setStyle("TrxLeadsFinancial.financialtotalotherbankloans", "visible", "false");
+    functions.setStyle("frame18", "visible", "false");
+    
+
+    if(type === "Individual"){
+        functions.setStyle("TrxLeadsApplicantNew.companytitle", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.companyname", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.companyphone", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.companyemail", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.companyownershipstatus", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.noofestablishmentdeed", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.dateofestablishmentdeed", "visible", "false");
+        functions.setStyle("economicdetail", "visible", "false");
+        functions.setStyle("subeconomicdetail", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.education", "visible", "false");
+        
+
+        functions.setStyle("frame5", "visible", "false");
+        functions.setStyle("frame7", "visible", "false");
+    } else {
+        functions.setStyle("TrxLeadsApplicantNew.placeofbirth", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.placeofbirth", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.identityno", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.identityno", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.gender", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.gender", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.dateofbirth", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.dateofbirth", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.occupation", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.occupation", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.religion", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.religion", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.mobilephone", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.mobilephone", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.maritalstatus", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.maritalstatus", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.education", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.education", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.nationality", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.nationality", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.email", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.email", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.companyemail", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.mothermaidenname", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.familyno", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.passportenddate", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.noofdependant", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.passportenddate", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.passportno", "visible", "false");
+        
+
+        functions.setStyle("TrxLeadsApplicantNew.isdomicilesame", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.addressdomicile", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.rtrwdomicile", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.provincedomicile", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.citydomicile", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.districtdomicile", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.villagedomicile", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.postalcodedomicile", "visible", "false");
+
+        functions.setStyle("TrxLeadsApplicantNew.spousename", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spouseidentityno", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spousepob", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spousedob", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spousegender", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spousereligion", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spousemobilephone", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.emergencycontactname", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.emergencycontactphone", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.address", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.rtrw", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.province", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.city", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.district", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.village", "mandatory", "false");
+        functions.setStyle("TrxLeadsApplicantNew.postalcode", "mandatory", "false");
+        
+        functions.setStyle("frame5", "visible", "false");
+        functions.setStyle("frame6", "visible", "false");
+        functions.setStyle("frame7", "visible", "false");
+    }
+
+    functions.updateJSON();
+}
+
+function handleFormDataVerif(){
+    handleFormDetailDataEntry();
+    functions.setStyle("label20", "visible", "true");
+    functions.setStyle("override", "visible", "true");
+    functions.setStyle("TrxLeadsFinancial.rentbusinessplace", "visible", "true");
+    functions.setStyle("TrxLeadsFinancial.monthlyrentfee", "visible", "true");
+    functions.setStyle("TrxLeadsFinancial.rentbusinessplace", "mandatory", "true");
+
+    onChangeOverride();
+
+    functions.updateJSON();
+}
+
+function onChangeOverride(){
+
+    var override = functions.getValue("override");
+
+    if(override === "Yes"){
+        functions.setStyle("frame2", "disable", "false");
+        functions.setStyle("frame5", "disable", "false");
+        functions.setStyle("frame6", "disable", "false");
+        functions.setStyle("frame7", "disable", "false");
+        functions.setStyle("frame8", "disable", "false");
+        functions.setStyle("frame11", "disable", "false");
+        functions.setStyle("frame12", "disable", "false");
+        functions.setStyle("frame13", "disable", "false");
+        functions.setStyle("frame37", "disable", "false");
+        functions.setStyle("frame16", "disable", "false");
+        functions.setStyle("frame17", "disable", "false");
+        functions.setStyle("frame18", "disable", "false");
+        functions.setStyle("frame31", "disable", "false");
+        functions.setStyle("frame19", "disable", "false");
+        functions.setStyle("frame21", "disable", "false");
+        functions.setStyle("frame22", "disable", "false");
+        functions.setStyle("frame23", "disable", "false");
+        functions.setStyle("frame27", "disable", "false");
+        
+    } else {
+        functions.setStyle("frame2", "disable", "true");
+        functions.setStyle("frame5", "disable", "true");
+        functions.setStyle("frame6", "disable", "true");
+        functions.setStyle("frame7", "disable", "true");
+        functions.setStyle("frame8", "disable", "true");
+        functions.setStyle("frame11", "disable", "true");
+        functions.setStyle("frame12", "disable", "true");
+        functions.setStyle("frame13", "disable", "true");
+        functions.setStyle("frame37", "disable", "true");
+        functions.setStyle("frame16", "disable", "true");
+        functions.setStyle("frame17", "disable", "true");
+        functions.setStyle("frame18", "disable", "true");
+        functions.setStyle("frame31", "disable", "true");
+        functions.setStyle("frame19", "disable", "true");
+        functions.setStyle("frame21", "disable", "true");
+        functions.setStyle("frame22", "disable", "true");
+        functions.setStyle("frame23", "disable", "true");
+        functions.setStyle("frame27", "disable", "true");
+    }
+
+
+    functions.updateJSON();
+}
+
+ //approval
+ function TypeCustomer(){
+ 
+     var tipeCustomer = functions.getValue("TrxLeadsApplicantNew.consumertype")
+ 
+     if(tipeCustomer.toLowerCase() == "individual"){
+         functions.setStyle("TrxLeadsApplicantNew.dateofbirth","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.identityno","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.address","visible","true");
+         functions.setStyle("textbox10","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.occupation","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.maritalstatus","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.mobilephone","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.nationality","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.familyno","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.email","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.noofdependant","visible","true");
+         MaritalStatusCustomer();
+         GetAgeCustomer();
+ 
+         functions.setStyle("TrxLeadsApplicantNew.companytitle","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.companyname","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.npwpno","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.npwpname","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.npwpregistereddate","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.dateofestablishmentdeed","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.companyownershipstatus","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.noofestablishmentdeed","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.economysector","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.economysubsector","visible","false");
+         IsGuarantor();
+         functions.setStyle("frame8","visible","false");
+        
+         
+         
+     } else if (tipeCustomer.toLowerCase() = "company"){
+ 
+         functions.setStyle("TrxLeadsApplicantNew.dateofbirth","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.identityno","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.address","visible","false");
+         functions.setStyle("textbox10","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.occupation","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.maritalstatus","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.mobilephone","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.nationality","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.familyno","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.email","visible","false");
+         functions.setStyle("TrxLeadsApplicantNew.noofdependant","visible","false");
+         functions.setStyle("frame3","visible","false");
+ 
+ 
+         functions.setStyle("TrxLeadsApplicantNew.companytitle","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.companyname","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.npwpno","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.npwpname","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.npwpregistereddate","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.dateofestablishmentdeed","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.companyownershipstatus","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.noofestablishmentdeed","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.economysector","visible","true");
+         functions.setStyle("TrxLeadsApplicantNew.economysubsector","visible","true");
+         functions.setStyle("TrxLeadsGuarantor.placeofbirth","visible","true");
+         functions.setStyle("frame8","visible","true");
+         GetAgeGuarantor();
+     
+     }
+ 
+     functions.updateJSON();
+ 
+ }
+ 
+ function MaritalStatusCustomer(){
+     var status = functions.getValue("TrxLeadsApplicantNew.maritalstatus");
+ 
+     if(status.toLowerCase() == "belum menikah" || status.toLowerCase() == "Janda"){
+ 
+         functions.setStyle("frame3","visible","false");
+ 
+     } else {
+        functions.setStyle("frame3","visible","true");
+        GetAgeSpouse();
+     }
+ 
+     functions.updateJSON();
+ }
+ 
+ function GetAgeCustomer(){
+     var birth = functions.getValue("TrxLeadsApplicantNew.dateofbirth");
+ 
+     var usia = GetAge(birth);
+ 
+     functions.setValue("textbox10",usia.toString());
+ 
+     functions.updateJSON();
+ }
+ 
+ 
+ function GetAgeSpouse(){
+     var birthSpouse = functions.getValue("TrxLeadsApplicantNew.spousedob");
+ 
+     var usiaSpouse = GetAge(birthSpouse);
+ 
+     functions.setValue("textbox21",usiaSpouse.toString());
+ 
+     functions.updateJSON();
+ }
+ 
+ 
+ function GetAgeGuarantor(){
+     var birthGuarantor = functions.getValue("TrxLeadsGuarantor.dateofbirth");
+ 
+     var usiaGuarantor = GetAge(birthGuarantor);
+ 
+     functions.setValue("textbox31",usiaGuarantor.toString());
+ 
+     functions.updateJSON();
+ }
+ 
+ function IsGuarantor(){
+     var guarantor = functions.getValue("TrxLeadsGuarantor.isguarantorneed");
+ 
+     if(guarantor == true){
+         functions.setStyle("frame4","visible","true");
+         functions.setStyle("TrxLeadsGuarantor.placeofbirth","visible","false");
+         GetAgeGuarantor();
+     } else{
+         functions.setStyle("frame4","visible","false");
+     }
+ functions.updateJSON();
+ 
+ }
+ 
+ 
+ function GetAge(dateString) {
+         
+     const parts = dateString.split('/');
+     const day = parseInt(parts[0], 10);
+     const month = parseInt(parts[1], 10) - 1; 
+     const year = parseInt(parts[2], 10);
+ 
+     const birthDate = new Date(year, month, day);
+ 
+     const currentDate = new Date();
+ 
+     let age = currentDate.getFullYear() - birthDate.getFullYear();
+     const monthDifference = currentDate.getMonth() - birthDate.getMonth();
+ 
+     if (monthDifference < 0 || (monthDifference === 0 && currentDate.getDate() < birthDate.getDate())) {
+         age--;
+     }
+ 
+     return age;
+ }
+ 
+ 
+//  function ActionActivityName(){
+//      var activity = functions.getWorkItemData("ActivityName");
+ 
+//      if(activity.toLowerCase() == "approval head of kcp"){
+//          functions.setStyle("button2","visible","false");
+//          functions.setStyle("frame23","visible","true");
+//      } else {
+//          functions.setStyle("button2","visible","true");
+//          functions.setStyle("frame23","visible","false");
+//      }
+ 
+//      functions.updateJSON();
+ 
+//  }
+ 
+ //disbursement
+ 
+ function hideByConsumerType(){
+     let consumerType = functions.getValue("TrxLeadsApplicantNew.consumertype");
+     if(consumerType.toLowerCase() == "individu"){
+         functions.setValue("frame2", "visible", true);
+         GetAge()
+         hideByMaritalStatus();
+
+         functions.setValue("frame3", "visible", false);
+     }else if(consumerType.toLowerCase() == "company"){
+         functions.setValue("frame2", "visible", false); //individu
+         functions.setValue("frame3", "visible", true);  //company
+         functions.setValue("frame6", "visible", false); //spouse
+         functions.setValue("frame4", "visible", true);  //guarantor
+     }else{
+         functions.setValue("frame2", "visible", false);
+         functions.setValue("frame3", "visible", false);
+         functions.setValue("frame6", "visible", false);
+         functions.setValue("frame4", "visible", false);
+     }
+     functions.updateJSON();
+ }
+ 
+ function hideByMaritalStatus(){
+     let consumerType = functions.getValue("TrxLeadsApplicantNew.consumertype");
+     let maritalStatus = functions.getValue("TrxLeadsApplicantNew.maritalstatus");
+     if(maritalStatus.toLowerCase() == "menikah" && consumerType.toLowerCase() == "individu"){
+         functions.setValue("frame6","visible", true);
+     }else{
+         functions.setValue("frame6", "visible", false);
+     }
+     functions.updateJSON();
+ }
+ 
+ function GetAge(){
+     let birth = functions.getValue("TrxLeadsApplicantNew.dateofbirth");
+ 
+     let usia = getAge(birth);
+ 
+     function getAge(dateString) {
+ 
+         const birthDate = new Date(dateString);
+         
+ 
+         const currentDate = new Date();
+ 
+         let age = currentDate.getFullYear() - birthDate.getFullYear();
+         const monthDifference = currentDate.getMonth() - birthDate.getMonth();
+ 
+ 
+         if (monthDifference < 0 || (monthDifference === 0 && currentDate.getDate() < birthDate.getDate())) {
+             age--;
+         }
+ 
+         return age;
+     }
+ 
+ 
+     functions.setValue("textbox12",usia.toString());
+ 
+     functions.updateJSON();
+ }
 
 
 
