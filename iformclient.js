@@ -341,8 +341,11 @@ function setShowFieldsByCustomerType() {
  function setAgeValue() {
     var birthdate = new Date(functions.getValue("TrxLeadsApplicantNew.dateofbirth"));
  
-    var result = Math.abs(new Date(Date.now() - birthdate).getUTCFullYear() - 1970);
+    var result = GetAge(birthdate);
+
     functions.setValue("ageOfCustomer", result.toString());
+
+    functions.updateJSON()
  }
  
  function setTimeInBusiness() {
@@ -807,7 +810,7 @@ function onChangeOverride(){
          functions.setStyle("TrxLeadsApplicantNew.email","visible","true");
          functions.setStyle("TrxLeadsApplicantNew.noofdependant","visible","true");
          MaritalStatusCustomer();
-         GetAgeCustomer();
+        //  GetAgeCustomer();
  
          functions.setStyle("TrxLeadsApplicantNew.companytitle","visible","false");
          functions.setStyle("TrxLeadsApplicantNew.companyname","visible","false");
@@ -875,19 +878,19 @@ function onChangeOverride(){
      functions.updateJSON();
  }
  
- function GetAgeCustomer(){
-     var birth = functions.getValue("TrxLeadsApplicantNew.dateofbirth");
+//  function GetAgeCustomer(){
+//      var birth = functions.getValue("TrxLeadsApplicantNew.dateofbirth");
  
-     var usia = GetAge(birth);
+//      var usia = GetAge(birth);
  
-     functions.setValue("textbox10",usia.toString());
+//      functions.setValue("textbox10",usia.toString());
  
-     functions.updateJSON();
- }
+//      functions.updateJSON();
+//  }
  
  
  function GetAgeSpouse(){
-     var birthSpouse = functions.getValue("TrxLeadsApplicantNew.spousedob");
+     var birthSpouse = new Date(functions.getValue("TrxLeadsApplicantNew.spousedob"));
  
      var usiaSpouse = GetAge(birthSpouse);
  
@@ -898,7 +901,7 @@ function onChangeOverride(){
  
  
  function GetAgeGuarantor(){
-     var birthGuarantor = functions.getValue("TrxLeadsGuarantor.dateofbirth");
+     var birthGuarantor = new Date(functions.getValue("TrxLeadsGuarantor.dateofbirth"));
  
      var usiaGuarantor = GetAge(birthGuarantor);
  
@@ -922,25 +925,9 @@ function onChangeOverride(){
  }
  
  
- function GetAge(dateString) {
+ function GetAge(birthDate) {
          
-     const parts = dateString.split('/');
-     const day = parseInt(parts[0], 10);
-     const month = parseInt(parts[1], 10) - 1; 
-     const year = parseInt(parts[2], 10);
- 
-     const birthDate = new Date(year, month, day);
- 
-     const currentDate = new Date();
- 
-     let age = currentDate.getFullYear() - birthDate.getFullYear();
-     const monthDifference = currentDate.getMonth() - birthDate.getMonth();
- 
-     if (monthDifference < 0 || (monthDifference === 0 && currentDate.getDate() < birthDate.getDate())) {
-         age--;
-     }
- 
-     return age;
+    return Math.abs(new Date(Date.now() - birthDate).getUTCFullYear() - 1970)
  }
  
  
@@ -965,7 +952,7 @@ function onChangeOverride(){
      let consumerType = functions.getValue("TrxLeadsApplicantNew.consumertype");
      if(consumerType.toLowerCase() == "individu"){
          functions.setValue("frame2", "visible", true);
-         GetAge()
+        //  GetAgeApplicant()
          hideByMaritalStatus();
 
          functions.setValue("frame3", "visible", false);
@@ -993,35 +980,34 @@ function onChangeOverride(){
      }
      functions.updateJSON();
  }
+
+//  function getAge(dateString) {
  
- function GetAge(){
-     let birth = functions.getValue("TrxLeadsApplicantNew.dateofbirth");
+//     const birthDate = new Date(dateString);
+    
+
+//     const currentDate = new Date();
+
+//     let age = currentDate.getFullYear() - birthDate.getFullYear();
+//     const monthDifference = currentDate.getMonth() - birthDate.getMonth();
+
+
+//     if (monthDifference < 0 || (monthDifference === 0 && currentDate.getDate() < birthDate.getDate())) {
+//         age--;
+//     }
+
+//     return age;
+// }
  
-     let usia = getAge(birth);
+//  function GetAgeApplicant(){
+//      let birth = functions.getValue("TrxLeadsApplicantNew.dateofbirth");
  
-     function getAge(dateString) {
+//      let usia = getAge(birth);
  
-         const birthDate = new Date(dateString);
-         
+//      functions.setValue("textbox12",usia.toString());
  
-         const currentDate = new Date();
- 
-         let age = currentDate.getFullYear() - birthDate.getFullYear();
-         const monthDifference = currentDate.getMonth() - birthDate.getMonth();
- 
- 
-         if (monthDifference < 0 || (monthDifference === 0 && currentDate.getDate() < birthDate.getDate())) {
-             age--;
-         }
- 
-         return age;
-     }
- 
- 
-     functions.setValue("textbox12",usia.toString());
- 
-     functions.updateJSON();
- }
+//      functions.updateJSON();
+//  }
 
 
 
