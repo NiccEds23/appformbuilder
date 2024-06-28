@@ -5,8 +5,8 @@ const cacheAssets = [
     // '/iforms/idesign/getFormStateFromJson',
     // '/iforms/idesign/getDataObjects',
     '/manifest.json',
-    '/DeptiKURProcess/locales/en/translation/constants.json',
-    '/DeptiKURProcess/locales/en/styles/constants.json'
+    '/deptiKUR/locales/en/translation/constants.json',
+    '/deptiKUR/locales/en/styles/constants.json'
 ]
 
 //console.log("cacheAssets",cacheAssets);

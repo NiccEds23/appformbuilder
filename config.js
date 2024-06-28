@@ -1,4 +1,4 @@
-var DeptiKURProcess_configs = {
+var deptiKUR_configs = {
     // backEndUrl : "http://localhost:8080/iforms",
     backEndUrl : "/formBuilder",
     //backEndUrl : "http://192.168.153.196:8080/formBuilder",
