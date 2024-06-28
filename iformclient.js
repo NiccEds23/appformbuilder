@@ -402,11 +402,10 @@ function onChangeActionDetail() {
 function setViewByDigitalSignature() {
     var digitalSignature = functions.getValue("TrxLeadsApplicant.isdigitalsignature");
  
-    if (digitalSignature == true) {
-       functions.setStyle("frame8", "visible", "false");
+    if (digitalSignature === true || digitalSignature === "true") {
+       functions.setStyle("frame9", "visible", "false");
     } else {
-       
-       functions.setStyle("frame8", "visible", "true");
+       functions.setStyle("frame9", "visible", "true");
     }
 
     functions.updateJSON();
