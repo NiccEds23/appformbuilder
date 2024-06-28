@@ -40,8 +40,6 @@ function tableOperation(tableId, operationType){
 
 function subFormLoad(buttonId){
     //console.log(buttonId);
-    functions.setStyle("frame3", "visible", "false");
-    functions.updateJSON();
 }
 
 function customValidation(type) {
