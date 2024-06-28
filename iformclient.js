@@ -232,7 +232,7 @@ function onChangeLoanPurpose(){
 function onChangeSourceLeads(){
     var sourceLeads = functions.getValue("TrxLeadsApplicantNew.sourceleads");
 
-    functions.setValues({"SourceLeads":sourceLeads});
+    functions.setValues({"SourceLead":sourceLeads});
 }
 
 function setShowFieldsByCustomerType() {
@@ -386,7 +386,7 @@ function getSetAverageMonthlySale() {
 function onChangeActionDetail() {
     var action = functions.getValue("TrxLeadsActionDetail.statusleads");
  
-    if (action === "REJECT" || action === "CANCEL") {
+    if (action === "REJECT" || action === "CANCEL" || action === "REVISE") {
         functions.setStyle("TrxLeadsActionDetail.rejectreason", "disable", "false");
         functions.setStyle("TrxLeadsActionDetail.rejectreason", "mandatory", "true");
         functions.setValues({"approvalDecision":action});
@@ -455,7 +455,7 @@ function handleFormDataEntry(){
     functions.setStyle("monthlydetail", "visible", "false");
     functions.setStyle("TrxLeadsFinancial.initcaptbusiness", "visible", "false");
     functions.setStyle("frame31", "visible", "false");
-    functions.setStyle("frame37", "visible", "false");
+    functions.setStyle("frame34", "visible", "false");
 
     if(type === "Individual"){
         functions.setStyle("TrxLeadsApplicantNew.companytitle", "visible", "false");
@@ -531,6 +531,7 @@ function handleFormDataEntry(){
     }
 
     onChangeGuerantorChecklist();
+    onChangeCollateral()
 
     functions.updateJSON();
 }
@@ -563,7 +564,7 @@ function onChangeDomicileChecklist(){
 function onChangeGuerantorChecklist(){
     var guarantor = functions.getValue("TrxLeadsGuarantor.isguarantorneed");
 
-    if(guarantor === true){
+    if(guarantor === "true" || guarantor === true){
         functions.setStyle("frame8", "visible", "true");
     } else {
         functions.clearValue("TrxLeadsGuarantor.name",true);
@@ -594,7 +595,7 @@ function onChangeGuerantorChecklist(){
 function onChangeCollateral(){
     var collateral = functions.getValue("checkbox3");
 
-    if(collateral === true){
+    if(collateral === "true" || collateral === true){
         functions.setStyle("TrxLeadsCollateral", "visible", "true");
     } else {
         functions.clearTable("TrxLeadsCollateral");
@@ -647,7 +648,7 @@ function onChangeInsuranceDetail(){
 
 function handleFormDetailDataEntry(){
     var type = functions.getValue("TrxLeadsApplicantNew.consumertype");
-    functions.setStyle("label20", "visible", "false");
+    functions.setStyle("label18", "visible", "false");
     functions.setStyle("override", "visible", "false");
     
     // Same Field
@@ -744,7 +745,7 @@ function handleFormDetailDataEntry(){
 
 function handleFormDataVerif(){
     handleFormDetailDataEntry();
-    functions.setStyle("label20", "visible", "true");
+    functions.setStyle("label18", "visible", "true");
     functions.setStyle("override", "visible", "true");
     functions.setStyle("TrxLeadsFinancial.rentbusinessplace", "visible", "true");
     functions.setStyle("TrxLeadsFinancial.monthlyrentfee", "visible", "true");
