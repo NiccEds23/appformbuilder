@@ -364,7 +364,7 @@ function setTimeInBusiness() {
  
     var result = (Math.abs(year - 1970) * 12) + month;
  
-    functions.setValues({"businessOperation":result.toString()}
+    functions.setValues({"businessOperation":result.toString()})
 }
  
 function getSetNationality() {
@@ -386,14 +386,14 @@ function getSetAverageMonthlySale() {
 function onChangeActionDetail() {
     var action = functions.getValue("TrxLeadsActionDetail.statusleads");
  
-    if (action == "Reject") {
-       functions.setStyle("TrxLeadsActionDetail.rejectreason", "disable", "false");
-       functions.setStyle("TrxLeadsActionDetail.rejectreason", "mandatory", "true");
-       functions.setValues({"approvalDecision":action});
+    if (action === "REJECT" || action === "CANCEL") {
+        functions.setStyle("TrxLeadsActionDetail.rejectreason", "disable", "false");
+        functions.setStyle("TrxLeadsActionDetail.rejectreason", "mandatory", "true");
+        functions.setValues({"approvalDecision":action});
     } else {
-       functions.setStyle("TrxLeadsActionDetail.rejectreason", "disable", "true");
-       functions.setStyle("TrxLeadsActionDetail.rejectreason", "mandatory", "false");
-       functions.setValues({"approvalDecision":action});
+        functions.setStyle("TrxLeadsActionDetail.rejectreason", "disable", "true");
+        functions.setStyle("TrxLeadsActionDetail.rejectreason", "mandatory", "false");
+        functions.setValues({"approvalDecision":action});
     }
     
     functions.updateJSON();
@@ -417,6 +417,7 @@ function handleFormDataEntry(){
     var type = functions.getValue("TrxLeadsApplicantNew.consumertype");
     functions.setStyle("TrxLeadsApplicantNew.jrmuser", "visible", "false");
     functions.setStyle("label20", "visible", "false");
+    functions.setStyle("label18", "visible", "false");
     functions.setStyle("override", "visible", "false");
 
     // Hide Detail
@@ -528,6 +529,8 @@ function handleFormDataEntry(){
         functions.setStyle("frame6", "visible", "false");
         functions.setStyle("frame7", "visible", "false");
     }
+
+    onChangeGuerantorChecklist();
 
     functions.updateJSON();
 }
@@ -763,7 +766,7 @@ function onChangeOverride(){
         functions.setStyle("frame11", "disable", "false");
         functions.setStyle("frame12", "disable", "false");
         functions.setStyle("frame13", "disable", "false");
-        functions.setStyle("frame37", "disable", "false");
+        functions.setStyle("frame34", "disable", "false");
         functions.setStyle("frame16", "disable", "false");
         functions.setStyle("frame17", "disable", "false");
         functions.setStyle("frame18", "disable", "false");
@@ -783,7 +786,7 @@ function onChangeOverride(){
         functions.setStyle("frame11", "disable", "true");
         functions.setStyle("frame12", "disable", "true");
         functions.setStyle("frame13", "disable", "true");
-        functions.setStyle("frame37", "disable", "true");
+        functions.setStyle("frame34", "disable", "true");
         functions.setStyle("frame16", "disable", "true");
         functions.setStyle("frame17", "disable", "true");
         functions.setStyle("frame18", "disable", "true");
