@@ -61,29 +61,29 @@ function formLoad(){
     var activityName = functions.getWorkItemData("activityname");
 
     if (activityName === "First Entry"){
-        functions.setValue("TrxLeadsActionDetail.statusleads", "");
+        functions.setValues({"TrxLeadsActionDetail.statusleads":""});
         setShowFieldsByCustomerType()
     } else if(activityName === "Data Entry OTS"){
-        functions.setValue("TrxLeadsActionDetail.statusleads", "");
+        functions.setValues({"TrxLeadsActionDetail.statusleads":""});
         handleFormDataEntry();
     } else if(activityName === "Detail Data Entry"){
-        functions.setValue("TrxLeadsActionDetail.statusleads", "");
+        functions.setValues({"TrxLeadsActionDetail.statusleads":""});
         handleFormDetailDataEntry();
     } else if(activityName === "Data Verification"){
-        functions.setValue("TrxLeadsActionDetail.statusleads", "");
+        functions.setValues({"TrxLeadsActionDetail.statusleads":""});
         handleFormDataVerif();
     } else if(activityName === "Approval Head of KCP"){
-        functions.setValue("TrxLeadsActionDetail.statusleads", "");
+        functions.setValues({"TrxLeadsActionDetail.statusleads":""});
         functions.setStyle("button2","visible","false");
         functions.setStyle("frame23","visible","true");
         TypeCustomer();
     } else if(activityName === "Approval Branch Manager" || activityName === "Agreement Verification" || activityName === "Approval JRM" || activityName === "Approval PBP" || activityName === "Document Printing"){
-        functions.setValue("TrxLeadsActionDetail.statusleads", "");
+        functions.setValues({"TrxLeadsActionDetail.statusleads":""});
         functions.setStyle("frame23","visible","false");
         functions.setStyle("button2","visible","true");
         TypeCustomer();
     } else if(activityName === "Request Disbursement"){
-        functions.setValue("TrxLeadsActionDetail.statusleads", "");
+        functions.setValues({"TrxLeadsActionDetail.statusleads":""});
         hideByConsumerType();
     }
 }
@@ -220,19 +220,19 @@ function selectFeatureToBeIncludedInRichText(){
 function onChangeLoanType(){
     var loanType = functions.getValue("TrxLeadsApplicantNew.loantype");
 
-    functions.setValue("LoanType", loanType);
+    functions.setValues({"LoanType":loanType});
 }
 
 function onChangeLoanPurpose(){
     var loanPurpose = functions.getValue("TrxLeadsApplicantNew.loanpurpose");
 
-    functions.setValue("LoanPurpose", loanPurpose);
+    functions.setValues({"LoanPurpose":loanPurpose});
 }
 
 function onChangeSourceLeads(){
     var sourceLeads = functions.getValue("TrxLeadsApplicantNew.sourceleads");
 
-    functions.setValue("SourceLeads", sourceLeads);
+    functions.setValues({"SourceLeads":sourceLeads});
 }
 
 function setShowFieldsByCustomerType() {
@@ -349,7 +349,7 @@ function setAgeValue() {
  
     var result = GetAge(birthdate);
 
-    functions.setValue("ageOfCustomer", result.toString());
+    functions.setValues({"ageOfCustomer":result.toString()});
 
     functions.updateJSON()
 }
@@ -364,13 +364,13 @@ function setTimeInBusiness() {
  
     var result = (Math.abs(year - 1970) * 12) + month;
  
-    functions.setValue("businessOperation", result.toString());
+    functions.setValues({"businessOperation":result.toString()}
 }
  
 function getSetNationality() {
     var nationality = functions.getValue("TrxLeadsApplicantNew.nationality")
  
-    functions.setValue("nationality", nationality)
+    functions.setValues({"nationality":nationality})
 
     functions.updateJSON();
 }
@@ -378,7 +378,7 @@ function getSetNationality() {
 function getSetAverageMonthlySale() {
     var avgMonthlySale = functions.getValue("TrxLeadsApplicantNew.averagemonthlysales")
  
-    functions.setValue("avgMonthlySales", avgMonthlySale)
+    functions.setValues({"avgMonthlySales":avgMonthlySale})
     
     functions.updateJSON();
 }
@@ -387,13 +387,13 @@ function onChangeActionDetail() {
     var action = functions.getValue("TrxLeadsActionDetail.statusleads");
  
     if (action == "Reject") {
-       functions.setStyle("TrxLeadsActionDetail.rejectreason", "disable", "true");
-       functions.setStyle("TrxLeadsActionDetail.rejectreason", "mandatory", "true");
-       functions.setValue("approvalDecision", action);
-    } else {
        functions.setStyle("TrxLeadsActionDetail.rejectreason", "disable", "false");
+       functions.setStyle("TrxLeadsActionDetail.rejectreason", "mandatory", "true");
+       functions.setValues({"approvalDecision":action});
+    } else {
+       functions.setStyle("TrxLeadsActionDetail.rejectreason", "disable", "true");
        functions.setStyle("TrxLeadsActionDetail.rejectreason", "mandatory", "false");
-       functions.setValue("approvalDecision", action);
+       functions.setValues({"approvalDecision":action});
     }
     
     functions.updateJSON();
@@ -893,7 +893,7 @@ function GetAgeSpouse(){
 
     var usiaSpouse = GetAge(birthSpouse);
 
-    functions.setValue("textbox21",usiaSpouse.toString());
+    functions.setValues({"textbox21":usiaSpouse.toString()});
 
     functions.updateJSON();
 }
@@ -903,7 +903,7 @@ function GetAgeGuarantor(){
 
     var usiaGuarantor = GetAge(birthGuarantor);
 
-    functions.setValue("textbox31",usiaGuarantor.toString());
+    functions.setValues({"textbox31":usiaGuarantor.toString()});
 
     functions.updateJSON();
 }
@@ -948,21 +948,21 @@ function GetAge(birthDate) {
 function hideByConsumerType(){
     let consumerType = functions.getValue("TrxLeadsApplicantNew.consumertype");
     if(consumerType.toLowerCase() == "individu"){
-        functions.setValue("frame2", "visible", true);
+        functions.setStyle("frame2", "visible", "true");
         // GetAgeApplicant()
+        functions.setStyle("frame3", "visible", "false");
         hideByMaritalStatus();
 
-        functions.setValue("frame3", "visible", false);
     }else if(consumerType.toLowerCase() == "company"){
-        functions.setValue("frame2", "visible", false); //individu
-        functions.setValue("frame3", "visible", true);  //company
-        functions.setValue("frame6", "visible", false); //spouse
-        functions.setValue("frame4", "visible", true);  //guarantor
+        functions.setStyle("frame2", "visible", "false"); //individu
+        functions.setStyle("frame3", "visible", "true");  //company
+        functions.setStyle("frame6", "visible", "false"); //spouse
+        functions.setStyle("frame4", "visible", "true");  //guarantor
     }else{
-        functions.setValue("frame2", "visible", false);
-        functions.setValue("frame3", "visible", false);
-        functions.setValue("frame6", "visible", false);
-        functions.setValue("frame4", "visible", false);
+        functions.setStyle("frame2", "visible", "false");
+        functions.setStyle("frame3", "visible", "false");
+        functions.setStyle("frame6", "visible", "false");
+        functions.setStyle("frame4", "visible", "false");
     }
     functions.updateJSON();
 }
@@ -971,9 +971,9 @@ function hideByMaritalStatus(){
     let consumerType = functions.getValue("TrxLeadsApplicantNew.consumertype");
     let maritalStatus = functions.getValue("TrxLeadsApplicantNew.maritalstatus");
     if(maritalStatus.toLowerCase() == "menikah" && consumerType.toLowerCase() == "individu"){
-        functions.setValue("frame6","visible", true);
+        functions.setStyle("frame6","visible", "true");
     }else{
-        functions.setValue("frame6", "visible", false);
+        functions.setStyle("frame6", "visible", "false");
     }
     functions.updateJSON();
 }
