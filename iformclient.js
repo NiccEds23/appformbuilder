@@ -61,7 +61,9 @@ function formLoad(){
     functions.setValue("TrxLeadsActionDetail.statusleads", "");
     var activityName = functions.getWorkItemData("activityname");
 
-    if(activityName === "Data Entry OTS"){
+    if (activityName === "First Entry"){
+        setShowFieldsByCustomerType()
+    } else if(activityName === "Data Entry OTS"){
         handleFormDataEntry();
     } else if(activityName === "Detail Data Entry"){
         handleFormDetailDataEntry();
