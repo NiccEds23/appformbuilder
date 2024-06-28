@@ -365,12 +365,16 @@ function getSetNationality() {
     var nationality = functions.getValue("TrxLeadsApplicantNew.nationality")
  
     functions.setValue("nationality", nationality)
+
+    functions.updateJSON();
 }
  
 function getSetAverageMonthlySale() {
     var avgMonthlySale = functions.getValue("TrxLeadsApplicantNew.averagemonthlysales")
  
     functions.setValue("avgMonthlySales", avgMonthlySale)
+    
+    functions.updateJSON();
 }
  
 function onChangeActionDetail() {
@@ -380,25 +384,25 @@ function onChangeActionDetail() {
        functions.setStyle("TrxLeadsActionDetail.rejectreason", "disable", "true");
        functions.setStyle("TrxLeadsActionDetail.rejectreason", "mandatory", "true");
        functions.setValue("approvalDecision", action);
-       functions.updateJSON();
     } else {
        functions.setStyle("TrxLeadsActionDetail.rejectreason", "disable", "false");
        functions.setStyle("TrxLeadsActionDetail.rejectreason", "mandatory", "false");
        functions.setValue("approvalDecision", action);
-       functions.updateJSON();
     }
+    
+    functions.updateJSON();
 }
  
 function setViewByDigitalSignature() {
     var digitalSignature = functions.getValue("TrxLeadsApplicant.isdigitalsignature");
  
     if (digitalSignature == true) {
-    
        functions.setStyle("frame8", "visible", "false");
     } else {
        
        functions.setStyle("frame8", "visible", "true");
     }
+
     functions.updateJSON();
 }
  
@@ -576,7 +580,6 @@ function onChangeGuerantorChecklist(){
     }
 
     functions.updateJSON();
-
 }
 
 function onChangeCollateral(){
@@ -739,8 +742,6 @@ function handleFormDataVerif(){
     functions.setStyle("TrxLeadsFinancial.rentbusinessplace", "mandatory", "true");
 
     onChangeOverride();
-
-    functions.updateJSON();
 }
 
 function onChangeOverride(){
@@ -788,7 +789,6 @@ function onChangeOverride(){
         functions.setStyle("frame27", "disable", "true");
     }
 
-
     functions.updateJSON();
 }
 
@@ -823,12 +823,9 @@ function TypeCustomer(){
         functions.setStyle("TrxLeadsApplicantNew.economysector","visible","false");
         functions.setStyle("TrxLeadsApplicantNew.economysubsector","visible","false");
         IsGuarantor();
-        functions.setStyle("frame8","visible","false");
-    
-        
-        
-    } else if (tipeCustomer.toLowerCase() = "company"){
 
+        functions.setStyle("frame8","visible","false");
+    } else if (tipeCustomer.toLowerCase() = "company"){
         functions.setStyle("TrxLeadsApplicantNew.dateofbirth","visible","false");
         functions.setStyle("TrxLeadsApplicantNew.identityno","visible","false");
         functions.setStyle("TrxLeadsApplicantNew.address","visible","false");
@@ -856,23 +853,19 @@ function TypeCustomer(){
         functions.setStyle("TrxLeadsGuarantor.placeofbirth","visible","true");
         functions.setStyle("frame8","visible","true");
         GetAgeGuarantor();
-    
     }
 
     functions.updateJSON();
-
 }
  
 function MaritalStatusCustomer(){
     var status = functions.getValue("TrxLeadsApplicantNew.maritalstatus");
 
     if(status.toLowerCase() == "belum menikah" || status.toLowerCase() == "Janda"){
-
         functions.setStyle("frame3","visible","false");
-
     } else {
-    functions.setStyle("frame3","visible","true");
-    GetAgeSpouse();
+        functions.setStyle("frame3","visible","true");
+        GetAgeSpouse();
     }
 
     functions.updateJSON();
@@ -898,7 +891,6 @@ function GetAgeSpouse(){
 
     functions.updateJSON();
 }
- 
  
 function GetAgeGuarantor(){
     var birthGuarantor = new Date(functions.getValue("TrxLeadsGuarantor.dateofbirth"));
@@ -926,7 +918,7 @@ function IsGuarantor(){
  
  
 function GetAge(birthDate) {
-   return Math.abs(new Date(Date.now() - birthDate).getUTCFullYear() - 1970)
+    return Math.abs(new Date(Date.now() - birthDate).getUTCFullYear() - 1970)
 }
  
  
@@ -951,7 +943,7 @@ function hideByConsumerType(){
     let consumerType = functions.getValue("TrxLeadsApplicantNew.consumertype");
     if(consumerType.toLowerCase() == "individu"){
         functions.setValue("frame2", "visible", true);
-    //  GetAgeApplicant()
+        // GetAgeApplicant()
         hideByMaritalStatus();
 
         functions.setValue("frame3", "visible", false);
