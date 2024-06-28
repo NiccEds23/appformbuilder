@@ -70,15 +70,13 @@ function formLoad(){
     } else if(activityName === "Data Verification"){
         handleFormDataVerif();
     } else if(activityName === "Approval Head of KCP"){
-        TypeCustomer();
         functions.setStyle("button2","visible","false");
         functions.setStyle("frame23","visible","true");
-        functions.updateJSON();
-    } else if(activityName === "Approval Branch Manager" || activityName === "Agreement Verification" || activityName === "Approval JRM" || activityName === "Approval PBP" || activityName === "Document Printing"){
         TypeCustomer();
+    } else if(activityName === "Approval Branch Manager" || activityName === "Agreement Verification" || activityName === "Approval JRM" || activityName === "Approval PBP" || activityName === "Document Printing"){
+        functions.setStyle("frame23","visible","false");
         functions.setStyle("button2","visible","true");
-         functions.setStyle("frame23","visible","false");
-         functions.updateJSON();
+        TypeCustomer();
     } else if(activityName === "Request Disbursement"){
         hideByConsumerType();
     }
