@@ -58,26 +58,32 @@ function customValidation(type) {
 }
 
 function formLoad(){
-    functions.setValue("TrxLeadsActionDetail.statusleads", "");
     var activityName = functions.getWorkItemData("activityname");
 
     if (activityName === "First Entry"){
+        functions.setValue("TrxLeadsActionDetail.statusleads", "");
         setShowFieldsByCustomerType()
     } else if(activityName === "Data Entry OTS"){
+        functions.setValue("TrxLeadsActionDetail.statusleads", "");
         handleFormDataEntry();
     } else if(activityName === "Detail Data Entry"){
+        functions.setValue("TrxLeadsActionDetail.statusleads", "");
         handleFormDetailDataEntry();
     } else if(activityName === "Data Verification"){
+        functions.setValue("TrxLeadsActionDetail.statusleads", "");
         handleFormDataVerif();
     } else if(activityName === "Approval Head of KCP"){
+        functions.setValue("TrxLeadsActionDetail.statusleads", "");
         functions.setStyle("button2","visible","false");
         functions.setStyle("frame23","visible","true");
         TypeCustomer();
     } else if(activityName === "Approval Branch Manager" || activityName === "Agreement Verification" || activityName === "Approval JRM" || activityName === "Approval PBP" || activityName === "Document Printing"){
+        functions.setValue("TrxLeadsActionDetail.statusleads", "");
         functions.setStyle("frame23","visible","false");
         functions.setStyle("button2","visible","true");
         TypeCustomer();
     } else if(activityName === "Request Disbursement"){
+        functions.setValue("TrxLeadsActionDetail.statusleads", "");
         hideByConsumerType();
     }
 }
