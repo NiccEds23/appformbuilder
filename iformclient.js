@@ -413,8 +413,7 @@ function setViewByDigitalSignature() {
 function handleFormDataEntry(){
     var type = functions.getValue("TrxLeadsApplicantNew.consumertype");
     functions.setStyle("TrxLeadsApplicantNew.jrmuser", "visible", "false");
-    functions.setStyle("label20", "visible", "false");
-    functions.setStyle("label18", "visible", "false");
+    functions.setStyle("labeloverride", "visible", "false");
     functions.setStyle("override", "visible", "false");
 
     // Hide Detail
@@ -645,7 +644,7 @@ function onChangeInsuranceDetail(){
 
 function handleFormDetailDataEntry(){
     var type = functions.getValue("TrxLeadsApplicantNew.consumertype");
-    functions.setStyle("label18", "visible", "false");
+    functions.setStyle("labeloverride", "visible", "false");
     functions.setStyle("override", "visible", "false");
     
     // Same Field
@@ -742,7 +741,7 @@ function handleFormDetailDataEntry(){
 
 function handleFormDataVerif(){
     handleFormDetailDataEntry();
-    functions.setStyle("label18", "visible", "true");
+    functions.setStyle("labeloverride", "visible", "true");
     functions.setStyle("override", "visible", "true");
     functions.setStyle("TrxLeadsFinancial.rentbusinessplace", "visible", "true");
     functions.setStyle("TrxLeadsFinancial.monthlyrentfee", "visible", "true");
