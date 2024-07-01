@@ -858,7 +858,7 @@ function TypeCustomer(){
         functions.setStyle("TrxLeadsApplicantNew.economysubsector","visible","true");
         functions.setStyle("TrxLeadsGuarantor.placeofbirth","visible","true");
         functions.setStyle("frame8","visible","true");
-        GetAgeGuarantor();
+        // GetAgeGuarantor();
     }
 
     functions.updateJSON();
@@ -871,7 +871,7 @@ function MaritalStatusCustomer(){
         functions.setStyle("frame3","visible","false");
     } else {
         functions.setStyle("frame3","visible","true");
-        GetAgeSpouse();
+        // GetAgeSpouse();
     }
 
     functions.updateJSON();
@@ -893,7 +893,7 @@ function GetAgeSpouse(){
 
     var usiaSpouse = GetAge(birthSpouse);
 
-    functions.setValues({"textbox21":usiaSpouse.toString()});
+    functions.setValues({"spouseAge":usiaSpouse.toString()});
 
     functions.updateJSON();
 }
@@ -903,7 +903,7 @@ function GetAgeGuarantor(){
 
     var usiaGuarantor = GetAge(birthGuarantor);
 
-    functions.setValues({"textbox31":usiaGuarantor.toString()});
+    functions.setValues({"guarantorAge":usiaGuarantor.toString()});
 
     functions.updateJSON();
 }
@@ -911,10 +911,10 @@ function GetAgeGuarantor(){
 function IsGuarantor(){
     var guarantor = functions.getValue("TrxLeadsGuarantor.isguarantorneed");
 
-    if(guarantor == true){
+    if(guarantor === true || guarantor === 'true'){
         functions.setStyle("frame4","visible","true");
         functions.setStyle("TrxLeadsGuarantor.placeofbirth","visible","false");
-        GetAgeGuarantor();
+        // GetAgeGuarantor();
     } else{
         functions.setStyle("frame4","visible","false");
     }
