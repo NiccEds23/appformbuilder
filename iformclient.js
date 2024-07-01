@@ -963,9 +963,9 @@ function onChangeOverride(){
  
  function hideByConsumerType(){
      let consumerType = functions.getValue("TrxLeadsApplicantNew.consumertype");
-     if(consumerType.toLowerCase() == "individu"){
+     if(consumerType.toLowerCase() == "individual"){
          functions.setValue("frame2", "visible", true);
-         GetAge()
+         GetAge();
          hideByMaritalStatus();
 
          functions.setValue("frame3", "visible", false);
@@ -986,7 +986,7 @@ function onChangeOverride(){
  function hideByMaritalStatus(){
      let consumerType = functions.getValue("TrxLeadsApplicantNew.consumertype");
      let maritalStatus = functions.getValue("TrxLeadsApplicantNew.maritalstatus");
-     if(maritalStatus.toLowerCase() == "menikah" && consumerType.toLowerCase() == "individu"){
+     if(maritalStatus.toLowerCase() == "menikah" && consumerType.toLowerCase() == "individual"){
          functions.setValue("frame6","visible", true);
      }else{
          functions.setValue("frame6", "visible", false);
@@ -1018,7 +1018,7 @@ function onChangeOverride(){
      }
  
  
-     functions.setValue("textbox12",usia.toString());
+     functions.setValue("ageOfCustomer",usia.toString());
  
      functions.updateJSON();
  }
