@@ -1012,7 +1012,7 @@ function GetAge(birthDate) {
 
 function hideByConsumerType() {
     let consumerType = functions.getValue("TrxLeadsApplicantNew.consumertype");
-    if (consumerType.toLowerCase() == "individu") {
+    if (consumerType.toLowerCase() == "individual") {
         functions.setStyle("frame2", "visible", "true");
         // GetAgeApplicant()
         functions.setStyle("frame3", "visible", "false");
@@ -1035,7 +1035,7 @@ function hideByConsumerType() {
 function hideByMaritalStatus() {
     let consumerType = functions.getValue("TrxLeadsApplicantNew.consumertype");
     let maritalStatus = functions.getValue("TrxLeadsApplicantNew.maritalstatus");
-    if (maritalStatus.toLowerCase() == "menikah" && consumerType.toLowerCase() == "individu") {
+    if (maritalStatus.toLowerCase() == "menikah" && consumerType.toLowerCase() == "individual") {
         functions.setStyle("frame6", "visible", "true");
     } else {
         functions.setStyle("frame6", "visible", "false");
