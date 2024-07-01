@@ -228,7 +228,7 @@ function onChangeLoanPurpose(){
 }
 
 function onChangeSourceLeads(){
-    var sourceLeads = functions.getValue("TrxLeadsApplicantNew.sourcelead");
+    var sourceLeads = functions.getValue("TrxLeadsApplicantNew.sourceofleads");
 
     functions.setValues({"SourceLead":sourceLeads});
 }
