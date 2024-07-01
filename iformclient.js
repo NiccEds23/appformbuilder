@@ -644,7 +644,7 @@ function onChangeGuerantorChecklist() {
 }
 
 function onChangeCollateral() {
-    var collateral = functions.getValue("checkbox3");
+    var collateral = functions.getValue("isCollateral");
 
     if (collateral === "true" || collateral === true) {
         functions.setStyle("TrxLeadsCollateral", "visible", "true");
