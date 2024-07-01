@@ -1,168 +1,176 @@
-function getExternalJSPaths(){
+function getExternalJSPaths() {
     // path to load multiple files are to given here comma seperated
-    const filePaths=[];
+    const filePaths = [];
     return filePaths;
 }
 
-function onRowClick(listviewId,rowIndex){
+function onRowClick(listviewId, rowIndex) {
     return true
 }
 
-function clickLabelLink(labelid)
-{
+function clickLabelLink(labelid) {
     //console.log("labelid",labelid);
 }
 
-function onChangeSectionState(frameId, state)
-{
+function onChangeSectionState(frameId, state) {
     //console.log(frameId,state);
-    
+
 }
 
-function postHookPickListOk(columns,controlId){
-   // console.log(columns, controlId);
+function postHookPickListOk(columns, controlId) {
+    // console.log(columns, controlId);
 }
 
 function postHookDBLink() {
     //will call after dblinking
 }
 
-function tableOperation(tableId, operationType){
-    if(operationType === "AddRow"){
+function tableOperation(tableId, operationType) {
+    if (operationType === "AddRow") {
         return true
-    } else if(operationType === "DeleteRow"){
+    } else if (operationType === "DeleteRow") {
         return true
-    } else if(operationType === "CopyRow"){
+    } else if (operationType === "CopyRow") {
         return true
     }
 }
 
 
-function subFormLoad(buttonId){
+function subFormLoad(buttonId) {
     //console.log(buttonId);
 }
 
 function customValidation(type) {
-    if(type === "D") {
+    if (type === "D") {
         //operation that need to perform on Done button
-    }
-    else if(type === "S") {
+    } else if (type === "S") {
         //operation that need to perform on Save button
-    }
-    else if(type === "I") {
+    } else if (type === "I") {
         //operation that need to perform on Introduce button
     }
     return true;
 }
 
-function formLoad(){
+function formLoad() {
     var activityName = functions.getWorkItemData("activityname");
 
-    if (activityName === "First Entry"){
-        functions.setValues({"TrxLeadsActionDetail.statusleads":""});
+    if (activityName === "First Entry") {
+        functions.setValues({
+            "TrxLeadsActionDetail.statusleads": ""
+        });
         setShowFieldsByCustomerType()
-    } else if(activityName === "Data Entry OTS"){
-        functions.setValues({"TrxLeadsActionDetail.statusleads":""});
+    } else if (activityName === "Data Entry OTS") {
+        functions.setValues({
+            "TrxLeadsActionDetail.statusleads": ""
+        });
         handleFormDataEntry();
-    } else if(activityName === "Detail Data Entry"){
-        functions.setValues({"TrxLeadsActionDetail.statusleads":""});
+    } else if (activityName === "Detail Data Entry") {
+        functions.setValues({
+            "TrxLeadsActionDetail.statusleads": ""
+        });
         handleFormDetailDataEntry();
-    } else if(activityName === "Data Verification"){
-        functions.setValues({"TrxLeadsActionDetail.statusleads":""});
+    } else if (activityName === "Data Verification") {
+        functions.setValues({
+            "TrxLeadsActionDetail.statusleads": ""
+        });
         handleFormDataVerif();
-    } else if(activityName === "Approval Head of KCP" || activityName === "Approval PBP" || activityName === "Approval JRM"  ){
-        functions.setValues({"TrxLeadsActionDetail.statusleads":""});
-        functions.setStyle("button2","visible","false");
-        functions.setStyle("frame23","visible","true");
+    } else if (activityName === "Approval Head of KCP" || activityName === "Approval PBP" || activityName === "Approval JRM") {
+        functions.setValues({
+            "TrxLeadsActionDetail.statusleads": ""
+        });
+        functions.setStyle("button2", "visible", "false");
+        functions.setStyle("frame23", "visible", "true");
         TypeCustomer();
-    } else if(activityName === "Agreement Verification" || activityName === "Document Printing"){
-        functions.setValues({"TrxLeadsActionDetail.statusleads":""});
-        functions.setStyle("frame23","visible","false");
-        functions.setStyle("button2","visible","true");
+    } else if (activityName === "Agreement Verification" || activityName === "Document Printing") {
+        functions.setValues({
+            "TrxLeadsActionDetail.statusleads": ""
+        });
+        functions.setStyle("frame23", "visible", "false");
+        functions.setStyle("button2", "visible", "true");
         TypeCustomer();
-    } else if(activityName === "Request Disbursement"){
-        functions.setValues({"TrxLeadsActionDetail.statusleads":""});
+    } else if (activityName === "Request Disbursement") {
+        functions.setValues({
+            "TrxLeadsActionDetail.statusleads": ""
+        });
         hideByConsumerType();
     }
 }
 
-function handleCustomKeyEvent(ev){
+function handleCustomKeyEvent(ev) {
     //console.log("handleCustomKeyEvent",ev);
 }
 
-function subformDoneClick(buttonId){ 
+function subformDoneClick(buttonId) {
     //Custom Code // Doubt
     //console.log(buttonId);
 }
 
-function picklistPreHook(controlId){ 
+function picklistPreHook(controlId) {
     //Custom Code 
     //console.log(controlId);
 }
 
-function subFormPreHook(buttonId){ 
+function subFormPreHook(buttonId) {
     //console.log(buttonId);
-    return true; 
+    return true;
 }
 
-function postHookPickListCancel(textid){ 
+function postHookPickListCancel(textid) {
     //CustomCode 
-//    console.log(textid);
+    //    console.log(textid);
 }
 
-function clearPicklistPostHook(controlId){
+function clearPicklistPostHook(controlId) {
     //Custom Code 
-  //  console.log(controlId);
+    //  console.log(controlId);
 }
 
-function formChangeHook(ref){
+function formChangeHook(ref) {
     //console.log(ref);
 }
 
-function addRowPostHook(tableId){ 
+function addRowPostHook(tableId) {
     //Custom Code 
     //console.log(tableId);
-    if (tableId == "TransportReimburse_group")
-    {
+    if (tableId == "TransportReimburse_group") {
         var rowCount = functions.getGridRowCount(tableId);
         var totalAmount = Number(functions.getValue("TotalAmount"));
 
-        for(let i = 0; i < rowCount; i++)
-        {
+        for (let i = 0; i < rowCount; i++) {
             var amount = functions.getValueFromTableCell(tableId, i, 3);
-            totalAmount+=amount;
+            totalAmount += amount;
         }
         functions.setValues({
-            "TotalAmount" : totalAmount
+            "TotalAmount": totalAmount
         });
     }
 }
 
-function deleteRowPostHook(tableId, rowIndices){ 
+function deleteRowPostHook(tableId, rowIndices) {
     //Custom Code 
     //console.log(tableId, rowIndices);
 }
 
-function onTableCellChange(rowIndex,colIndex,ref,controlId){ 
+function onTableCellChange(rowIndex, colIndex, ref, controlId) {
     //custom code 
     //console.log(rowIndex,colIndex,ref,controlId);
 }
 
-function selectRowHook(tableId,selectedRowsArray,isAllRowsSelected){
+function selectRowHook(tableId, selectedRowsArray, isAllRowsSelected) {
     //custom code 
     //console.log(tableId, selectedRowsArray, isAllRowsSelected);
 }
 
-function saveAndNextPreHook(tabId){    
+function saveAndNextPreHook(tabId) {
     return false;
 }
 
 function closeWorkitemHook() {
-    
+
 }
 
 function skipValidation() {
-    
+
     return false;
 }
 
@@ -175,14 +183,15 @@ function restrictMultipleDocUpload() {
     return false;
 }
 
-function setDefaultPrecisionForControl(){
+function setDefaultPrecisionForControl() {
     return 2
 }
 
-function clearEditableComboBoxValueIFNotExists(){
+function clearEditableComboBoxValueIFNotExists() {
     return true
 }
-function selectFeatureToBeIncludedInRichText(){
+
+function selectFeatureToBeIncludedInRichText() {
     const FroalaToolbarJson = {
         "paragraphFormat": 'true',
         "fontSize": 'true',
@@ -192,7 +201,7 @@ function selectFeatureToBeIncludedInRichText(){
         "alignLeft": 'true',
         "alignRight": 'true',
         "alignCenter": 'true',
-        "alignJustify": 'true',    
+        "alignJustify": 'true',
         "strikeThrough": 'true',
         "subscript": 'true',
         "superscript": 'true',
@@ -209,33 +218,53 @@ function selectFeatureToBeIncludedInRichText(){
         "insertTable": 'true',
         "undo": 'true',
         "redo": 'true',
-        
+
     }
     return FroalaToolbarJson;
 }
 
 //first entry
-function onChangeLoanType(){
+function onChangeLoanType() {
     var loanType = functions.getValue("TrxLeadsApplicantNew.loantype");
 
-    functions.setValues({"LoanType":loanType});
+    functions.setValues({
+        "LoanType": loanType
+    });
 }
 
-function onChangeLoanPurpose(){
+function onChangeLoanPurpose() {
     var loanPurpose = functions.getValue("TrxLeadsApplicantNew.loanpurpose");
 
-    functions.setValues({"LoanPurpose":loanPurpose});
+    functions.setValues({
+        "LoanPurpose": loanPurpose
+    });
 }
 
-function onChangeSourceLeads(){
+function onChangeSourceLeads() {
     var sourceLeads = functions.getValue("TrxLeadsApplicantNew.sourceofleads");
 
-    functions.setValues({"SourceLead":sourceLeads});
+    functions.setValues({
+        "SourceLead": sourceLeads
+    });
+}
+
+function onChangeBranchName() {
+    var branchName = functions.getValue("TrxLeadsApplicantNew.branchname");
+
+    if (branchName === "KC Grogol") {
+        functions.setValues({
+            "branchType": "KCU"
+        })
+    } else if (branchName === "KCP Grogol") {
+        functions.setValues({
+            "branchType": "KCP"
+        })
+    }
 }
 
 function setShowFieldsByCustomerType() {
     var customerType = functions.getValue("TrxLeadsApplicantNew.consumertype");
- 
+
     if (customerType === "Individual") {
         functions.setStyle("TrxLeadsApplicantNew.companytitle", "visible", "false");
         functions.setStyle("TrxLeadsApplicantNew.companytitle", "mandatory", "false");
@@ -341,76 +370,88 @@ function setShowFieldsByCustomerType() {
     }
 }
 
- 
+
 function setAgeValue() {
     var birthdate = new Date(functions.getValue("TrxLeadsApplicantNew.dateofbirth"));
- 
+
     var result = GetAge(birthdate);
 
-    functions.setValues({"ageOfCustomer":result.toString()});
+    functions.setValues({
+        "ageOfCustomer": result.toString()
+    });
 
     functions.updateJSON()
 }
- 
+
 function setTimeInBusiness() {
     var businessEst = new Date(functions.getValue("TrxLeadsBusiness.sincewhen")).getTime();
- 
+
     var diff = new Date(Date.now() - businessEst);
- 
+
     var month = diff.getUTCMonth();
     var year = diff.getUTCFullYear();
- 
+
     var result = (Math.abs(year - 1970) * 12) + month;
- 
-    functions.setValues({"businessOperation":result.toString()})
+
+    functions.setValues({
+        "businessOperation": result.toString()
+    })
 }
- 
+
 function getSetNationality() {
     var nationality = functions.getValue("TrxLeadsApplicantNew.nationality")
- 
-    functions.setValues({"nationality":nationality})
+
+    functions.setValues({
+        "nationality": nationality
+    })
 
     functions.updateJSON();
 }
- 
+
 function getSetAverageMonthlySale() {
     var avgMonthlySale = functions.getValue("TrxLeadsApplicantNew.averagemonthlysales")
- 
-    functions.setValues({"avgMonthlySales":avgMonthlySale})
-    
+
+    functions.setValues({
+        "avgMonthlySales": avgMonthlySale
+    })
+
     functions.updateJSON();
 }
- 
+
 function onChangeActionDetail() {
     var action = functions.getValue("TrxLeadsActionDetail.statusleads");
- 
+
     if (action === "REJECT" || action === "CANCEL" || action === "REVISE") {
         functions.setStyle("TrxLeadsActionDetail.rejectreason", "disable", "false");
         functions.setStyle("TrxLeadsActionDetail.rejectreason", "mandatory", "true");
-        functions.setValues({"approvalDecision":action});
+        functions.setValues({
+            "approvalDecision": action
+        });
     } else {
         functions.setStyle("TrxLeadsActionDetail.rejectreason", "disable", "true");
         functions.setStyle("TrxLeadsActionDetail.rejectreason", "mandatory", "false");
-        functions.setValues({"approvalDecision":action});
-    }
-    
-    functions.updateJSON();
-}
- 
-function setViewByDigitalSignature() {
-    var digitalSignature = functions.getValue("TrxLeadsApplicant.isdigitalsignature");
- 
-    if (digitalSignature === true || digitalSignature === "true") {
-       functions.setStyle("frame9", "visible", "false");
-    } else {
-       functions.setStyle("frame9", "visible", "true");
+        functions.setValues({
+            "approvalDecision": action
+        });
     }
 
     functions.updateJSON();
 }
- 
- //data entry
-function handleFormDataEntry(){
+
+function setViewByDigitalSignature() {
+    var digitalSignature = functions.getValue("TrxLeadsApplicant.isdigitalsignature");
+
+    if (digitalSignature === true || digitalSignature === "true") {
+        functions.setStyle("frame9", "visible", "false");
+    } else {
+        functions.setStyle("frame9", "visible", "true");
+    }
+
+    functions.updateJSON();
+}
+
+//data entry
+function handleFormDataEntry() {
     var type = functions.getValue("TrxLeadsApplicantNew.consumertype");
     functions.setStyle("TrxLeadsApplicantNew.jrmuser", "visible", "false");
     functions.setStyle("labeloverride", "visible", "false");
@@ -453,7 +494,7 @@ function handleFormDataEntry(){
     functions.setStyle("frame31", "visible", "false");
     functions.setStyle("frame34", "visible", "false");
 
-    if(type === "Individual"){
+    if (type === "Individual") {
         functions.setStyle("TrxLeadsApplicantNew.companytitle", "visible", "false");
         functions.setStyle("TrxLeadsApplicantNew.companyname", "visible", "false");
         functions.setStyle("TrxLeadsApplicantNew.companyphone", "visible", "false");
@@ -521,7 +562,7 @@ function handleFormDataEntry(){
         functions.setStyle("TrxLeadsApplicantNew.spousemobilephone", "mandatory", "false");
         functions.setStyle("TrxLeadsApplicantNew.emergencycontactname", "mandatory", "false");
         functions.setStyle("TrxLeadsApplicantNew.emergencycontactphone", "mandatory", "false");
-        
+
         functions.setStyle("frame6", "visible", "false");
         functions.setStyle("frame7", "visible", "false");
     }
@@ -532,66 +573,80 @@ function handleFormDataEntry(){
     functions.updateJSON();
 }
 
-function onChangeDomicileChecklist(){
+function onChangeDomicileChecklist() {
     var domicile = functions.getValue("TrxLeadsApplicantNew.isdomicilesame");
 
-    if(domicile === true){
-        functions.setValues({"TrxLeadsApplicantNew.addressdomicile": functions.getValue("TrxLeadsApplicantNew.address")});
-        functions.setValues({"TrxLeadsApplicantNew.rtrwdomicile": functions.getValue("TrxLeadsApplicantNew.rtrw")});
-        functions.setValues({"TrxLeadsApplicantNew.provincedomicile": functions.getValue("TrxLeadsApplicantNew.province")});
-        functions.setValues({"TrxLeadsApplicantNew.citydomicile": functions.getValue("TrxLeadsApplicantNew.city")});
-        functions.setValues({"TrxLeadsApplicantNew.districtdomicile": functions.getValue("TrxLeadsApplicantNew.district")});
-        functions.setValues({"TrxLeadsApplicantNew.villagedomicile": functions.getValue("TrxLeadsApplicantNew.village")});
-        functions.setValues({"TrxLeadsApplicantNew.postalcodedomicile": functions.getValue("TrxLeadsApplicantNew.postalcode")});
+    if (domicile === true) {
+        functions.setValues({
+            "TrxLeadsApplicantNew.addressdomicile": functions.getValue("TrxLeadsApplicantNew.address")
+        });
+        functions.setValues({
+            "TrxLeadsApplicantNew.rtrwdomicile": functions.getValue("TrxLeadsApplicantNew.rtrw")
+        });
+        functions.setValues({
+            "TrxLeadsApplicantNew.provincedomicile": functions.getValue("TrxLeadsApplicantNew.province")
+        });
+        functions.setValues({
+            "TrxLeadsApplicantNew.citydomicile": functions.getValue("TrxLeadsApplicantNew.city")
+        });
+        functions.setValues({
+            "TrxLeadsApplicantNew.districtdomicile": functions.getValue("TrxLeadsApplicantNew.district")
+        });
+        functions.setValues({
+            "TrxLeadsApplicantNew.villagedomicile": functions.getValue("TrxLeadsApplicantNew.village")
+        });
+        functions.setValues({
+            "TrxLeadsApplicantNew.postalcodedomicile": functions.getValue("TrxLeadsApplicantNew.postalcode")
+        });
     } else {
-        functions.clearValue("TrxLeadsApplicantNew.addressdomicile",true);
-        functions.clearValue("TrxLeadsApplicantNew.rtrwdomicile",true);
-        functions.clearValue("TrxLeadsApplicantNew.provincedomicile",true);
-        functions.clearValue("TrxLeadsApplicantNew.citydomicile",true);
-        functions.clearValue("TrxLeadsApplicantNew.districtdomicile",true);
-        functions.clearValue("TrxLeadsApplicantNew.villagedomicile",true);
-        functions.clearValue("TrxLeadsApplicantNew.postalcodedomicile",true);
+        functions.clearValue("TrxLeadsApplicantNew.addressdomicile", true);
+        functions.clearValue("TrxLeadsApplicantNew.rtrwdomicile", true);
+        functions.clearValue("TrxLeadsApplicantNew.provincedomicile", true);
+        functions.clearValue("TrxLeadsApplicantNew.citydomicile", true);
+        functions.clearValue("TrxLeadsApplicantNew.districtdomicile", true);
+        functions.clearValue("TrxLeadsApplicantNew.villagedomicile", true);
+        functions.clearValue("TrxLeadsApplicantNew.postalcodedomicile", true);
     }
 
     functions.updateJSON();
 
 }
 
-function onChangeGuerantorChecklist(){
+function onChangeGuerantorChecklist() {
     var guarantor = functions.getValue("TrxLeadsGuarantor.isguarantorneed");
 
-    if(guarantor === "true" || guarantor === true){
+    if (guarantor === "true" || guarantor === true) {
         functions.setStyle("frame8", "visible", "true");
     } else {
-        functions.clearValue("TrxLeadsGuarantor.name",true);
-        functions.clearValue("TrxLeadsGuarantor.identityno",true);
-        functions.clearValue("TrxLeadsGuarantor.placeofbirth",true);
-        functions.clearValue("TrxLeadsGuarantor.dateofbirth",true);
-        functions.clearValue("TrxLeadsApplicantNew.addressdomicile",true);
-        functions.clearValue("TrxLeadsGuarantor.address",true);
-        functions.clearValue("TrxLeadsGuarantor.rtrw",true);
-        functions.clearValue("TrxLeadsGuarantor.province",true);
-        functions.clearValue("TrxLeadsGuarantor.city",true);
-        functions.clearValue("TrxLeadsGuarantor.district",true);
-        functions.clearValue("TrxLeadsGuarantor.village",true);
-        functions.clearValue("TrxLeadsGuarantor.postalcode",true);
-        functions.clearValue("TrxLeadsGuarantor.religion",true);
-        functions.clearValue("TrxLeadsGuarantor.gender",true);
-        functions.clearValue("TrxLeadsGuarantor.maritalstatus",true);
-        functions.clearValue("TrxLeadsGuarantor.occupation",true);
-        functions.clearValue("TrxLeadsGuarantor.kewarganegaraan",true);
-        functions.clearValue("TrxLeadsGuarantor.mobilephone",true);
-        functions.clearValue("TrxLeadsGuarantor.email",true);
+        functions.clearValue("TrxLeadsGuarantor.name", true);
+        functions.clearValue("TrxLeadsGuarantor.identityno", true);
+        functions.clearValue("TrxLeadsGuarantor.placeofbirth", true);
+        functions.clearValue("TrxLeadsGuarantor.dateofbirth", true);
+        functions.clearValue("TrxLeadsApplicantNew.addressdomicile", true);
+        functions.clearValue("TrxLeadsGuarantor.address", true);
+        functions.clearValue("TrxLeadsGuarantor.rtrw", true);
+        functions.clearValue("TrxLeadsGuarantor.province", true);
+        functions.clearValue("TrxLeadsGuarantor.city", true);
+        functions.clearValue("TrxLeadsGuarantor.district", true);
+        functions.clearValue("TrxLeadsGuarantor.village", true);
+        functions.clearValue("TrxLeadsGuarantor.postalcode", true);
+        functions.clearValue("TrxLeadsGuarantor.religion", true);
+        functions.clearValue("TrxLeadsGuarantor.gender", true);
+        functions.clearValue("TrxLeadsGuarantor.maritalstatus", true);
+        functions.clearValue("TrxLeadsGuarantor.occupation", true);
+        functions.clearValue("TrxLeadsGuarantor.kewarganegaraan", true);
+        functions.clearValue("TrxLeadsGuarantor.mobilephone", true);
+        functions.clearValue("TrxLeadsGuarantor.email", true);
         functions.setStyle("frame8", "visible", "false");
     }
 
     functions.updateJSON();
 }
 
-function onChangeCollateral(){
+function onChangeCollateral() {
     var collateral = functions.getValue("checkbox3");
 
-    if(collateral === "true" || collateral === true){
+    if (collateral === "true" || collateral === true) {
         functions.setStyle("TrxLeadsCollateral", "visible", "true");
     } else {
         functions.clearTable("TrxLeadsCollateral");
@@ -601,10 +656,10 @@ function onChangeCollateral(){
     functions.updateJSON();
 }
 
-function onChangeSpouse(){
+function onChangeSpouse() {
     var spouse = functions.getValue("TrxLeadsApplicantNew.maritalstatus");
 
-    if(spouse != "Menikah"){
+    if (spouse != "Menikah") {
         functions.setStyle("TrxLeadsApplicantNew.spousename", "mandatory", "false");
         functions.setStyle("TrxLeadsApplicantNew.spouseidentityno", "mandatory", "false");
         functions.setStyle("TrxLeadsApplicantNew.spousepob", "mandatory", "false");
@@ -629,24 +684,30 @@ function onChangeSpouse(){
     functions.updateJSON();
 }
 
-function onChangeInsuranceDetail(){
+function onChangeInsuranceDetail() {
     var premi = 0;
     var depresi = 100 - (parseInt((functions.getValue("TrxLeadsLoanInsurance.insuranceyear")) - 1) * 10);
-    functions.setValues({"TrxLeadsLoanInsurance.coveramount": functions.getValue("TrxLeadsLoan.loanamount")});
+    functions.setValues({
+        "TrxLeadsLoanInsurance.coveramount": functions.getValue("TrxLeadsLoan.loanamount")
+    });
 
     premi = (parseInt(functions.getValue("TrxLeadsLoan.loanamount")) * depresi) * parseInt(functions.getValue("TrxLeadsLoanInsurance.sellrate")) / 100;
 
-    functions.setValues({"TrxLeadsLoanInsurance.premitotal": parseInt(Math.floor(premi)).toString()})
-    functions.setValues({"TrxLeadsLoanInsurance.stdrate": "5"})
+    functions.setValues({
+        "TrxLeadsLoanInsurance.premitotal": parseInt(Math.floor(premi)).toString()
+    })
+    functions.setValues({
+        "TrxLeadsLoanInsurance.stdrate": "5"
+    })
 
     functions.updateJSON();
 }
 
-function handleFormDetailDataEntry(){
+function handleFormDetailDataEntry() {
     var type = functions.getValue("TrxLeadsApplicantNew.consumertype");
     functions.setStyle("labeloverride", "visible", "false");
     functions.setStyle("override", "visible", "false");
-    
+
     // Same Field
     functions.setStyle("TrxLeadsFinancial.rentbusinessplace", "mandatory", "false");
     functions.setStyle("TrxLeadsFinancial.rentbusinessplace", "visible", "false");
@@ -656,9 +717,9 @@ function handleFormDetailDataEntry(){
     functions.setStyle("TrxLeadsFinancial.monthlyrentfee", "visible", "false");
     functions.setStyle("TrxLeadsFinancial.financialtotalotherbankloans", "visible", "false");
     functions.setStyle("frame18", "visible", "false");
-    
 
-    if(type === "Individual"){
+
+    if (type === "Individual") {
         functions.setStyle("TrxLeadsApplicantNew.companytitle", "visible", "false");
         functions.setStyle("TrxLeadsApplicantNew.companyname", "visible", "false");
         functions.setStyle("TrxLeadsApplicantNew.companyphone", "visible", "false");
@@ -669,7 +730,7 @@ function handleFormDetailDataEntry(){
         functions.setStyle("economicdetail", "visible", "false");
         functions.setStyle("subeconomicdetail", "visible", "false");
         functions.setStyle("TrxLeadsApplicantNew.education", "visible", "false");
-        
+
 
         functions.setStyle("frame5", "visible", "false");
         functions.setStyle("frame7", "visible", "false");
@@ -703,7 +764,7 @@ function handleFormDetailDataEntry(){
         functions.setStyle("TrxLeadsApplicantNew.noofdependant", "visible", "false");
         functions.setStyle("TrxLeadsApplicantNew.passportenddate", "visible", "false");
         functions.setStyle("TrxLeadsApplicantNew.passportno", "visible", "false");
-        
+
 
         functions.setStyle("TrxLeadsApplicantNew.isdomicilesame", "visible", "false");
         functions.setStyle("TrxLeadsApplicantNew.addressdomicile", "visible", "false");
@@ -730,7 +791,7 @@ function handleFormDetailDataEntry(){
         functions.setStyle("TrxLeadsApplicantNew.district", "mandatory", "false");
         functions.setStyle("TrxLeadsApplicantNew.village", "mandatory", "false");
         functions.setStyle("TrxLeadsApplicantNew.postalcode", "mandatory", "false");
-        
+
         functions.setStyle("frame5", "visible", "false");
         functions.setStyle("frame6", "visible", "false");
         functions.setStyle("frame7", "visible", "false");
@@ -739,7 +800,7 @@ function handleFormDetailDataEntry(){
     functions.updateJSON();
 }
 
-function handleFormDataVerif(){
+function handleFormDataVerif() {
     handleFormDetailDataEntry();
     functions.setStyle("labeloverride", "visible", "true");
     functions.setStyle("override", "visible", "true");
@@ -750,11 +811,11 @@ function handleFormDataVerif(){
     onChangeOverride();
 }
 
-function onChangeOverride(){
+function onChangeOverride() {
 
     var override = functions.getValue("override");
 
-    if(override === "Yes"){
+    if (override === "Yes") {
         functions.setStyle("frame2", "disable", "false");
         functions.setStyle("frame5", "disable", "false");
         functions.setStyle("frame6", "disable", "false");
@@ -773,7 +834,7 @@ function onChangeOverride(){
         functions.setStyle("frame22", "disable", "false");
         functions.setStyle("frame23", "disable", "false");
         functions.setStyle("frame27", "disable", "false");
-        
+
     } else {
         functions.setStyle("frame2", "disable", "true");
         functions.setStyle("frame5", "disable", "true");
@@ -799,138 +860,142 @@ function onChangeOverride(){
 }
 
 //approval
-function TypeCustomer(){
+function TypeCustomer() {
 
     var tipeCustomer = functions.getValue("TrxLeadsApplicantNew.consumertype")
 
-    if(tipeCustomer.toLowerCase() == "individual"){
-        functions.setStyle("TrxLeadsApplicantNew.dateofbirth","visible","true");
-        functions.setStyle("TrxLeadsApplicantNew.identityno","visible","true");
-        functions.setStyle("TrxLeadsApplicantNew.address","visible","true");
-        functions.setStyle("textbox10","visible","true");
-        functions.setStyle("TrxLeadsApplicantNew.occupation","visible","true");
-        functions.setStyle("TrxLeadsApplicantNew.maritalstatus","visible","true");
-        functions.setStyle("TrxLeadsApplicantNew.mobilephone","visible","true");
-        functions.setStyle("TrxLeadsApplicantNew.nationality","visible","true");
-        functions.setStyle("TrxLeadsApplicantNew.familyno","visible","true");
-        functions.setStyle("TrxLeadsApplicantNew.email","visible","true");
-        functions.setStyle("TrxLeadsApplicantNew.noofdependant","visible","true");
+    if (tipeCustomer.toLowerCase() == "individual") {
+        functions.setStyle("TrxLeadsApplicantNew.dateofbirth", "visible", "true");
+        functions.setStyle("TrxLeadsApplicantNew.identityno", "visible", "true");
+        functions.setStyle("TrxLeadsApplicantNew.address", "visible", "true");
+        functions.setStyle("textbox10", "visible", "true");
+        functions.setStyle("TrxLeadsApplicantNew.occupation", "visible", "true");
+        functions.setStyle("TrxLeadsApplicantNew.maritalstatus", "visible", "true");
+        functions.setStyle("TrxLeadsApplicantNew.mobilephone", "visible", "true");
+        functions.setStyle("TrxLeadsApplicantNew.nationality", "visible", "true");
+        functions.setStyle("TrxLeadsApplicantNew.familyno", "visible", "true");
+        functions.setStyle("TrxLeadsApplicantNew.email", "visible", "true");
+        functions.setStyle("TrxLeadsApplicantNew.noofdependant", "visible", "true");
         MaritalStatusCustomer();
-    //  GetAgeCustomer();
+        //  GetAgeCustomer();
 
-        functions.setStyle("TrxLeadsApplicantNew.companytitle","visible","false");
-        functions.setStyle("TrxLeadsApplicantNew.companyname","visible","false");
-        functions.setStyle("TrxLeadsApplicantNew.npwpno","visible","false");
-        functions.setStyle("TrxLeadsApplicantNew.npwpname","visible","false");
-        functions.setStyle("TrxLeadsApplicantNew.npwpregistereddate","visible","false");
-        functions.setStyle("TrxLeadsApplicantNew.dateofestablishmentdeed","visible","false");
-        functions.setStyle("TrxLeadsApplicantNew.companyownershipstatus","visible","false");
-        functions.setStyle("TrxLeadsApplicantNew.noofestablishmentdeed","visible","false");
-        functions.setStyle("TrxLeadsApplicantNew.economysector","visible","false");
-        functions.setStyle("TrxLeadsApplicantNew.economysubsector","visible","false");
+        functions.setStyle("TrxLeadsApplicantNew.companytitle", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.companyname", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.npwpno", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.npwpname", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.npwpregistereddate", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.dateofestablishmentdeed", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.companyownershipstatus", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.noofestablishmentdeed", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.economysector", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.economysubsector", "visible", "false");
         IsGuarantor();
 
-        functions.setStyle("frame8","visible","false");
-    } else if (tipeCustomer.toLowerCase() = "company"){
-        functions.setStyle("TrxLeadsApplicantNew.dateofbirth","visible","false");
-        functions.setStyle("TrxLeadsApplicantNew.identityno","visible","false");
-        functions.setStyle("TrxLeadsApplicantNew.address","visible","false");
-        functions.setStyle("textbox10","visible","false");
-        functions.setStyle("TrxLeadsApplicantNew.occupation","visible","false");
-        functions.setStyle("TrxLeadsApplicantNew.maritalstatus","visible","false");
-        functions.setStyle("TrxLeadsApplicantNew.mobilephone","visible","false");
-        functions.setStyle("TrxLeadsApplicantNew.nationality","visible","false");
-        functions.setStyle("TrxLeadsApplicantNew.familyno","visible","false");
-        functions.setStyle("TrxLeadsApplicantNew.email","visible","false");
-        functions.setStyle("TrxLeadsApplicantNew.noofdependant","visible","false");
-        functions.setStyle("frame3","visible","false");
+        functions.setStyle("frame8", "visible", "false");
+    } else if (tipeCustomer.toLowerCase() = "company") {
+        functions.setStyle("TrxLeadsApplicantNew.dateofbirth", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.identityno", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.address", "visible", "false");
+        functions.setStyle("textbox10", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.occupation", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.maritalstatus", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.mobilephone", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.nationality", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.familyno", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.email", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.noofdependant", "visible", "false");
+        functions.setStyle("frame3", "visible", "false");
 
 
-        functions.setStyle("TrxLeadsApplicantNew.companytitle","visible","true");
-        functions.setStyle("TrxLeadsApplicantNew.companyname","visible","true");
-        functions.setStyle("TrxLeadsApplicantNew.npwpno","visible","true");
-        functions.setStyle("TrxLeadsApplicantNew.npwpname","visible","true");
-        functions.setStyle("TrxLeadsApplicantNew.npwpregistereddate","visible","true");
-        functions.setStyle("TrxLeadsApplicantNew.dateofestablishmentdeed","visible","true");
-        functions.setStyle("TrxLeadsApplicantNew.companyownershipstatus","visible","true");
-        functions.setStyle("TrxLeadsApplicantNew.noofestablishmentdeed","visible","true");
-        functions.setStyle("TrxLeadsApplicantNew.economysector","visible","true");
-        functions.setStyle("TrxLeadsApplicantNew.economysubsector","visible","true");
-        functions.setStyle("TrxLeadsGuarantor.placeofbirth","visible","true");
-        functions.setStyle("frame8","visible","true");
+        functions.setStyle("TrxLeadsApplicantNew.companytitle", "visible", "true");
+        functions.setStyle("TrxLeadsApplicantNew.companyname", "visible", "true");
+        functions.setStyle("TrxLeadsApplicantNew.npwpno", "visible", "true");
+        functions.setStyle("TrxLeadsApplicantNew.npwpname", "visible", "true");
+        functions.setStyle("TrxLeadsApplicantNew.npwpregistereddate", "visible", "true");
+        functions.setStyle("TrxLeadsApplicantNew.dateofestablishmentdeed", "visible", "true");
+        functions.setStyle("TrxLeadsApplicantNew.companyownershipstatus", "visible", "true");
+        functions.setStyle("TrxLeadsApplicantNew.noofestablishmentdeed", "visible", "true");
+        functions.setStyle("TrxLeadsApplicantNew.economysector", "visible", "true");
+        functions.setStyle("TrxLeadsApplicantNew.economysubsector", "visible", "true");
+        functions.setStyle("TrxLeadsGuarantor.placeofbirth", "visible", "true");
+        functions.setStyle("frame8", "visible", "true");
         // GetAgeGuarantor();
     }
 
     functions.updateJSON();
 }
- 
-function MaritalStatusCustomer(){
+
+function MaritalStatusCustomer() {
     var status = functions.getValue("TrxLeadsApplicantNew.maritalstatus");
 
-    if(status.toLowerCase() == "belum menikah" || status.toLowerCase() == "Janda"){
-        functions.setStyle("frame3","visible","false");
+    if (status.toLowerCase() == "belum menikah" || status.toLowerCase() == "Janda") {
+        functions.setStyle("frame3", "visible", "false");
     } else {
-        functions.setStyle("frame3","visible","true");
+        functions.setStyle("frame3", "visible", "true");
         // GetAgeSpouse();
     }
 
     functions.updateJSON();
 }
- 
+
 //  function GetAgeCustomer(){
 //      var birth = functions.getValue("TrxLeadsApplicantNew.dateofbirth");
- 
+
 //      var usia = GetAge(birth);
- 
+
 //      functions.setValue("textbox10",usia.toString());
- 
+
 //      functions.updateJSON();
 //  }
- 
- 
-function GetAgeSpouse(){
+
+
+function GetAgeSpouse() {
     var birthSpouse = new Date(functions.getValue("TrxLeadsApplicantNew.spousedob"));
 
     var usiaSpouse = GetAge(birthSpouse);
 
-    functions.setValues({"spouseAge":usiaSpouse.toString()});
+    functions.setValues({
+        "spouseAge": usiaSpouse.toString()
+    });
 
     functions.updateJSON();
 }
- 
-function GetAgeGuarantor(){
+
+function GetAgeGuarantor() {
     var birthGuarantor = new Date(functions.getValue("TrxLeadsGuarantor.dateofbirth"));
 
     var usiaGuarantor = GetAge(birthGuarantor);
 
-    functions.setValues({"guarantorAge":usiaGuarantor.toString()});
+    functions.setValues({
+        "guarantorAge": usiaGuarantor.toString()
+    });
 
     functions.updateJSON();
 }
- 
-function IsGuarantor(){
+
+function IsGuarantor() {
     var guarantor = functions.getValue("TrxLeadsGuarantor.isguarantorneed");
 
-    if(guarantor === true || guarantor === 'true'){
-        functions.setStyle("frame4","visible","true");
-        functions.setStyle("TrxLeadsGuarantor.placeofbirth","visible","false");
+    if (guarantor === true || guarantor === 'true') {
+        functions.setStyle("frame4", "visible", "true");
+        functions.setStyle("TrxLeadsGuarantor.placeofbirth", "visible", "false");
         // GetAgeGuarantor();
-    } else{
-        functions.setStyle("frame4","visible","false");
+    } else {
+        functions.setStyle("frame4", "visible", "false");
     }
 
     functions.updateJSON();
 }
- 
- 
+
+
 function GetAge(birthDate) {
     return Math.abs(new Date(Date.now() - birthDate).getUTCFullYear() - 1970)
 }
- 
- 
+
+
 //  function ActionActivityName(){
 //      var activity = functions.getWorkItemData("ActivityName");
- 
+
 //      if(activity.toLowerCase() == "approval head of kcp"){
 //          functions.setStyle("button2","visible","false");
 //          functions.setStyle("frame23","visible","true");
@@ -938,27 +1003,27 @@ function GetAge(birthDate) {
 //          functions.setStyle("button2","visible","true");
 //          functions.setStyle("frame23","visible","false");
 //      }
- 
+
 //      functions.updateJSON();
- 
+
 //  }
- 
- //disbursement
- 
-function hideByConsumerType(){
+
+//disbursement
+
+function hideByConsumerType() {
     let consumerType = functions.getValue("TrxLeadsApplicantNew.consumertype");
-    if(consumerType.toLowerCase() == "individu"){
+    if (consumerType.toLowerCase() == "individu") {
         functions.setStyle("frame2", "visible", "true");
         // GetAgeApplicant()
         functions.setStyle("frame3", "visible", "false");
         hideByMaritalStatus();
 
-    }else if(consumerType.toLowerCase() == "company"){
+    } else if (consumerType.toLowerCase() == "company") {
         functions.setStyle("frame2", "visible", "false"); //individu
-        functions.setStyle("frame3", "visible", "true");  //company
+        functions.setStyle("frame3", "visible", "true"); //company
         functions.setStyle("frame6", "visible", "false"); //spouse
-        functions.setStyle("frame4", "visible", "true");  //guarantor
-    }else{
+        functions.setStyle("frame4", "visible", "true"); //guarantor
+    } else {
         functions.setStyle("frame2", "visible", "false");
         functions.setStyle("frame3", "visible", "false");
         functions.setStyle("frame6", "visible", "false");
@@ -966,22 +1031,22 @@ function hideByConsumerType(){
     }
     functions.updateJSON();
 }
- 
-function hideByMaritalStatus(){
+
+function hideByMaritalStatus() {
     let consumerType = functions.getValue("TrxLeadsApplicantNew.consumertype");
     let maritalStatus = functions.getValue("TrxLeadsApplicantNew.maritalstatus");
-    if(maritalStatus.toLowerCase() == "menikah" && consumerType.toLowerCase() == "individu"){
-        functions.setStyle("frame6","visible", "true");
-    }else{
+    if (maritalStatus.toLowerCase() == "menikah" && consumerType.toLowerCase() == "individu") {
+        functions.setStyle("frame6", "visible", "true");
+    } else {
         functions.setStyle("frame6", "visible", "false");
     }
     functions.updateJSON();
 }
 
 //  function getAge(dateString) {
- 
+
 //     const birthDate = new Date(dateString);
-    
+
 
 //     const currentDate = new Date();
 
@@ -995,14 +1060,14 @@ function hideByMaritalStatus(){
 
 //     return age;
 // }
- 
+
 //  function GetAgeApplicant(){
 //      let birth = functions.getValue("TrxLeadsApplicantNew.dateofbirth");
- 
+
 //      let usia = getAge(birth);
- 
+
 //      functions.setValue("textbox12",usia.toString());
- 
+
 //      functions.updateJSON();
 //  }
 
@@ -1047,61 +1112,61 @@ function hideByMaritalStatus(){
 	2. Output returned is in json format whose sample is provided at bottom of this article.	
 ***********************************************************************************************************************************************************/
 
-window.getWorkitemDataHandler = function (){	
-	window._getWorkitemData(["form_data","doc","excp","todo"], window.workitemDataProcessor, true);
+window.getWorkitemDataHandler = function () {
+    window._getWorkitemData(["form_data", "doc", "excp", "todo"], window.workitemDataProcessor, true);
 }
 
-window.workitemDataProcessor = function (workitemData){
-	// ==============================================	Custom Implementation Start here	==========================================================    
-	var workitemDataJson = JSON.parse(workitemData);
-		
-	if(workitemDataJson.data.doc){
-		var docStatus = workitemDataJson.data.doc.status;
-		if(docStatus.maincode == "0"){
-			var docData = workitemDataJson.data.doc.data;
-			//alert("##docData="+docData);
-		}
-	} 
-	
-	if(workitemDataJson.data.excp){
-		var excpStatus = workitemDataJson.data.excp.status;
-		if(excpStatus.maincode == "0"){
-			var excpData = workitemDataJson.data.excp.data;	
-			//alert("##excpData="+excpData);
-		}
-	} 
-	
-	if(workitemDataJson.data.form_data){
-		var formDataStatus = workitemDataJson.data.form_data.status;
-		if(formDataStatus.maincode == "0"){
-			var formData = workitemDataJson.data.form_data.data;
-			//alert("##formData="+formData);
-		}
-	} 
-	
-	if(workitemDataJson.data.todo){
-		var todoStatus = workitemDataJson.data.todo.status;
-		if(todoStatus.maincode == "0"){
-			var todoData = workitemDataJson.data.todo.data;
-			//alert("##todoData="+todoData);
-		}
-	}
-	
-	
-	/* 	Uncomment below code to unlock the workitem. 
-		This is required if Application load data from DB and does not store it in Web Session e.g Mobile App. Desktop Application version unlocks workiem on browser window close automatically so explicit call is not required.
-	*/	
-	//window._unlockWorkitem(workitemUnlockProcessor);
+window.workitemDataProcessor = function (workitemData) {
+    // ==============================================	Custom Implementation Start here	==========================================================    
+    var workitemDataJson = JSON.parse(workitemData);
+
+    if (workitemDataJson.data.doc) {
+        var docStatus = workitemDataJson.data.doc.status;
+        if (docStatus.maincode == "0") {
+            var docData = workitemDataJson.data.doc.data;
+            //alert("##docData="+docData);
+        }
+    }
+
+    if (workitemDataJson.data.excp) {
+        var excpStatus = workitemDataJson.data.excp.status;
+        if (excpStatus.maincode == "0") {
+            var excpData = workitemDataJson.data.excp.data;
+            //alert("##excpData="+excpData);
+        }
+    }
+
+    if (workitemDataJson.data.form_data) {
+        var formDataStatus = workitemDataJson.data.form_data.status;
+        if (formDataStatus.maincode == "0") {
+            var formData = workitemDataJson.data.form_data.data;
+            //alert("##formData="+formData);
+        }
+    }
+
+    if (workitemDataJson.data.todo) {
+        var todoStatus = workitemDataJson.data.todo.status;
+        if (todoStatus.maincode == "0") {
+            var todoData = workitemDataJson.data.todo.data;
+            //alert("##todoData="+todoData);
+        }
+    }
+
+
+    /* 	Uncomment below code to unlock the workitem. 
+    	This is required if Application load data from DB and does not store it in Web Session e.g Mobile App. Desktop Application version unlocks workiem on browser window close automatically so explicit call is not required.
+    */
+    //window._unlockWorkitem(workitemUnlockProcessor);
 }
 
-window.workitemUnlockProcessor = function (workitemUnlockData){
-	workitemUnlockDataJson = JSON.parse(workitemUnlockData);
-	
-	var workitemUnlockStatus = workitemUnlockDataJson.status;
-	if(workitemUnlockStatus.maincode == "0"){
-		var workitemStatus = workitemUnlockDataJson.data.status_list[0].status; //"Success"
-		//alert("##workitemStatus="+workitemStatus);
-	}
+window.workitemUnlockProcessor = function (workitemUnlockData) {
+    workitemUnlockDataJson = JSON.parse(workitemUnlockData);
+
+    var workitemUnlockStatus = workitemUnlockDataJson.status;
+    if (workitemUnlockStatus.maincode == "0") {
+        var workitemStatus = workitemUnlockDataJson.data.status_list[0].status; //"Success"
+        //alert("##workitemStatus="+workitemStatus);
+    }
 }
 
 
