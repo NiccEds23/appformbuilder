@@ -74,7 +74,7 @@ function formLoad() {
             "TrxLeadsActionDetail.statusleads": ""
         });
         handleFormDataVerif();
-    } else if (activityName === "Approval Head of KCP" || activityName === "Approval PBP" || activityName === "Approval JRM") {
+    } else if (activityName === "Approval Head of KCP" || activityName === "Approval PBP" || activityName === "Approval JRM" || activityName === "Approval Branch Manager") {
         functions.setValues({
             "TrxLeadsActionDetail.statusleads": ""
         });
