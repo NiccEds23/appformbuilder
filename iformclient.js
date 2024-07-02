@@ -571,6 +571,7 @@ function handleFormDataEntry() {
 
     onChangeGuerantorChecklist();
     onChangeCollateral()
+    onChangeFormInsuranceDetail();
 
     functions.updateJSON();
 }
@@ -686,7 +687,24 @@ function onChangeSpouse() {
     functions.updateJSON();
 }
 
+function onChangeFormInsuranceDetail(){
+    var tenor = functions.getValue("TrxLeadsLoan.tenor");
+    var loan = (parseInt(tenor) / 12).toString();
+
+    functions.setValues({
+        "TrxLeadsLoanInsurance.stdrate": "5",
+        "TrxLeadsLoanInsurance.insuranceyear" : loan
+    });
+
+    functions.setValues({
+        "TrxLeadsLoanInsurance.sellrate" : functions.getValue("TrxLeadsLoanInsurance.stdrate")
+    })
+
+    functions.updateJSON();
+}
+
 function onChangeInsuranceDetail() {
+    onChangeFormInsuranceDetail();
     var premi = 0;
     var depresi = 100 - (parseInt((functions.getValue("TrxLeadsLoanInsurance.insuranceyear")) - 1) * 10);
     functions.setValues({
@@ -698,9 +716,7 @@ function onChangeInsuranceDetail() {
     functions.setValues({
         "TrxLeadsLoanInsurance.premitotal": parseInt(Math.floor(premi)).toString()
     })
-    functions.setValues({
-        "TrxLeadsLoanInsurance.stdrate": "5"
-    })
+
 
     functions.updateJSON();
 }
