@@ -570,8 +570,7 @@ function handleFormDataEntry() {
     }
 
     onChangeGuerantorChecklist();
-    onChangeCollateral()
-    onChangeFormInsuranceDetail();
+    onChangeCollateral();
 
     functions.updateJSON();
 }
@@ -699,8 +698,6 @@ function onChangeFormInsuranceDetail(){
     functions.setValues({
         "TrxLeadsLoanInsurance.sellrate" : functions.getValue("TrxLeadsLoanInsurance.stdrate")
     })
-
-    functions.updateJSON();
 }
 
 function onChangeInsuranceDetail() {
