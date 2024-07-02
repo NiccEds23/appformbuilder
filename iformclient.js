@@ -80,11 +80,13 @@ function formLoad() {
         });
         functions.setStyle("button2", "visible", "false");
         functions.setStyle("frame23", "visible", "true");
+        functions.setStyle("approvedLoanAmount", "mandatory", "true");
         TypeCustomer();
     } else if (activityName === "Agreement Verification" || activityName === "Document Printing") {
         functions.setValues({
             "TrxLeadsActionDetail.statusleads": ""
         });
+        functions.setStyle("approvedLoanAmount", "mandatory", "false");
         functions.setStyle("frame23", "visible", "false");
         functions.setStyle("button2", "visible", "true");
         TypeCustomer();
