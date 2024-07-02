@@ -54,7 +54,7 @@ function customValidation(type) {
 function formLoad() {
     var activityName = functions.getWorkItemData("activityname");
 
-    if (activityName === "First Entry") {
+    if (activityName === "First Entry" || activityName === "Review and Verification Leads") {
         functions.setValues({
             "TrxLeadsActionDetail.statusleads": ""
         });
@@ -644,7 +644,7 @@ function onChangeGuerantorChecklist() {
 }
 
 function onChangeCollateral() {
-    var collateral = functions.getValue("checkbox3");
+    var collateral = functions.getValue("isCollateral");
 
     if (collateral === "true" || collateral === true) {
         functions.setStyle("TrxLeadsCollateral", "visible", "true");
