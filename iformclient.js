@@ -892,7 +892,7 @@ function TypeCustomer() {
         IsGuarantor();
 
         functions.setStyle("frame8", "visible", "false");
-    } else if (tipeCustomer.toLowerCase() = "company") {
+    } else if (tipeCustomer.toLowerCase() == "company") {
         functions.setStyle("TrxLeadsApplicantNew.dateofbirth", "visible", "false");
         functions.setStyle("TrxLeadsApplicantNew.identityno", "visible", "false");
         functions.setStyle("TrxLeadsApplicantNew.address", "visible", "false");
