@@ -372,7 +372,7 @@ function setShowFieldsByCustomerType() {
     }
 
     functions.setValues({
-        "consumerType": tipeCustomer
+        "consumerType": customerType
     });
     functions.updateJSON()
 }
