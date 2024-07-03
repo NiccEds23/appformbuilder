@@ -686,17 +686,17 @@ function onChangeSpouse() {
     functions.updateJSON();
 }
 
-function onChangeFormInsuranceDetail(){
+function onChangeFormInsuranceDetail() {
     var tenor = functions.getValue("TrxLeadsLoan.tenor");
     var loan = (parseInt(tenor) / 12).toString();
 
     functions.setValues({
         "TrxLeadsLoanInsurance.stdrate": "5",
-        "TrxLeadsLoanInsurance.insuranceyear" : loan
+        "TrxLeadsLoanInsurance.insuranceyear": loan
     });
 
     functions.setValues({
-        "TrxLeadsLoanInsurance.sellrate" : functions.getValue("TrxLeadsLoanInsurance.stdrate")
+        "TrxLeadsLoanInsurance.sellrate": functions.getValue("TrxLeadsLoanInsurance.stdrate")
     })
 }
 
@@ -937,6 +937,9 @@ function TypeCustomer() {
         // GetAgeGuarantor();
     }
 
+    functions.setValues({
+        "consumerType": tipeCustomer
+    });
     functions.updateJSON();
 }
 
@@ -1058,11 +1061,6 @@ function hideByMaritalStatus() {
     functions.updateJSON();
 }
 
-function onChangeConsumerType() {
-    let consumerType = functions.getValue("TrxLeadsApplicantNew.consumertype");
-    functions.setValues({"consumerType": consumerType});
-    functions.updateJSON();
-}
 
 //  function getAge(dateString) {
 
