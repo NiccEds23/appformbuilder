@@ -712,13 +712,13 @@ function onChangeSpouse() {
     functions.updateJSON();
 }
 
-function onChangeFormInsuranceDetail() {
+async function onChangeFormInsuranceDetail() {
     var tenor = functions.getValue("TrxLeadsLoan.tenor");
     var loan = (parseInt(tenor) / 12).toString();
 
     // Manggil fungsi custom Java
-    var rate = functions.executeServerEvent("", "TrxLeadsLoanInsurance.paymentmodel", "", true);
-
+    var rate = await functions.executeServerEvent("", "TrxLeadsLoanInsurance.paymentmodel", "", true);
+    
 
     functions.setValues({
         "TrxLeadsLoanInsurance.stdrate" : rate,
@@ -728,6 +728,8 @@ function onChangeFormInsuranceDetail() {
     functions.setValues({
         "TrxLeadsLoanInsurance.sellrate": functions.getValue("TrxLeadsLoanInsurance.stdrate")
     })
+
+    functions.updateJSON();
 }
 
 function onChangeInsuranceDetail() {
