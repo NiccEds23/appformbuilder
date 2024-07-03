@@ -1058,6 +1058,12 @@ function hideByMaritalStatus() {
     functions.updateJSON();
 }
 
+function onChangeConsumerType() {
+    let consumerType = functions.getValue("TrxLeadsApplicantNew.consumertype");
+    functions.setValues({"consumerType": consumerType});
+    functions.updateJSON();
+}
+
 //  function getAge(dateString) {
 
 //     const birthDate = new Date(dateString);
