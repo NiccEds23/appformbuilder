@@ -519,7 +519,7 @@ function handleFormDataEntry() {
         functions.setStyle("TrxLeadsApplicantNew.spousepostalcode", "visible", "false");
         functions.setStyle("TrxLeadsApplicantNew.spousemaritalstatus", "visible", "false");
         functions.setStyle("TrxLeadsApplicantNew.spouseoccupation", "visible", "false");
-        functions.setStyle("TrxLeadsApplicantNew.spousenationality", "visible", "false");
+        functions.setStyle("TrxLeadsApplicantNew.spousenationalitynew", "visible", "false");
         functions.setStyle("TrxLeadsApplicantNew.spousenpwpno", "visible", "false");
         functions.setStyle("TrxLeadsApplicantNew.spousenpwpname", "visible", "false");
         functions.setStyle("TrxLeadsApplicantNew.spousenpwpregistereddate", "visible", "false");
@@ -576,6 +576,27 @@ function handleFormDataEntry() {
 
     onChangeGuerantorChecklist();
     onChangeCollateral();
+
+    functions.updateJSON();
+}
+
+function onChangeHideKeuangan(){
+    var sewa = functions.getValue("TrxLeadsFinancial.rentbusinessplace");
+    var penghasilan = functions.getValue("TrxLeadsFinancial.isotherincome");
+
+    if(sewa === "No"){
+        functions.clearValue("TrxLeadsFinancial.monthlyrentfee", true);
+        functions.setStyle("TrxLeadsFinancial.monthlyrentfee", "visible", "false");
+    } else {
+        functions.setStyle("TrxLeadsFinancial.monthlyrentfee", "visible", "true");
+    }
+    
+    if(penghasilan === "No"){
+        functions.clearValue("TrxLeadsFinancial.othermonthlyincome", true);
+        functions.setStyle("TrxLeadsFinancial.othermonthlyincome", "visible", "false");
+    } else {
+        functions.setStyle("TrxLeadsFinancial.othermonthlyincome", "visible", "true");
+    }
 
     functions.updateJSON();
 }
@@ -695,8 +716,12 @@ function onChangeFormInsuranceDetail() {
     var tenor = functions.getValue("TrxLeadsLoan.tenor");
     var loan = (parseInt(tenor) / 12).toString();
 
+    // Manggil fungsi custom Java
+    var rate = functions.executeServerEvent("", "TrxLeadsLoanInsurance.paymentmodel", "", true);
+
+
     functions.setValues({
-        "TrxLeadsLoanInsurance.stdrate": "5",
+        "TrxLeadsLoanInsurance.stdrate" : rate,
         "TrxLeadsLoanInsurance.insuranceyear": loan
     });
 
@@ -713,7 +738,7 @@ function onChangeInsuranceDetail() {
         "TrxLeadsLoanInsurance.coveramount": functions.getValue("TrxLeadsLoan.loanamount")
     });
 
-    premi = (parseInt(functions.getValue("TrxLeadsLoan.loanamount")) * depresi) * parseInt(functions.getValue("TrxLeadsLoanInsurance.sellrate")) / 100;
+    premi = (parseInt(functions.getValue("TrxLeadsLoan.loanamount")) * depresi / 100) * parseInt(functions.getValue("TrxLeadsLoanInsurance.sellrate")) / 100;
 
     functions.setValues({
         "TrxLeadsLoanInsurance.premitotal": parseInt(Math.floor(premi)).toString()
