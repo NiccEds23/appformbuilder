@@ -370,6 +370,11 @@ function setShowFieldsByCustomerType() {
         functions.setStyle("TrxLeadsApplicantNew.companyemail", "visible", "true");
         functions.setStyle("TrxLeadsApplicantNew.companyemail", "mandatory", "true");
     }
+
+    functions.setValues({
+        "consumerType": tipeCustomer
+    });
+    functions.updateJSON()
 }
 
 
@@ -936,10 +941,6 @@ function TypeCustomer() {
         functions.setStyle("frame8", "visible", "true");
         // GetAgeGuarantor();
     }
-
-    functions.setValues({
-        "consumerType": tipeCustomer
-    });
     functions.updateJSON();
 }
 
