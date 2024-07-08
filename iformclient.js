@@ -713,32 +713,35 @@ function onChangeSpouse() {
 }
 
 function onChangeInsuranceDetail() {
-    var tenor = functions.getValue("TrxLeadsLoan.tenor");
-    var loan = (parseInt(tenor) / 12).toString();
-    var premi = 0;
-    var depresi = 100 - ((parseInt(functions.getValue("TrxLeadsLoanInsurance.insuranceyear")) - 1) * 10);
+    setTimeout(() => {
+        var tenor = functions.getValue("TrxLeadsLoan.tenor");
+        var loan = (parseInt(tenor) / 12).toString();
 
-    functions.setValues({
-        "TrxLeadsLoanInsurance.stdrate":"5",
-        "TrxLeadsLoanInsurance.insuranceyear":loan
-    });
+        functions.setValues({
+            "TrxLeadsLoanInsurance.stdrate":"5",
+            "TrxLeadsLoanInsurance.insuranceyear":loan
+        });
 
-    functions.setValues({
-        "TrxLeadsLoanInsurance.sellrate": functions.getValue("TrxLeadsLoanInsurance.stdrate")
-    })
+        functions.setValues({
+            "TrxLeadsLoanInsurance.sellrate": functions.getValue("TrxLeadsLoanInsurance.stdrate")
+        })
 
-    functions.setValues({
-        "TrxLeadsLoanInsurance.coveramount": functions.getValue("TrxLeadsLoan.loanamount")
-    });
+        var premi = 0;
+        var depresi = 100 - ((parseInt(functions.getValue("TrxLeadsLoanInsurance.insuranceyear")) - 1) * 10);
 
-    premi = (parseInt(functions.getValue("TrxLeadsLoan.loanamount")) * depresi / 100) * parseInt(functions.getValue("TrxLeadsLoanInsurance.sellrate")) / 100;
+        functions.setValues({
+            "TrxLeadsLoanInsurance.coveramount": functions.getValue("TrxLeadsLoan.loanamount")
+        });
 
-    functions.setValues({
-        "TrxLeadsLoanInsurance.premitotal": parseInt(Math.floor(premi)).toString()
-    })
+        premi = (parseInt(functions.getValue("TrxLeadsLoan.loanamount")) * depresi / 100) * parseInt(functions.getValue("TrxLeadsLoanInsurance.sellrate")) / 100;
 
+        functions.setValues({
+            "TrxLeadsLoanInsurance.premitotal": (parseInt(Math.floor(premi))).toString()
+        })
 
-    functions.updateJSON();
+        functions.updateJSON();
+    }, 500);
+    
 }
 
 function handleFormDetailDataEntry() {
